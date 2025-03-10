@@ -86,18 +86,18 @@ export const RESUME_DATA = {
     {
       title: "AI Chatbot Integration",
       techStack: ["Deep Chat", "React"],
-      description: "AI Chatbot Integration about my info in my portfolio.",
+      description: "AI Chatbot Integration about my info in my portfolio, Try the AI Chatbot, It Works!",
       logo: null, // If you have a logo
       link: {
         label: "Link to project",
-        href: "PROJECT_URL",
+        href: "https://github.com/angeldev96/personal-porfolio",
       },
     },
 
     {
       title: "Mobile App of a Modbus Scanner",
       techStack: ["React Native, Expo"],
-      description: "Mobile App of a Modbus Scanner.",
+      description: "Mobile App of a Modbus Scanner, WIP",
       logo: null, // If you have a logo
       link: {
         label: "Link to project",
