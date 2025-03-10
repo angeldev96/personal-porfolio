@@ -16,23 +16,51 @@ export interface ChatMessage {
   text: string;
 }
 
+const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+const GEMINI_API_URL = process.env.NEXT_PUBLIC_GEMINI_API_URL;
+
 export function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [history, setHistory] = useState<ChatMessage[]>([
     { role: 'ai', text: 'Hello! How can I help you today?' },
   ]);
 
-  const handleSendMessage = () => {
-    if (!message.trim()) return;
+  const handleSendMessage = async () => {
+    if (!message.trim() || isLoading) return;
     
     setHistory([...history, { role: 'user', text: message }]);
     setMessage('');
+    setIsLoading(true);
     
-    // Simulate AI response
-    setTimeout(() => {
-      setHistory(prev => [...prev, { role: 'ai', text: 'This is a demo response.' }]);
-    }, 1000);
+    try {
+      const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contents: [{
+            parts: [{ text: message }]
+          }]
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to get response from Gemini API');
+      }
+
+      const data = await response.json();
+      const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not generate a response.';
+      
+      setHistory(prev => [...prev, { role: 'ai', text: aiResponse }]);
+    } catch (error) {
+      console.error('Error:', error);
+      setHistory(prev => [...prev, { role: 'ai', text: 'Sorry, there was an error processing your request.' }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -65,6 +93,17 @@ export function ChatBot() {
                 </div>
               </div>
             ))}
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="max-w-[80%] rounded-lg p-3 bg-muted">
+                  <div className="flex gap-2">
+                    <div className="w-2 h-2 rounded-full bg-foreground/50 animate-bounce"></div>
+                    <div className="w-2 h-2 rounded-full bg-foreground/50 animate-bounce [animation-delay:0.2s]"></div>
+                    <div className="w-2 h-2 rounded-full bg-foreground/50 animate-bounce [animation-delay:0.4s]"></div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           <div className="p-4 border-t">
             <form
@@ -79,9 +118,10 @@ export function ChatBot() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Type your message..."
-                className="flex-1 min-w-0 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                disabled={isLoading}
+                className="flex-1 min-w-0 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50"
               />
-              <Button type="submit" size="icon">
+              <Button type="submit" size="icon" disabled={isLoading}>
                 <MessageCircle className="h-5 w-5" />
               </Button>
             </form>
