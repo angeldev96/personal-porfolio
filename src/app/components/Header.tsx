@@ -48,7 +48,7 @@ function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
 
 interface ContactButtonsProps {
   contact: typeof RESUME_DATA.contact;
-  personalWebsiteUrl?: string;
+  personalWebsiteUrl?: string | null;
 }
 
 function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
@@ -93,8 +93,9 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
 
 interface PrintContactProps {
   contact: typeof RESUME_DATA.contact;
-  personalWebsiteUrl?: string;
+  personalWebsiteUrl?: string | null;
 }
+
 
 function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
   return (
