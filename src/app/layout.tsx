@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import React from "react";
+import { ChatBot } from "@/components/chat-bot";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,8 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body>{children}</body>
-      <Analytics />
+      <body>
+        {children}
+        <ChatBot />
+        <Analytics />
+      </body>
     </html>
   );
 }

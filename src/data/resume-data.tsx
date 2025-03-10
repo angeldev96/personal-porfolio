@@ -112,7 +112,7 @@ export const RESUME_DATA = {
       logo: null, // If you have a logo
       link: {
         label: "Link to project",
-        href: "PROJECT_URL",
+        href: "https://github.com/angeldev96/partyandgift",
       },
     },
     // You can add more projects here
