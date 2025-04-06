@@ -78,14 +78,14 @@ export default function UpworkSummaryPage() {
               
               <ul className="list-disc pl-5 space-y-2 mb-4">
                 <li>
-                  <strong>Solid Fundamentals:</strong> Unlike newer developers known as "vibe coders" 
+                  <strong>Solid Fundamentals:</strong> Unlike newer developers known as &quot;vibe coders&quot; 
                   who rely exclusively on AI tools without understanding the fundamental concepts, my experience 
                   allows me to identify and solve complex problems efficiently.
                 </li>
                 <li>
                   <strong>Experience with AI Tools:</strong> I know current AI tools perfectly 
                   and use them strategically to accelerate development, always maintaining control over the code and 
-                  understanding exactly what I'm implementing.
+                  understanding exactly what I&apos;m implementing.
                 </li>
                 <li>
                   <strong>Accelerated and Reliable Development:</strong> The combination of my fundamental knowledge with the efficient use 
@@ -97,7 +97,7 @@ export default function UpworkSummaryPage() {
               <h3 className="text-lg font-semibold mb-2">Why Hire Me?</h3>
               
               <p className="mb-4">
-                By working with me, you'll get the best of both worlds: the technical solidity of an experienced developer 
+                By working with me, you&apos;ll get the best of both worlds: the technical solidity of an experienced developer 
                 and the efficiency provided by modern AI tools. This translates into:
               </p>
               
@@ -128,7 +128,7 @@ export default function UpworkSummaryPage() {
           <Section>
             <h2 className="text-xl font-bold">Contact Me</h2>
             <div className="text-pretty font-mono text-sm text-foreground/80">
-              <p>If you're interested in working with me, you can contact me through:</p>
+              <p>If you&apos;re interested in working with me, you can contact me through:</p>
               <ul className="list-disc pl-5 mt-2">
                 <li>Email: {RESUME_DATA.contact.email}</li>
                 <li>Upwork: <a href="https://www.upwork.com/freelancers/~01ae446fd0e1c79c86" className="text-blue-600 hover:underline">My Upwork Profile</a></li>
