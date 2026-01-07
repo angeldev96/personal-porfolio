@@ -9,6 +9,7 @@ import { Skills } from "./components/Skills";
 import { Header } from "./components/Header";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me"),
   title: `${RESUME_DATA.name} - Resume`,
   description: RESUME_DATA.about,
   openGraph: {
