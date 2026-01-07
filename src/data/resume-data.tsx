@@ -7,16 +7,16 @@ export const RESUME_DATA = {
   location: "Tegucigalpa, Honduras, CST", // Assuming timezone
   locationLink: "https://www.google.com/maps/place/Tegucigalpa", // Link to Tegucigalpa on Google Maps
   about:
-    "Full-Stack Backend (Node/Python) · n8n Automation Specialist",
+    "100% Full-Stack Freelancer (Node/Python) · n8n Automation Specialist · Upwork Top Rated",
   summary: (
     <>
-      I am a full-stack software developer with a strong focus on backend development. I specialize in building scalable and efficient server-side applications using Node.js (NestJS, Express) and Python (FastAPI, Flask). My experience spans designing robust APIs, managing data workflows, and integrating AI models into production systems.
+      I am a 100% full-stack freelance software developer with a strong focus on backend development. I specialize in building scalable and efficient server-side applications using Node.js (NestJS, Express) and Python (FastAPI, Flask). My experience spans designing robust APIs, managing data workflows, and integrating AI models into production systems.
       <br />
       <br />
       I have a solid background in implementing AI features such as large language model (LLM) integration, speech recognition, text-to-speech, and other intelligent services. While my core expertise is backend architecture and AI integration, I am also proficient in frontend development using React and Next.js, allowing me to deliver complete, end-to-end web applications.
       <br />
       <br />
-      I am a Top Rated freelancer on Upwork with ~1 year of freelancing experience and a strong earnings record that reflects the quality and consistency of my work. I also work as a Software Developer at a hydroelectric power plant, where I help build and maintain internal systems. In my free time, I deliver solutions that include web applications, automation workflows (n8n), and AI integrations using intelligent agents.
+      I am a <strong>Top Rated freelancer on Upwork with 100% Job Success Score</strong>. This achievement represents hundreds of hours of high-quality delivery and satisfied clients. My excellent Upwork profile with positive reviews demonstrates my commitment to delivering exceptional work. I focus on building scalable web applications and creating efficient, automated workflows that save businesses time and resources. Whether you need a complex React application or an intricate n8n automation, I deliver high-quality, maintainable code with clear communication and reliable deadlines.
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4", // Replace with your actual avatar URL
@@ -53,7 +53,7 @@ export const RESUME_DATA = {
   work: [
     {
       company: "Freelance (Upwork)",
-      link: "https://www.upwork.com",
+      link: "https://www.upwork.com/freelancers/~0116803452ac7b4ff7",
       badges: [
         "Node.js",
         "NestJS",
@@ -66,38 +66,21 @@ export const RESUME_DATA = {
         "React",
         "PostgreSQL",
       ],
-      title: "Full-Stack Developer · Top Rated",
+      title: "Full-Stack Developer · Top Rated · 100% Job Success",
       logo: null,
       start: "2024",
       end: null,
       description: (
         <>
-          As a Top Rated freelancer I deliver backend-first solutions and end-to-end applications for clients worldwide.
+          As a <strong>Top Rated freelancer with 100% Job Success Score</strong>, I deliver backend-first solutions and end-to-end applications for clients worldwide. My Upwork profile shows hundreds of hours of high-quality delivery with excellent reviews and consistent positive feedback from satisfied clients.
           <ul className="list-inside list-disc">
+            <li> <strong>100% Job Success Score:</strong> Proven history of happy clients and exceptional project delivery.</li>
+            <li> <strong>Top Rated Badge:</strong> Recognition for consistently delivering high-quality work with excellent client satisfaction.</li>
             <li> Designed and built production-grade REST/GraphQL APIs and services in Node.js and Python.</li>
             <li> Implemented AI-powered features: LLM integrations, speech-to-text, and text-to-speech.</li>
             <li> Created automation workflows and internal tools using n8n, integrating third-party services.</li>
             <li> Delivered full-stack web apps with Next.js/React, focusing on performance and maintainability.</li>
-            <li> Maintained excellent client satisfaction and a strong earnings track record on Upwork.</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Copenergy", // or "Freelance", or "Seeking Opportunities"
-      link: "https://arrayanhn.com/beta/", // If applicable
-      badges: ["Node.js", "React", "MySQL", "MUI", "JavaScript"], // Technologies you use
-      title: "Software Developer", // Or your current position
-      logo: null, // If you have a logo
-      start: "2024", // Replace with the actual year
-      end: null, // or the end date if you no longer work there
-      description: (
-        <>
-          Software Developer at a hydroelectric power plant — building and maintaining internal systems and tooling.
-          <ul className="list-inside list-disc">
-            <li> Developed and maintained web applications using Node.js and React.</li>
-            <li> Designed and optimized MySQL databases for reliability and performance.</li>
-            <li> Collaborated with operations teams to streamline workflows and reporting dashboards.</li>
+            <li> <strong>Clear communication and reliable deadlines</strong> are my priority for every project.</li>
           </ul>
         </>
       ),
@@ -130,17 +113,6 @@ export const RESUME_DATA = {
     // You can add more skills here
   ],
   projects: [
-    {
-      title: "AI Chatbot Integration",
-      techStack: ["Deep Chat", "React"],
-      description: "AI Chatbot Integration about my info in my portfolio, Try the AI Chatbot, It Works!",
-      logo: null, // If you have a logo
-      link: {
-        label: "Link to project",
-        href: "https://github.com/angeldev96/personal-porfolio",
-      },
-    },
-
     {
       title: "n8n Automation Workflows",
       techStack: ["n8n", "Node.js"],
