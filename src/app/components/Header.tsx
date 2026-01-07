@@ -1,14 +1,16 @@
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { RESUME_DATA } from "@/data/resume-data";
+import { type Dictionary } from "@/i18n/dictionary";
+import { type ResumeData } from "@/data/resume-data";
 
 interface LocationLinkProps {
-  location: typeof RESUME_DATA.location;
-  locationLink: typeof RESUME_DATA.locationLink;
+  location: ResumeData["location"];
+  locationLink: ResumeData["locationLink"];
+  label: string;
 }
 
-function LocationLink({ location, locationLink }: LocationLinkProps) {
+function LocationLink({ location, locationLink, label }: LocationLinkProps) {
   return (
     <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
       <a
@@ -16,7 +18,7 @@ function LocationLink({ location, locationLink }: LocationLinkProps) {
         href={locationLink}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Location: ${location}`}
+        aria-label={`${label}: ${location}`}
       >
         <GlobeIcon className="size-3" aria-hidden="true" />
         {location}
@@ -47,11 +49,12 @@ function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
 }
 
 interface ContactButtonsProps {
-  contact: typeof RESUME_DATA.contact;
+  contact: ResumeData["contact"];
   personalWebsiteUrl?: string | null;
+  labels: Dictionary["header"];
 }
 
-function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
+function ContactButtons({ contact, personalWebsiteUrl, labels }: ContactButtonsProps) {
   return (
     <div
       className="flex gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
@@ -62,21 +65,21 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
         <SocialButton
           href={personalWebsiteUrl}
           icon={GlobeIcon}
-          label="Personal website"
+          label={labels.personalWebsite}
         />
       )}
       {contact.email && (
         <SocialButton
           href={`mailto:${contact.email}`}
           icon={MailIcon}
-          label="Email"
+          label={labels.email}
         />
       )}
       {contact.tel && (
         <SocialButton
           href={`tel:${contact.tel}`}
           icon={PhoneIcon}
-          label="Phone"
+          label={labels.phone}
         />
       )}
       {contact.social.map((social) => (
@@ -92,7 +95,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
 }
 
 interface PrintContactProps {
-  contact: typeof RESUME_DATA.contact;
+  contact: ResumeData["contact"];
   personalWebsiteUrl?: string | null;
 }
 
@@ -140,42 +143,50 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
 /**
  * Header component displaying personal information and contact details
  */
-export function Header() {
+export function Header({
+  resume,
+  labels,
+}: {
+  resume: ResumeData;
+  labels: Dictionary["header"];
+}) {
   return (
     <header className="flex items-center justify-between">
       <div className="flex-1 space-y-1.5">
         <h1 className="text-2xl font-bold" id="resume-name">
-          {RESUME_DATA.name}
+          {resume.name}
         </h1>
         <p
           className="max-w-md text-pretty font-mono text-sm text-foreground/80 print:text-[12px]"
           aria-labelledby="resume-name"
         >
-          {RESUME_DATA.about}
+          {resume.about}
         </p>
 
         <LocationLink
-          location={RESUME_DATA.location}
-          locationLink={RESUME_DATA.locationLink}
+          location={resume.location}
+          locationLink={resume.locationLink}
+          label={labels.locationLabel}
         />
 
         <ContactButtons
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+          contact={resume.contact}
+          personalWebsiteUrl={resume.personalWebsiteUrl}
+          labels={labels}
         />
 
         <PrintContact
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+          contact={resume.contact}
+          personalWebsiteUrl={resume.personalWebsiteUrl}
         />
       </div>
 
       <Avatar className="size-28" aria-hidden="true">
         <AvatarImage
-          alt={`${RESUME_DATA.name}'s profile picture`}
-          src={RESUME_DATA.avatarUrl}
+          alt={`${resume.name}'s profile picture`}
+          src={resume.avatarUrl}
         />
-        <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+        <AvatarFallback>{resume.initials}</AvatarFallback>
       </Avatar>
     </header>
   );

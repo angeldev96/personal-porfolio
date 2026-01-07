@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
-import { RESUME_DATA } from "../data/resume-data";
+
+import { getResumeData } from "../data/resume-data";
+import { DEFAULT_LOCALE } from "../i18n/config";
 
 export const alt = "Minimalist Resume";
 export const size = {
@@ -11,6 +13,8 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
+  const resume = getResumeData(DEFAULT_LOCALE);
+
   return new ImageResponse(
     (
       <div
@@ -34,8 +38,8 @@ export default async function Image() {
           }}
         >
           <img
-            src={RESUME_DATA.avatarUrl}
-            alt={RESUME_DATA.name}
+            src={resume.avatarUrl}
+            alt={resume.name}
             style={{
               width: "150px",
               height: "150px",
@@ -51,7 +55,7 @@ export default async function Image() {
               marginBottom: "1rem",
             }}
           >
-            {RESUME_DATA.name}
+            {resume.name}
           </div>
           <div
             style={{
@@ -61,7 +65,7 @@ export default async function Image() {
               lineHeight: "1.4",
             }}
           >
-            {RESUME_DATA.about}
+            {resume.about}
           </div>
           <div
             style={{
@@ -70,9 +74,9 @@ export default async function Image() {
               gap: "1rem",
             }}
           >
-            {RESUME_DATA.contact.email && (
+            {resume.contact.email && (
               <div style={{ fontSize: "1rem", color: "#666" }}>
-                {RESUME_DATA.personalWebsiteUrl}
+                {resume.personalWebsiteUrl}
               </div>
             )}
           </div>

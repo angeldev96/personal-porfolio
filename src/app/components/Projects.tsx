@@ -7,7 +7,8 @@ import {
   CardContent,
 } from "../../components/ui/card";
 import { Section } from "../../components/ui/section";
-import { RESUME_DATA } from "../../data/resume-data";
+import { type ResumeData } from "../../data/resume-data";
+import { type Dictionary } from "@/i18n/dictionary";
 
 type ProjectTags = readonly string[];
 
@@ -51,18 +52,19 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
 
 interface ProjectTagsProps {
   tags: ProjectTags;
+  label: string;
 }
 
 /**
  * Renders a list of technology tags used in the project
  */
-function ProjectTags({ tags }: ProjectTagsProps) {
+function ProjectTags({ tags, label }: ProjectTagsProps) {
   if (tags.length === 0) return null;
 
   return (
     <ul
       className="mt-2 flex list-none flex-wrap gap-1 p-0"
-      aria-label="Technologies used"
+      aria-label={label}
     >
       {tags.map((tag) => (
         <li key={tag}>
@@ -83,12 +85,13 @@ interface ProjectCardProps {
   description: string;
   tags: ProjectTags;
   link?: string;
+  label: string;
 }
 
 /**
  * Card component displaying project information
  */
-function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
+function ProjectCard({ title, description, tags, link, label }: ProjectCardProps) {
   return (
     <Card
       className="flex h-full flex-col overflow-hidden border p-3"
@@ -108,24 +111,25 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex">
-        <ProjectTags tags={tags} />
+        <ProjectTags tags={tags} label={label} />
       </CardContent>
     </Card>
   );
 }
 
 interface ProjectsProps {
-  projects: (typeof RESUME_DATA)["projects"];
+  projects: ResumeData["projects"];
+  labels: Dictionary["projects"];
 }
 
 /**
  * Section component displaying all side projects
  */
-export function Projects({ projects }: ProjectsProps) {
+export function Projects({ projects, labels }: ProjectsProps) {
   return (
     <Section className="print-force-new-page scroll-mb-16 print:space-y-4 print:pt-12">
       <h2 className="text-xl font-bold" id="side-projects">
-        Side projects
+        {labels.sideProjects || labels.projects}
       </h2>
       <div
         className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3"
@@ -142,6 +146,7 @@ export function Projects({ projects }: ProjectsProps) {
               description={project.description}
               tags={project.techStack}
               link={"link" in project ? project.link.href : undefined}
+              label={labels.technologiesUsed}
             />
           </article>
         ))}

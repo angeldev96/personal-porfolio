@@ -1,23 +1,27 @@
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import { type ResumeData } from "@/data/resume-data";
+import { type Dictionary } from "@/i18n/dictionary";
 import { cn } from "@/lib/utils";
 
-type Skills = readonly string[];
+type Skills = ResumeData["skills"];
 
 interface SkillsListProps {
   skills: Skills;
   className?: string;
+  label: string;
+  ariaLabelledby?: string;
 }
 
 /**
  * Renders a list of skills as badges
  */
-function SkillsList({ skills, className }: SkillsListProps) {
+function SkillsList({ skills, className, label, ariaLabelledby }: SkillsListProps) {
   return (
     <ul
       className={cn("flex list-none flex-wrap gap-1 p-0", className)}
-      aria-label="List of skills"
+      aria-label={label}
+      aria-labelledby={ariaLabelledby}
     >
       {skills.map((skill) => (
         <li key={skill}>
@@ -33,19 +37,20 @@ function SkillsList({ skills, className }: SkillsListProps) {
 interface SkillsProps {
   skills: Skills;
   className?: string;
+  title: Dictionary["skills"]["skills"];
 }
 
 /**
  * Skills section component
  * Displays a list of professional skills as badges
  */
-export function Skills({ skills, className }: SkillsProps) {
+export function Skills({ skills, className, title }: SkillsProps) {
   return (
     <Section className={className}>
       <h2 className="text-xl font-bold" id="skills-section">
-        Skills
+        {title}
       </h2>
-      <SkillsList skills={skills} aria-labelledby="skills-section" />
+      <SkillsList skills={skills} ariaLabelledby="skills-section" label={title} />
     </Section>
   );
 }

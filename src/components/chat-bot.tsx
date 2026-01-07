@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { type Dictionary } from '@/i18n/dictionary';
 
 // Dynamically import DeepChat component
 const DeepChat = dynamic(
@@ -19,12 +20,12 @@ export interface ChatMessage {
 const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 const GEMINI_API_URL = process.env.NEXT_PUBLIC_GEMINI_API_URL;
 
-export function ChatBot() {
+export function ChatBot({ labels }: { labels: Dictionary['chatBot'] }) {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [history, setHistory] = useState<ChatMessage[]>([
-    { role: 'ai', text: 'Hello! How can I help you today?' },
+    { role: 'ai', text: labels.initialMessage },
   ]);
 
   const handleSendMessage = async () => {
@@ -52,12 +53,12 @@ export function ChatBot() {
       }
 
       const data = await response.json();
-      const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not generate a response.';
+      const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || labels.fallbackMessage;
       
       setHistory(prev => [...prev, { role: 'ai', text: aiResponse }]);
     } catch (error) {
       console.error('Error:', error);
-      setHistory(prev => [...prev, { role: 'ai', text: 'Sorry, there was an error processing your request.' }]);
+      setHistory(prev => [...prev, { role: 'ai', text: labels.errorMessage }]);
     } finally {
       setIsLoading(false);
     }
@@ -70,7 +71,7 @@ export function ChatBot() {
           <div className="flex items-center justify-between p-4 border-b">
             <div className="flex items-center gap-2">
               <MessageCircle className="h-5 w-5 text-primary" />
-              <h2 className="font-semibold">Chat Assistant</h2>
+              <h2 className="font-semibold">{labels.title}</h2>
             </div>
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} aria-label="Close chat">
               <X className="h-5 w-5" />
@@ -117,7 +118,7 @@ export function ChatBot() {
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type your message..."
+                placeholder={labels.inputPlaceholder}
                 disabled={isLoading}
                 className="flex-1 min-w-0 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50"
               />

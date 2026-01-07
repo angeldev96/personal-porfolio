@@ -2,6 +2,7 @@
 
 import { Button } from "./ui/button";
 import { PrinterIcon } from "lucide-react";
+import { type Dictionary } from "@/i18n/dictionary";
 import {
   Drawer,
   DrawerTrigger,
@@ -13,7 +14,7 @@ import {
   DrawerClose,
 } from "./ui/drawer";
 
-export const PrintDrawer = () => {
+export const PrintDrawer = ({ labels }: { labels: Dictionary["printDrawer"] }) => {
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -24,14 +25,14 @@ export const PrintDrawer = () => {
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
-            <DrawerTitle>Move Goal</DrawerTitle>
-            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+            <DrawerTitle>{labels.title}</DrawerTitle>
+            <DrawerDescription>{labels.description}</DrawerDescription>
           </DrawerHeader>
           <div className="p-4 pb-0"></div>
           <DrawerFooter>
-            <Button onClick={() => window.print()}>Print</Button>
+            <Button onClick={() => window.print()}>{labels.print}</Button>
             <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
+              <Button variant="outline">{labels.cancel}</Button>
             </DrawerClose>
           </DrawerFooter>
         </div>

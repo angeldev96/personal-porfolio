@@ -1,28 +1,30 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import { type ResumeData } from "@/data/resume-data";
+import { type Dictionary } from "@/i18n/dictionary";
 import { cn } from "@/lib/utils";
 
-type WorkExperience = (typeof RESUME_DATA)["work"][number];
+type WorkExperience = ResumeData["work"][number];
 type WorkBadges = readonly string[];
 
 interface BadgeListProps {
   className?: string;
   badges: WorkBadges;
+  label: string;
 }
 
 /**
  * Renders a list of badges for work experience
  * Handles both mobile and desktop layouts through className prop
  */
-function BadgeList({ className, badges }: BadgeListProps) {
+function BadgeList({ className, badges, label }: BadgeListProps) {
   if (badges.length === 0) return null;
 
   return (
     <ul
       className={cn("inline-flex list-none gap-x-1 p-0", className)}
-      aria-label="Technologies used"
+      aria-label={label}
     >
       {badges.map((badge) => (
         <li key={badge}>
@@ -41,18 +43,19 @@ function BadgeList({ className, badges }: BadgeListProps) {
 interface WorkPeriodProps {
   start: WorkExperience["start"];
   end?: WorkExperience["end"];
+  presentLabel: string;
 }
 
 /**
  * Displays the work period in a consistent format
  */
-function WorkPeriod({ start, end }: WorkPeriodProps) {
+function WorkPeriod({ start, end, presentLabel }: WorkPeriodProps) {
   return (
     <div
       className="text-sm tabular-nums text-gray-500"
-      aria-label={`Employment period: ${start} to ${end ?? "Present"}`}
+      aria-label={`Employment period: ${start} to ${end ?? presentLabel}`}
     >
-      {start} - {end ?? "Present"}
+      {start} - {end ?? presentLabel}
     </div>
   );
 }
@@ -81,13 +84,17 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
 
 interface WorkExperienceItemProps {
   work: WorkExperience;
+  labels: {
+    technologiesUsed: string;
+    present: string;
+  };
 }
 
 /**
  * Individual work experience card component
  * Handles responsive layout for badges (mobile/desktop)
  */
-function WorkExperienceItem({ work }: WorkExperienceItemProps) {
+function WorkExperienceItem({ work, labels }: WorkExperienceItemProps) {
   const { company, link, badges, title, start, end, description } = work;
 
   return (
@@ -99,9 +106,10 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
             <BadgeList
               className="hidden gap-x-1 sm:inline-flex"
               badges={badges}
+              label={labels.technologiesUsed}
             />
           </h3>
-          <WorkPeriod start={start} end={end} />
+          <WorkPeriod start={start} end={end} presentLabel={labels.present} />
         </div>
 
         <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
@@ -117,6 +125,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
           <BadgeList
             className="-mx-2 flex-wrap gap-1 sm:hidden"
             badges={badges}
+            label={labels.technologiesUsed}
           />
         </div>
       </CardContent>
@@ -125,23 +134,24 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
 }
 
 interface WorkExperienceProps {
-  work: (typeof RESUME_DATA)["work"];
+  work: ResumeData["work"];
+  labels: Dictionary["work"];
 }
 
 /**
  * Main work experience section component
  * Renders a list of work experiences in chronological order
  */
-export function WorkExperience({ work }: WorkExperienceProps) {
+export function WorkExperience({ work, labels }: WorkExperienceProps) {
   return (
     <Section>
       <h2 className="text-xl font-bold" id="work-experience">
-        Work Experience
+        {labels.work}
       </h2>
       <div className="space-y-4 print:space-y-0" role="feed" aria-labelledby="work-experience">
         {work.map((item) => (
           <article key={`${item.company}-${item.start}`} role="article">
-            <WorkExperienceItem work={item} />
+            <WorkExperienceItem work={item} labels={labels} />
           </article>
         ))}
       </div>

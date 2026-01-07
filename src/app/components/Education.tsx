@@ -1,8 +1,9 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import { type ResumeData } from "@/data/resume-data";
+import { type Dictionary } from "@/i18n/dictionary";
 
-type Education = (typeof RESUME_DATA)["education"][number];
+type Education = ResumeData["education"][number];
 
 interface EducationPeriodProps {
   start: Education["start"];
@@ -60,17 +61,18 @@ function EducationItem({ education }: EducationItemProps) {
 
 interface EducationListProps {
   education: readonly Education[];
+  labels: Dictionary["education"];
 }
 
 /**
  * Main education section component
  * Renders a list of education experiences
  */
-export function Education({ education }: EducationListProps) {
+export function Education({ education, labels }: EducationListProps) {
   return (
     <Section>
       <h2 className="text-xl font-bold" id="education-section">
-        Education
+        {labels.education}
       </h2>
       <div
         className="space-y-4"
