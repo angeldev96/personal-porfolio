@@ -4,20 +4,21 @@ import { LanguageToggle } from "@/components/language-toggle";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const dictionary = getDictionary(locale);
+  const { locale } = await params;
+  const resolvedLocale: Locale = isLocale(locale) ? locale : DEFAULT_LOCALE;
+  const dictionary = getDictionary(resolvedLocale);
 
   return (
     <div className="min-h-screen">
       <div className="fixed right-4 top-4 z-50 print:hidden">
-        <LanguageToggle currentLocale={locale} label={dictionary.languageToggle.label} />
+        <LanguageToggle currentLocale={resolvedLocale} label={dictionary.languageToggle.label} />
       </div>
       {children}
     </div>

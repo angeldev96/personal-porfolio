@@ -40,10 +40,11 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const locale = resolveLocale(params.locale);
-  const resume = getResumeData(locale);
-  const dictionary = getDictionary(locale);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const resolvedLocale = resolveLocale(locale);
+  const resume = getResumeData(resolvedLocale);
+  const dictionary = getDictionary(resolvedLocale);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me";
   const title = `${resume.name} - ${dictionary.meta.resumeTitle}`;
 
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       title,
       description: resume.about,
       type: "profile",
-      locale: locale === "en" ? "en_US" : "es_ES",
+      locale: resolvedLocale === "en" ? "en_US" : "es_ES",
       images: [
         {
           url: `${siteUrl}/opengraph-image`,
@@ -74,10 +75,11 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-export default function ResumePage({ params }: { params: { locale: string } }) {
-  const locale = resolveLocale(params.locale);
-  const resume = getResumeData(locale);
-  const dictionary = getDictionary(locale);
+export default async function ResumePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const resolvedLocale = resolveLocale(locale);
+  const resume = getResumeData(resolvedLocale);
+  const dictionary = getDictionary(resolvedLocale);
 
   return (
     <main

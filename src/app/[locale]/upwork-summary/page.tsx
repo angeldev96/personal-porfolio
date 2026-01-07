@@ -35,10 +35,11 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const locale = resolveLocale(params.locale);
-  const resume = getResumeData(locale);
-  const dictionary = getDictionary(locale);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const resolvedLocale = resolveLocale(locale);
+  const resume = getResumeData(resolvedLocale);
+  const dictionary = getDictionary(resolvedLocale);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me";
   const title = `${resume.name} - ${dictionary.meta.upworkTitle}`;
 
@@ -50,15 +51,16 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       title,
       description: dictionary.meta.upworkDescription,
       type: "profile",
-      locale: locale === "en" ? "en_US" : "es_ES",
+      locale: resolvedLocale === "en" ? "en_US" : "es_ES",
     },
   };
 }
 
-export default function UpworkSummaryPage({ params }: { params: { locale: string } }) {
-  const locale = resolveLocale(params.locale);
-  const resume = getResumeData(locale);
-  const dictionary = getDictionary(locale);
+export default async function UpworkSummaryPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const resolvedLocale = resolveLocale(locale);
+  const resume = getResumeData(resolvedLocale);
+  const dictionary = getDictionary(resolvedLocale);
   const upworkProfile = resume.work[0]?.link ?? "https://www.upwork.com/freelancers/~0116803452ac7b4ff7";
 
   return (

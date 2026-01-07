@@ -16,13 +16,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me"),
 };
 
-function getCurrentLocale() {
-  const stored = cookies().get("NEXT_LOCALE")?.value;
+async function getCurrentLocale() {
+  const cookieStore = await cookies();
+  const stored = cookieStore.get("NEXT_LOCALE")?.value;
   return stored && isLocale(stored) ? stored : DEFAULT_LOCALE;
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const locale = getCurrentLocale();
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getCurrentLocale();
 
   return (
     <html lang={locale} className={inter.className}>
