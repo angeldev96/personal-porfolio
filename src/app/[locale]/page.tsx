@@ -158,7 +158,7 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
       </div>
 
       <section
-        className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
+        className="mx-auto w-full max-w-2xl space-y-8 bg-background dark:bg-background print:space-y-4"
         aria-label="Resume Content"
       >
         <Header resume={resume} labels={dictionary.header} />

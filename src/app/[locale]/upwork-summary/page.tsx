@@ -131,7 +131,7 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
       </div>
 
       <section
-        className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
+        className="mx-auto w-full max-w-2xl space-y-8 bg-background dark:bg-background print:space-y-4"
         aria-label="Upwork Summary Content"
       >
         <div className="flex flex-col gap-3">

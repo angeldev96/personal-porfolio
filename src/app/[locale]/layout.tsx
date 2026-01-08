@@ -1,6 +1,7 @@
 import React from "react";
 
 import { LanguageToggle } from "@/components/language-toggle";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 
@@ -17,7 +18,8 @@ export default async function LocaleLayout({
 
   return (
     <div className="min-h-screen">
-      <div className="fixed right-4 top-4 z-50 print:hidden">
+      <div className="fixed right-4 top-4 z-50 flex gap-2 print:hidden">
+        <ThemeToggle label={dictionary.themeToggle.label} />
         <LanguageToggle currentLocale={resolvedLocale} label={dictionary.languageToggle.label} />
       </div>
       {children}

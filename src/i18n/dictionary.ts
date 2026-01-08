@@ -59,6 +59,9 @@ export type Dictionary = {
   languageToggle: {
     label: string;
   };
+  themeToggle: {
+    label: string;
+  };
   upwork: {
     heading: string;
     intro: string;
@@ -160,6 +163,9 @@ const dictionaries: Record<Locale, Dictionary> = {
     },
     languageToggle: {
       label: "Change language",
+    },
+    themeToggle: {
+      label: "Toggle theme",
     },
     upwork: {
       heading: "For Upwork Employers",
@@ -271,6 +277,9 @@ const dictionaries: Record<Locale, Dictionary> = {
     },
     languageToggle: {
       label: "Cambiar idioma",
+    },
+    themeToggle: {
+      label: "Cambiar tema",
     },
     upwork: {
       heading: "Para empleadores en Upwork",

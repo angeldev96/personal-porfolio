@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 import React from "react";
 
 import { DEFAULT_LOCALE, isLocale } from "@/i18n/config";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const inter = Inter({
@@ -74,9 +75,31 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const locale = await getCurrentLocale();
 
   return (
-    <html lang={locale} className={inter.className}>
-      <body>
-        {children}
+    <html lang={locale} className={inter.className} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function getTheme() {
+                  const storedTheme = localStorage.getItem('portfolio-theme');
+                  if (storedTheme) {
+                    return storedTheme;
+                  }
+                  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+
+                const theme = getTheme();
+                document.documentElement.classList.add(theme);
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body suppressHydrationWarning>
+        <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
+          {children}
+        </ThemeProvider>
         {enableAnalytics && <Analytics />}
       </body>
     </html>
