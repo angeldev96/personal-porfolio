@@ -139,6 +139,92 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           </>
         ),
       },
+      {
+        company: "Copenergy SA",
+        link: "https://www.linkedin.com/company/copenergy-s-a-/",
+        badges: [
+          "Next.js",
+          "Node.js",
+          "Python",
+          "React",
+          "NestJS",
+          "SQL Server",
+          "PostgreSQL",
+        ],
+        title: "Full-Stack Developer & Electrical Plant Operator",
+        logo: null,
+        start: "Jul 2024",
+        end: "Dec 2025",
+        description: (
+          <>
+            Passionate professional combining software development expertise with operational management in the energy sector. Create and maintain applications that optimize operations and monitoring in the electrical plant, while developing web applications for various departments.
+            <ul className="list-inside list-disc">
+              <li>Developed web applications to optimize electrical plant operations and monitoring systems.</li>
+              <li>Managed electrical plant machinery and monitored systems for efficient and safe operation.</li>
+              <li>Combined technical and operational knowledge to deliver tailored solutions for business needs.</li>
+              <li>Committed to innovation and sustainability, improving existing processes through technology.</li>
+              <li>Contributed to a collaborative work environment with continuous improvement mindset.</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        company: "DAI",
+        link: "https://www.dai.com",
+        badges: ["C#", "Microsoft SQL Server", ".NET", "Web Development"],
+        title: "IT Auxiliary",
+        logo: null,
+        start: "Jul 2023",
+        end: "Jan 2024",
+        description: (
+          <>
+            Provided IT support and development services in a hybrid work environment.
+            <ul className="list-inside list-disc">
+              <li>Assisted in web development projects using C# and Microsoft SQL Server.</li>
+              <li>Provided technical support and maintenance for internal systems.</li>
+              <li>Collaborated with cross-functional teams on IT initiatives.</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        company: "DAI",
+        link: "https://www.dai.com",
+        badges: ["C#", "Web Development", ".NET", "SQL Server"],
+        title: "IT Intern",
+        logo: null,
+        start: "Feb 2023",
+        end: "Jun 2023",
+        description: (
+          <>
+            Completed internship focusing on web development and IT support.
+            <ul className="list-inside list-disc">
+              <li>Gained hands-on experience in web development with C# and SQL Server.</li>
+              <li>Assisted in developing and maintaining internal applications.</li>
+              <li>Participated in code reviews and team meetings.</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        company: "TIGO (Milicom)",
+        link: "https://www.tigo.com.hn",
+        badges: ["Systems Analysis", "IT Support", "Telecommunications"],
+        title: "Systems Analyst Intern",
+        logo: null,
+        start: "Mar 2019",
+        end: "Jul 2019",
+        description: (
+          <>
+            Completed internship at Tigo Honduras as a Systems Analyst.
+            <ul className="list-inside list-disc">
+              <li>Analyzed and documented system requirements and processes.</li>
+              <li>Provided IT support and assistance in telecommunications projects.</li>
+              <li>Gained exposure to large-scale telecommunications infrastructure.</li>
+            </ul>
+          </>
+        ),
+      },
     ],
     skills: [
       "Node.js",
@@ -166,33 +252,23 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     ],
     projects: [
       {
-        title: "n8n Automation Workflows",
-        techStack: ["n8n", "Node.js"],
-        description: "Production automation workflows and integrations (client-specific details omitted).",
+        title: "Yiddish Jobs",
+        techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        description: "Platform helping the Yiddish community in Boro Park, New York find employment. Assisted with web platform development, internal tools, and automation to support job seekers and local businesses.",
         logo: null,
         link: {
-          label: "n8n.io",
-          href: "https://n8n.io",
+          label: "yiddishjobs.com",
+          href: "https://www.yiddishjobs.com/",
         },
       },
       {
-        title: "Mobile App of a Modbus Scanner",
-        techStack: ["React Native", "Expo"],
-        description: "Mobile App of a Modbus Scanner, WIP",
+        title: "Pinky's Store",
+        techStack: ["Next.js", "React", "Node.js", "PostgreSQL"],
+        description: "E-commerce platform and inventory management system for a local cosmetics business. Automated sales processes and provided the owner with an internal tool for efficient inventory tracking and sales management.",
         logo: null,
         link: {
-          label: "Link to project",
-          href: "PROJECT_URL",
-        },
-      },
-      {
-        title: "E-Commerce Website",
-        techStack: ["React", "Node", "PostgreSQL", "Stripe"],
-        description: "E-Commerce Website with Stripe Payment Integration.",
-        logo: null,
-        link: {
-          label: "Link to project",
-          href: "https://github.com/angeldev96/partyandgift",
+          label: "GitHub",
+          href: "https://github.com/angeldev96/pinkys-store",
         },
       },
     ],
@@ -287,6 +363,92 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           </>
         ),
       },
+      {
+        company: "Copenergy SA",
+        link: "https://www.linkedin.com/company/copenergy-s-a-/",
+        badges: [
+          "Next.js",
+          "Node.js",
+          "Python",
+          "React",
+          "NestJS",
+          "SQL Server",
+          "PostgreSQL",
+        ],
+        title: "Desarrollador Full-Stack y Operador de Planta Eléctrica",
+        logo: null,
+        start: "Jul 2024",
+        end: "Dic 2025",
+        description: (
+          <>
+            Profesional apasionado que combina experiencia en desarrollo de software con gestión operativa en el sector energético. Desarrollo y mantengo aplicaciones que optimizan operaciones y monitoreo en la planta eléctrica, además de crear aplicaciones web para varios departamentos.
+            <ul className="list-inside list-disc">
+              <li>Desarrollé aplicaciones web para optimizar operaciones y sistemas de monitoreo de la planta eléctrica.</li>
+              <li>Administré maquinaria de planta eléctrica y monitoreé sistemas para operación eficiente y segura.</li>
+              <li>Combiné conocimiento técnico y operacional para entregar soluciones adaptadas a necesidades del negocio.</li>
+              <li>Comprometido con la innovación y sostenibilidad, mejorando procesos existentes a través de tecnología.</li>
+              <li>Contribuí a un ambiente colaborativo con mentalidad de mejora continua.</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        company: "DAI",
+        link: "https://www.dai.com",
+        badges: ["C#", "Microsoft SQL Server", ".NET", "Desarrollo Web"],
+        title: "Auxiliar de IT",
+        logo: null,
+        start: "Jul 2023",
+        end: "Ene 2024",
+        description: (
+          <>
+            Brindé soporte de TI y servicios de desarrollo en entorno de trabajo híbrido.
+            <ul className="list-inside list-disc">
+              <li>Asistí en proyectos de desarrollo web usando C# y Microsoft SQL Server.</li>
+              <li>Proporcioné soporte técnico y mantenimiento de sistemas internos.</li>
+              <li>Colaboré con equipos multidisciplinarios en iniciativas de TI.</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        company: "DAI",
+        link: "https://www.dai.com",
+        badges: ["C#", "Desarrollo Web", ".NET", "SQL Server"],
+        title: "Pasante de IT",
+        logo: null,
+        start: "Feb 2023",
+        end: "Jun 2023",
+        description: (
+          <>
+            Completé pasantía enfocada en desarrollo web y soporte de TI.
+            <ul className="list-inside list-disc">
+              <li>Adquirí experiencia práctica en desarrollo web con C# y SQL Server.</li>
+              <li>Asistí en el desarrollo y mantenimiento de aplicaciones internas.</li>
+              <li>Participé en revisiones de código y reuniones de equipo.</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        company: "TIGO (Milicom)",
+        link: "https://www.tigo.com.hn",
+        badges: ["Análisis de Sistemas", "Soporte TI", "Telecomunicaciones"],
+        title: "Pasante Analista de Sistemas",
+        logo: null,
+        start: "Mar 2019",
+        end: "Jul 2019",
+        description: (
+          <>
+            Realicé pasantía en Tigo Honduras como Analista de Sistemas.
+            <ul className="list-inside list-disc">
+              <li>Analicé y documenté requerimientos y procesos de sistemas.</li>
+              <li>Proporcioné soporte de TI y asistencia en proyectos de telecomunicaciones.</li>
+              <li>Obtuve exposición a infraestructura de telecomunicaciones a gran escala.</li>
+            </ul>
+          </>
+        ),
+      },
     ],
     skills: [
       "Node.js",
@@ -314,33 +476,23 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     ],
     projects: [
       {
-        title: "Automatizaciones con n8n",
-        techStack: ["n8n", "Node.js"],
-        description: "Flujos de automatización e integraciones en producción (detalles de clientes omitidos).",
+        title: "Yiddish Jobs",
+        techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        description: "Plataforma que ayuda a la comunidad Yiddish en Boro Park, Nueva York a encontrar empleo. Asistí con el desarrollo de la plataforma web, herramientas internas y automatización para apoyar a buscadores de empleo y negocios locales.",
         logo: null,
         link: {
-          label: "n8n.io",
-          href: "https://n8n.io",
+          label: "yiddishjobs.com",
+          href: "https://www.yiddishjobs.com/",
         },
       },
       {
-        title: "App móvil para escáner Modbus",
-        techStack: ["React Native", "Expo"],
-        description: "Aplicación móvil de escáner Modbus (en progreso).",
+        title: "Pinky's Store",
+        techStack: ["Next.js", "React", "Node.js", "PostgreSQL"],
+        description: "Plataforma de e-commerce y sistema de gestión de inventario para un negocio local de cosméticos. Automaticé procesos de ventas y proporcioné a la dueña una herramienta interna para gestión eficiente de inventario y ventas.",
         logo: null,
         link: {
-          label: "Link al proyecto",
-          href: "PROJECT_URL",
-        },
-      },
-      {
-        title: "E-Commerce",
-        techStack: ["React", "Node", "PostgreSQL", "Stripe"],
-        description: "E-Commerce con integración de pagos Stripe.",
-        logo: null,
-        link: {
-          label: "Repositorio",
-          href: "https://github.com/angeldev96/partyandgift",
+          label: "GitHub",
+          href: "https://github.com/angeldev96/pinkys-store",
         },
       },
     ],

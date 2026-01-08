@@ -114,7 +114,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       projects: "Projects",
       technologiesUsed: "Technologies used",
       present: "Present",
-      sideProjects: "Side projects",
+      sideProjects: "Impactful Projects",
     },
     education: {
       about: "",
@@ -225,7 +225,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       projects: "Proyectos",
       technologiesUsed: "Tecnologías usadas",
       present: "Actualidad",
-      sideProjects: "Proyectos personales",
+      sideProjects: "Proyectos con impacto",
     },
     education: {
       about: "",
