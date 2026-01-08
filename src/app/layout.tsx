@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     "Full-stack software engineer and web developer specialized in Node.js, Python, Next.js, and automation with n8n. Upwork Top Rated with 100% Job Success.",
 };
 
+const enableAnalytics = process.env.NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS === "true";
+
 async function getCurrentLocale() {
   const cookieStore = await cookies();
   const stored = cookieStore.get("NEXT_LOCALE")?.value;
@@ -32,7 +34,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang={locale} className={inter.className}>
       <body>
         {children}
-        <Analytics />
+        {enableAnalytics && <Analytics />}
       </body>
     </html>
   );
