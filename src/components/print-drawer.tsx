@@ -18,7 +18,10 @@ export const PrintDrawer = ({ labels }: { labels: Dictionary["printDrawer"] }) =
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button className="fixed bottom-4 right-4 size-16 rounded-full shadow-2xl print:hidden">
+        <Button
+          className="fixed bottom-4 right-4 size-16 rounded-full shadow-2xl print:hidden"
+          aria-label={labels.print}
+        >
           <PrinterIcon />
         </Button>
       </DrawerTrigger>

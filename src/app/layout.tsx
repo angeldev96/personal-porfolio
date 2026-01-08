@@ -14,6 +14,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev"),
+  title: "Angel Valladares | Full-Stack Software Engineer & Web Developer",
+  description:
+    "Full-stack software engineer and web developer specialized in Node.js, Python, Next.js, and automation with n8n. Upwork Top Rated with 100% Job Success.",
 };
 
 async function getCurrentLocale() {

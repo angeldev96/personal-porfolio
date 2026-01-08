@@ -56,41 +56,47 @@ interface ContactButtonsProps {
 
 function ContactButtons({ contact, personalWebsiteUrl, labels }: ContactButtonsProps) {
   return (
-    <div
-      className="flex gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
-      role="list"
+    <ul
+      className="flex list-none gap-x-1 p-0 pt-1 font-mono text-sm text-foreground/80 print:hidden"
       aria-label="Contact links"
     >
       {personalWebsiteUrl && (
-        <SocialButton
-          href={personalWebsiteUrl}
-          icon={GlobeIcon}
-          label={labels.personalWebsite}
-        />
+        <li>
+          <SocialButton
+            href={personalWebsiteUrl}
+            icon={GlobeIcon}
+            label={labels.personalWebsite}
+          />
+        </li>
       )}
       {contact.email && (
-        <SocialButton
-          href={`mailto:${contact.email}`}
-          icon={MailIcon}
-          label={labels.email}
-        />
+        <li>
+          <SocialButton
+            href={`mailto:${contact.email}`}
+            icon={MailIcon}
+            label={labels.email}
+          />
+        </li>
       )}
       {contact.tel && (
-        <SocialButton
-          href={`tel:${contact.tel}`}
-          icon={PhoneIcon}
-          label={labels.phone}
-        />
+        <li>
+          <SocialButton
+            href={`tel:${contact.tel}`}
+            icon={PhoneIcon}
+            label={labels.phone}
+          />
+        </li>
       )}
       {contact.social.map((social) => (
-        <SocialButton
-          key={social.name}
-          href={social.url}
-          icon={social.icon}
-          label={social.name}
-        />
+        <li key={social.name}>
+          <SocialButton
+            href={social.url}
+            icon={social.icon}
+            label={social.name}
+          />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 

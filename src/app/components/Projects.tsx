@@ -140,6 +140,7 @@ export function Projects({ projects, labels }: ProjectsProps) {
           <article
             key={project.title}
             className="h-full" // Added h-full here
+            role="article"
           >
             <ProjectCard
               title={project.title}
