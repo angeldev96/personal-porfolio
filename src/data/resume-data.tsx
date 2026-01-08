@@ -1,5 +1,4 @@
-
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import React from "react";
 import { DEFAULT_LOCALE, Locale } from "@/i18n/config";
 
 export type ResumeData = {
@@ -17,7 +16,7 @@ export type ResumeData = {
     social: {
       name: string;
       url: string;
-      icon: React.ElementType;
+      icon: "github" | "linkedin" | "x";
     }[];
   };
   education: {
@@ -77,17 +76,17 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         {
           name: "GitHub",
           url: "https://github.com/angeldev96",
-          icon: GitHubIcon,
+          icon: "github",
         },
         {
           name: "LinkedIn",
           url: "https://www.linkedin.com/in/angel-valladares-422490159/",
-          icon: LinkedInIcon,
+          icon: "linkedin",
         },
         {
           name: "X",
           url: "https://twitter.com/angeldev96",
-          icon: XIcon,
+          icon: "x",
         },
       ],
     },
@@ -225,17 +224,17 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         {
           name: "GitHub",
           url: "https://github.com/angeldev96",
-          icon: GitHubIcon,
+          icon: "github",
         },
         {
           name: "LinkedIn",
           url: "https://www.linkedin.com/in/angel-valladares-422490159/",
-          icon: LinkedInIcon,
+          icon: "linkedin",
         },
         {
           name: "X",
           url: "https://twitter.com/angeldev96",
-          icon: XIcon,
+          icon: "x",
         },
       ],
     },

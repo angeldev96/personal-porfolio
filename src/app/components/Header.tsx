@@ -1,4 +1,8 @@
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { type Dictionary } from "@/i18n/dictionary";
@@ -27,13 +31,17 @@ function LocationLink({ location, locationLink, label }: LocationLinkProps) {
   );
 }
 
-interface SocialButtonProps {
-  href: string;
-  icon: React.ElementType;
-  label: string;
-}
+type SocialIconName = "github" | "linkedin" | "x";
 
-function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
+const socialIconMap: Record<SocialIconName, React.ElementType> = {
+  github: GitHubIcon,
+  linkedin: LinkedInIcon,
+  x: XIcon,
+};
+
+function SocialButton({ href, icon, label }: { href: string; icon: SocialIconName; label: string }) {
+  const Icon = socialIconMap[icon];
+
   return (
     <Button className="size-8" variant="outline" size="icon" asChild>
       <a
@@ -55,6 +63,37 @@ interface ContactButtonsProps {
 }
 
 function ContactButtons({ contact, personalWebsiteUrl, labels }: ContactButtonsProps) {
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const toastTimer = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (toastTimer.current) {
+        clearTimeout(toastTimer.current);
+      }
+    };
+  }, []);
+
+  const showToast = (message: string) => {
+    if (toastTimer.current) {
+      clearTimeout(toastTimer.current);
+    }
+
+    setToastMessage(message);
+    toastTimer.current = setTimeout(() => setToastMessage(null), 2000);
+  };
+
+  const copyEmail = async () => {
+    if (!contact.email) return;
+    try {
+      await navigator.clipboard?.writeText(contact.email);
+      showToast(labels.copiedEmail);
+    } catch (error) {
+      console.error("Failed to copy email", error);
+      showToast(labels.copyFailed);
+    }
+  };
+
   return (
     <ul
       className="flex list-none gap-x-1 p-0 pt-1 font-mono text-sm text-foreground/80 print:hidden"
@@ -62,29 +101,43 @@ function ContactButtons({ contact, personalWebsiteUrl, labels }: ContactButtonsP
     >
       {personalWebsiteUrl && (
         <li>
-          <SocialButton
-            href={personalWebsiteUrl}
-            icon={GlobeIcon}
-            label={labels.personalWebsite}
-          />
+          <Button className="size-8" variant="outline" size="icon" asChild>
+            <a
+              href={personalWebsiteUrl}
+              aria-label={labels.personalWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GlobeIcon className="size-4" aria-hidden="true" />
+            </a>
+          </Button>
         </li>
       )}
       {contact.email && (
         <li>
-          <SocialButton
-            href={`mailto:${contact.email}`}
-            icon={MailIcon}
-            label={labels.email}
-          />
+          <Button
+            className="size-8"
+            variant="outline"
+            size="icon"
+            aria-label={`${labels.email}: copy to clipboard`}
+            title={labels.copyEmail}
+            onClick={copyEmail}
+            type="button"
+          >
+            <MailIcon className="size-4" aria-hidden="true" />
+          </Button>
         </li>
       )}
       {contact.tel && (
         <li>
-          <SocialButton
-            href={`tel:${contact.tel}`}
-            icon={PhoneIcon}
-            label={labels.phone}
-          />
+          <Button className="size-8" variant="outline" size="icon" asChild>
+            <a
+              href={`tel:${contact.tel}`}
+              aria-label={labels.phone}
+            >
+              <PhoneIcon className="size-4" aria-hidden="true" />
+            </a>
+          </Button>
         </li>
       )}
       {contact.social.map((social) => (
@@ -96,6 +149,16 @@ function ContactButtons({ contact, personalWebsiteUrl, labels }: ContactButtonsP
           />
         </li>
       ))}
+
+      {toastMessage && (
+        <div
+          className="fixed left-1/2 bottom-6 -translate-x-1/2 rounded-md bg-foreground px-3 py-1 text-xs font-medium text-background shadow-lg"
+          role="status"
+          aria-live="polite"
+        >
+          {toastMessage}
+        </div>
+      )}
     </ul>
   );
 }

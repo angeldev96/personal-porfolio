@@ -23,6 +23,9 @@ export type Dictionary = {
     email: string;
     phone: string;
     locationLabel: string;
+    copyEmail: string;
+    copiedEmail: string;
+    copyFailed: string;
   };
   summary: {
     title: string;
@@ -88,6 +91,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       email: "Email",
       phone: "Phone",
       locationLabel: "Location",
+      copyEmail: "Copy email",
+      copiedEmail: "Email copied",
+      copyFailed: "Could not copy email",
     },
     summary: { title: "About" },
     work: {
@@ -196,6 +202,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       email: "Correo",
       phone: "Teléfono",
       locationLabel: "Ubicación",
+      copyEmail: "Copiar correo",
+      copiedEmail: "Correo copiado",
+      copyFailed: "No se pudo copiar el correo",
     },
     summary: { title: "Sobre mí" },
     work: {
