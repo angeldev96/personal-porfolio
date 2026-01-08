@@ -4,6 +4,7 @@ import { getResumeData } from "@/data/resume-data";
 import { getDictionary } from "@/i18n/dictionary";
 import { DEFAULT_LOCALE, LOCALES, type Locale, isLocale } from "@/i18n/config";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 function resolveLocale(value: string): Locale {
   return isLocale(value) ? value : DEFAULT_LOCALE;
@@ -40,18 +41,53 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const resolvedLocale = resolveLocale(locale);
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+  const canonicalUrl = `${siteUrl}/${resolvedLocale}/upwork-summary`;
   const title = `${resume.name} - ${dictionary.meta.upworkTitle}`;
 
   return {
     metadataBase: new URL(siteUrl),
     title,
     description: dictionary.meta.upworkDescription,
+    keywords: [
+      "Upwork Top Rated",
+      "Full-Stack Developer",
+      "Software Engineer",
+      "Programador Freelance",
+      "Desarrollador Web",
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${siteUrl}/en/upwork-summary`,
+        es: `${siteUrl}/es/upwork-summary`,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title,
       description: dictionary.meta.upworkDescription,
       type: "profile",
       locale: resolvedLocale === "en" ? "en_US" : "es_ES",
+      url: canonicalUrl,
+      images: [
+        {
+          url: `${siteUrl}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: `${resume.name}'s profile picture`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: dictionary.meta.upworkDescription,
+      images: [`${siteUrl}/opengraph-image`],
+      site: "@angeldev96",
     },
   };
 }
@@ -62,12 +98,32 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
   const upworkProfile = resume.work[0]?.link ?? "https://www.upwork.com/freelancers/~0116803452ac7b4ff7";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+  const pageUrl = `${siteUrl}/${resolvedLocale}/upwork-summary`;
+
+  const personLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: resume.name,
+    url: pageUrl,
+    image: resume.avatarUrl,
+    jobTitle: resume.work[0]?.title || "Full-Stack Software Engineer",
+    sameAs: [upworkProfile, ...resume.contact.social.map((item) => item.url)],
+  };
 
   return (
-    <main
-      className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
-      id="main-content"
-    >
+    <>
+      <Script
+        id={`ld-upwork-person-${resolvedLocale}`}
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+      />
+
+      <main
+        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
+        id="main-content"
+      >
       <div className="sr-only">
         <h1>
           {resume.name}&apos;s Upwork Profile
@@ -176,6 +232,7 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
           labels={dictionary.commandMenu}
         />
       </nav>
-    </main>
+      </main>
+    </>
   );
 }

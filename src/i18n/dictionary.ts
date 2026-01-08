@@ -79,9 +79,9 @@ const dictionaries: Record<Locale, Dictionary> = {
   en: {
     meta: {
       resumeTitle: "Resume",
-      resumeDescription: "Full-stack developer profile",
+      resumeDescription: "Full-stack software engineer and web developer specializing in Node.js, Python, and Next.js",
       upworkTitle: "Upwork Summary",
-      upworkDescription: "Experienced developer with solid fundamentals and AI expertise",
+      upworkDescription: "Experienced software engineer with solid fundamentals, AI expertise, and automation skills",
     },
     header: {
       personalWebsite: "Personal website",
@@ -187,9 +187,9 @@ const dictionaries: Record<Locale, Dictionary> = {
   es: {
     meta: {
       resumeTitle: "Currículum",
-      resumeDescription: "Perfil de desarrollador full-stack",
+      resumeDescription: "Ingeniero de software full-stack y desarrollador web especializado en Node.js, Python y Next.js",
       upworkTitle: "Resumen Upwork",
-      upworkDescription: "Desarrollador con fundamentos sólidos y experiencia en IA",
+      upworkDescription: "Ingeniero de software con fundamentos sólidos, experiencia en IA y automatización",
     },
     header: {
       personalWebsite: "Sitio web",

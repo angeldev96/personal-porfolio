@@ -9,6 +9,7 @@ import { getResumeData } from "@/data/resume-data";
 import { getDictionary } from "@/i18n/dictionary";
 import { DEFAULT_LOCALE, LOCALES, type Locale, isLocale } from "@/i18n/config";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 function resolveLocale(value: string): Locale {
   return isLocale(value) ? value : DEFAULT_LOCALE;
@@ -45,18 +46,44 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const resolvedLocale = resolveLocale(locale);
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+  const canonicalUrl = `${siteUrl}/${resolvedLocale}`;
   const title = `${resume.name} - ${dictionary.meta.resumeTitle}`;
 
   return {
     metadataBase: new URL(siteUrl),
     title,
     description: resume.about,
+    keywords: [
+      "Full-Stack Developer",
+      "Software Engineer",
+      "Backend Developer",
+      "Node.js",
+      "Python",
+      "Next.js",
+      "React",
+      "n8n",
+      "Programador Web",
+      "Desarrollador",
+      "Ingeniero de Software",
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${siteUrl}/en`,
+        es: `${siteUrl}/es`,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title,
       description: resume.about,
       type: "profile",
       locale: resolvedLocale === "en" ? "en_US" : "es_ES",
+      url: canonicalUrl,
       images: [
         {
           url: `${siteUrl}/opengraph-image`,
@@ -70,6 +97,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title,
       description: resume.about,
+      site: "@angeldev96",
       images: [`${siteUrl}/opengraph-image`],
     },
   };
@@ -80,12 +108,49 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
   const resolvedLocale = resolveLocale(locale);
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+  const profileUrl = `${siteUrl}/${resolvedLocale}`;
+  const sameAs = resume.contact.social.map((item) => item.url);
+
+  const personLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: resume.name,
+    url: profileUrl,
+    image: resume.avatarUrl,
+    jobTitle: "Full-Stack Software Engineer & Web Developer",
+    description: resume.about,
+    sameAs,
+  };
+
+  const websiteLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: `${resume.name} | ${dictionary.meta.resumeTitle}`,
+    url: profileUrl,
+    inLanguage: resolvedLocale === "en" ? "en-US" : "es-ES",
+    about: resume.about,
+  };
 
   return (
-    <main
-      className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
-      id="main-content"
-    >
+    <>
+      <Script
+        id={`ld-person-${resolvedLocale}`}
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+      />
+      <Script
+        id={`ld-website-${resolvedLocale}`}
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+      />
+
+      <main
+        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
+        id="main-content"
+      >
       <div className="sr-only">
         <h1>
           {resume.name} - {dictionary.meta.resumeTitle}
@@ -117,6 +182,7 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
           labels={dictionary.commandMenu}
         />
       </nav>
-    </main>
+      </main>
+    </>
   );
 }

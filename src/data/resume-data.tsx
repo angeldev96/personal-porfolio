@@ -56,20 +56,20 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "100% Full-Stack Freelancer (Node/Python) · n8n Automation Specialist · Upwork Top Rated",
+      "Full-Stack Software Engineer & Web Developer (Node.js/Python) · n8n Automation Specialist · Upwork Top Rated",
     summary: (
       <>
-        I am a 100% full-stack freelance software developer with a strong focus on backend development. I specialize in building scalable and efficient server-side applications using Node.js (NestJS, Express) and Python (FastAPI, Flask). My experience spans designing robust APIs, managing data workflows, and integrating AI models into production systems.
+        I am a full-stack freelance software engineer with a strong focus on backend web development. I specialize in building scalable and efficient server-side applications using Node.js (NestJS, Express) and Python (FastAPI, Flask). My experience spans designing robust APIs, managing data workflows, and integrating AI models into production systems for startups and established teams.
         <br />
         <br />
-        I have a solid background in implementing AI features such as large language model (LLM) integration, speech recognition, text-to-speech, and other intelligent services. While my core expertise is backend architecture and AI integration, I am also proficient in frontend development using React and Next.js, allowing me to deliver complete, end-to-end web applications.
+        I have a solid background in implementing AI features such as large language model (LLM) integration, speech recognition, text-to-speech, and other intelligent services. While my core expertise is backend architecture and AI integration, I am also proficient in frontend development using React and Next.js, allowing me to deliver complete, end-to-end web applications as a web developer and software engineer.
         <br />
         <br />
-        I am a <strong>Top Rated freelancer on Upwork with 100% Job Success Score</strong>. This achievement represents hundreds of hours of high-quality delivery and satisfied clients. My excellent Upwork profile with positive reviews demonstrates my commitment to delivering exceptional work. I focus on building scalable web applications and creating efficient, automated workflows that save businesses time and resources. Whether you need a complex React application or an intricate n8n automation, I deliver high-quality, maintainable code with clear communication and reliable deadlines.
+        I am a <strong>Top Rated freelancer on Upwork with 100% Job Success Score</strong>. This achievement represents hundreds of hours of high-quality delivery and satisfied clients. My profile highlights clear communication and on-time delivery for companies hiring a software engineer, backend developer, or web developer (programador web). Whether you need a complex React application or an intricate n8n automation, I deliver maintainable code with reliable deadlines.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
-    personalWebsiteUrl: null,
+    personalWebsiteUrl: "https://angelvalladares.dev",
     contact: {
       email: "arivalladares2.0@gmail.com",
       tel: null,
@@ -115,7 +115,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "React",
           "PostgreSQL",
         ],
-        title: "Full-Stack Developer · Top Rated · 100% Job Success",
+        title: "Full-Stack Software Engineer · Top Rated · 100% Job Success",
         logo: null,
         start: "2024",
         end: null,
@@ -204,20 +204,20 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Freelancer Full-Stack 100% (Node/Python) · Especialista en automatización con n8n · Top Rated en Upwork",
+      "Ingeniero de software y desarrollador web Full-Stack (Node/Python) · Especialista en automatización con n8n · Top Rated en Upwork",
     summary: (
       <>
-        Soy un desarrollador full-stack freelance con fuerte enfoque en backend. Construyo aplicaciones de servidor escalables con Node.js (NestJS, Express) y Python (FastAPI, Flask), diseñando APIs robustas, manejando flujos de datos e integrando modelos de IA en producción.
+        Soy un desarrollador web full-stack e ingeniero de software freelance con fuerte enfoque en backend. Construyo aplicaciones de servidor escalables con Node.js (NestJS, Express) y Python (FastAPI, Flask), diseñando APIs robustas, manejando flujos de datos e integrando modelos de IA en producción.
         <br />
         <br />
-        Tengo experiencia implementando características de IA como integración de LLMs, reconocimiento de voz y texto a voz. Aunque mi especialidad es la arquitectura backend y la integración de IA, también domino frontend con React y Next.js para entregar aplicaciones web completas, de extremo a extremo.
+        Tengo experiencia implementando características de IA como integración de LLMs, reconocimiento de voz y texto a voz. Aunque mi especialidad es la arquitectura backend y la integración de IA, también domino frontend con React y Next.js para entregar aplicaciones web completas, de extremo a extremo, como desarrollador y programador web.
         <br />
         <br />
-        Soy <strong>freelancer Top Rated en Upwork con 100% Job Success Score</strong>. Esto representa cientos de horas de entregas de calidad y clientes satisfechos. Mi perfil con reseñas positivas respalda mi compromiso con la excelencia. Me enfoco en construir apps web escalables y flujos automatizados que ahorran tiempo y recursos. Ya sea una app compleja en React o una automatización en n8n, entrego código mantenible y comunicación clara.
+        Soy <strong>freelancer Top Rated en Upwork con 100% Job Success Score</strong>. Esto representa cientos de horas de entregas de calidad y clientes satisfechos. Mi perfil con reseñas positivas respalda mi compromiso con la excelencia. Me enfoco en construir apps web escalables y flujos automatizados que ahorran tiempo y recursos. Ya sea una app compleja en React o una automatización en n8n, entrego código mantenible y comunicación clara para empresas que buscan un desarrollador o ingeniero de software confiable.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
-    personalWebsiteUrl: null,
+    personalWebsiteUrl: "https://angelvalladares.dev",
     contact: {
       email: "arivalladares2.0@gmail.com",
       tel: null,
@@ -263,7 +263,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "React",
           "PostgreSQL",
         ],
-        title: "Desarrollador Full-Stack · Top Rated · 100% Job Success",
+        title: "Ingeniero de Software Full-Stack · Top Rated · 100% Job Success",
         logo: null,
         start: "2024",
         end: null,
