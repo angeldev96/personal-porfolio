@@ -172,7 +172,7 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
 
           <Skills skills={resume.skills} title={dictionary.skills.skills} />
 
-          <Projects projects={resume.projects} labels={dictionary.projects} />
+          <Projects projects={resume.projects} labels={dictionary.projects} locale={resolvedLocale} />
         </div>
       </section>
 

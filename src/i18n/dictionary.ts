@@ -62,6 +62,16 @@ export type Dictionary = {
   themeToggle: {
     label: string;
   };
+  projectDetail: {
+    backToProjects: string;
+    technologies: string;
+    features: string;
+    challenges: string;
+    viewProject: string;
+    viewDemo: string;
+    viewRepo: string;
+    gallery: string;
+  };
   upwork: {
     heading: string;
     intro: string;
@@ -166,6 +176,16 @@ const dictionaries: Record<Locale, Dictionary> = {
     },
     themeToggle: {
       label: "Toggle theme",
+    },
+    projectDetail: {
+      backToProjects: "Back to Projects",
+      technologies: "Technologies",
+      features: "Features",
+      challenges: "Challenges",
+      viewProject: "View Project",
+      viewDemo: "View Demo",
+      viewRepo: "View Repository",
+      gallery: "Gallery",
     },
     upwork: {
       heading: "For Upwork Employers",
@@ -280,6 +300,16 @@ const dictionaries: Record<Locale, Dictionary> = {
     },
     themeToggle: {
       label: "Cambiar tema",
+    },
+    projectDetail: {
+      backToProjects: "Volver a Proyectos",
+      technologies: "Tecnologías",
+      features: "Características",
+      challenges: "Desafíos",
+      viewProject: "Ver Proyecto",
+      viewDemo: "Ver Demo",
+      viewRepo: "Ver Repositorio",
+      gallery: "Galería",
     },
     upwork: {
       heading: "Para empleadores en Upwork",

@@ -37,6 +37,7 @@ export type ResumeData = {
   }[];
   skills: readonly string[];
   projects: {
+    slug: string;
     title: string;
     techStack: readonly string[];
     description: string;
@@ -45,6 +46,11 @@ export type ResumeData = {
       label: string;
       href: string;
     };
+    longDescription?: string;
+    images?: string[];
+    videoUrl?: string;
+    features?: string[];
+    challenges?: string;
   }[];
 };
 
@@ -252,6 +258,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     ],
     projects: [
       {
+        slug: "yiddish-jobs",
         title: "Yiddish Jobs",
         techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         description: "Platform helping the Yiddish community in Boro Park, New York find employment. Assisted with web platform development, internal tools, and automation to support job seekers and local businesses.",
@@ -260,8 +267,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           label: "yiddishjobs.com",
           href: "https://www.yiddishjobs.com/",
         },
+        longDescription: "A comprehensive job platform built specifically for the Yiddish-speaking community in Boro Park, New York. The platform connects job seekers with local employers, featuring advanced search filters, real-time job postings, and an intuitive interface designed to serve the community's unique needs.",
+        images: [],
+        features: [
+          "Advanced job search with filters for location, job type, and industry",
+          "Real-time job posting updates",
+          "User-friendly interface optimized for the Yiddish community",
+          "Internal tools for employers to manage listings",
+          "Responsive design working on all devices",
+        ],
+        challenges: "Creating a platform that bridges cultural and language barriers while maintaining modern usability standards. Implemented intuitive UI patterns that work seamlessly with RTL text considerations and community-specific workflows.",
       },
       {
+        slug: "pinkys-store",
         title: "Pinky's Store",
         techStack: ["Next.js", "React", "Node.js", "PostgreSQL"],
         description: "E-commerce platform and inventory management system for a local cosmetics business. Automated sales processes and provided the owner with an internal tool for efficient inventory tracking and sales management.",
@@ -270,6 +288,17 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           label: "GitHub",
           href: "https://github.com/angeldev96/pinkys-store",
         },
+        longDescription: "A complete e-commerce and inventory management solution designed for a local cosmetics business. The system includes both a customer-facing storefront and an admin dashboard for managing products, tracking inventory, processing orders, and analyzing sales data.",
+        images: [],
+        features: [
+          "Product catalog with image galleries and detailed descriptions",
+          "Shopping cart and secure checkout process",
+          "Admin dashboard for inventory management",
+          "Sales analytics and reporting",
+          "Order tracking and status updates",
+          "Automated low-stock notifications",
+        ],
+        challenges: "Building a solution that balances e-commerce functionality with inventory management needs. Created a dual-interface system that serves both customers and business owners through a single, unified platform.",
       },
     ],
   },
@@ -476,6 +505,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     ],
     projects: [
       {
+        slug: "yiddish-jobs",
         title: "Yiddish Jobs",
         techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         description: "Plataforma que ayuda a la comunidad Yiddish en Boro Park, Nueva York a encontrar empleo. Asistí con el desarrollo de la plataforma web, herramientas internas y automatización para apoyar a buscadores de empleo y negocios locales.",
@@ -484,8 +514,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           label: "yiddishjobs.com",
           href: "https://www.yiddishjobs.com/",
         },
+        longDescription: "Una plataforma de empleo completa construida específicamente para la comunidad de habla Yiddish en Boro Park, Nueva York. La plataforma conecta a buscadores de empleo con empleadores locales, con filtros de búsqueda avanzados, publicaciones de empleo en tiempo real y una interfaz intuitiva diseñada para servir las necesidades únicas de la comunidad.",
+        images: [],
+        features: [
+          "Búsqueda avanzada de empleo con filtros por ubicación, tipo y industria",
+          "Actualizaciones en tiempo real de publicaciones de empleo",
+          "Interfaz fácil de usar optimizada para la comunidad Yiddish",
+          "Herramientas internas para empleadores gestionar listados",
+          "Diseño responsive que funciona en todos los dispositivos",
+        ],
+        challenges: "Crear una plataforma que supere las barreras culturales y de idioma manteniendo estándares modernos de usabilidad. Implementé patrones de UI intuitivos que funcionan perfectamente con consideraciones de texto RTL y flujos de trabajo específicos de la comunidad.",
       },
       {
+        slug: "pinkys-store",
         title: "Pinky's Store",
         techStack: ["Next.js", "React", "Node.js", "PostgreSQL"],
         description: "Plataforma de e-commerce y sistema de gestión de inventario para un negocio local de cosméticos. Automaticé procesos de ventas y proporcioné a la dueña una herramienta interna para gestión eficiente de inventario y ventas.",
@@ -494,6 +535,17 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           label: "GitHub",
           href: "https://github.com/angeldev96/pinkys-store",
         },
+        longDescription: "Una solución completa de e-commerce y gestión de inventario diseñada para un negocio local de cosméticos. El sistema incluye tanto una tienda para clientes como un panel de administración para gestionar productos, rastrear inventario, procesar pedidos y analizar datos de ventas.",
+        images: [],
+        features: [
+          "Catálogo de productos con galerías de imágenes y descripciones detalladas",
+          "Carrito de compras y proceso de pago seguro",
+          "Panel de administración para gestión de inventario",
+          "Análisis y reportes de ventas",
+          "Seguimiento de pedidos y actualizaciones de estado",
+          "Notificaciones automáticas de stock bajo",
+        ],
+        challenges: "Construir una solución que equilibra funcionalidad de e-commerce con necesidades de gestión de inventario. Creé un sistema de doble interfaz que sirve tanto a clientes como a dueños de negocios a través de una plataforma unificada.",
       },
     ],
   },
