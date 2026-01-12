@@ -5,6 +5,8 @@ import { WorkExperience } from "@/app/components/WorkExperience";
 import { Education } from "@/app/components/Education";
 import { Skills } from "@/app/components/Skills";
 import { Projects } from "@/app/components/Projects";
+import { UpworkSection } from "@/app/components/UpworkSection";
+import { Certificates } from "@/app/components/Certificates";
 import { getResumeData } from "@/data/resume-data";
 import { getDictionary } from "@/i18n/dictionary";
 import { DEFAULT_LOCALE, LOCALES, type Locale, isLocale } from "@/i18n/config";
@@ -173,7 +175,16 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
           <Skills skills={resume.skills} title={dictionary.skills.skills} />
 
           <Projects projects={resume.projects} labels={dictionary.projects} locale={resolvedLocale} />
+
+          <Certificates certificates={resume.certificates} labels={dictionary.certificates} locale={resolvedLocale} />
         </div>
+
+        <UpworkSection
+          heading={dictionary.upworkSection.heading}
+          description={dictionary.upworkSection.description}
+          ctaLabel={dictionary.upworkSection.ctaLabel}
+          locale={resolvedLocale}
+        />
       </section>
 
       <nav className="print:hidden" aria-label="Quick navigation">

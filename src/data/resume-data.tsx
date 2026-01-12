@@ -52,6 +52,16 @@ export type ResumeData = {
     features?: string[];
     challenges?: string;
   }[];
+  certificates: {
+    id: string;
+    title: string;
+    issuer: string;
+    date: string;
+    credentialUrl?: string;
+    credentialId?: string;
+    description?: string;
+    badgeUrl?: string;
+  }[];
 };
 
 const RESUME_DATA: Record<Locale, ResumeData> = {
@@ -308,6 +318,33 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         challenges: "Building a solution that balances e-commerce functionality with inventory management needs. Created a dual-interface system that serves both customers and business owners through a single, unified platform.",
       },
     ],
+    certificates: [
+      {
+        id: "openai-api",
+        title: "OpenAI API Mastery",
+        issuer: "OpenAI",
+        date: "2024",
+        credentialUrl: "https://credentials.example.com/openai",
+        description: "Deep understanding of OpenAI API, including GPT models, embeddings, function calling, and best practices for production deployments.",
+      },
+      {
+        id: "nextjs-advanced",
+        title: "Advanced Next.js",
+        issuer: "Next.js",
+        date: "2024",
+        credentialUrl: "https://nextjs.org/learn",
+        description: "Advanced patterns in Next.js including Server Components, Server Actions, App Router, and performance optimization.",
+      },
+      {
+        id: "aws-cloud-practitioner",
+        title: "AWS Cloud Practitioner",
+        issuer: "Amazon Web Services",
+        date: "2023",
+        credentialUrl: "https://aws.amazon.com/certification/",
+        credentialId: "AWS-CP-123456",
+        description: "Foundational understanding of AWS Cloud concepts, security, architecture, and core services.",
+      },
+    ],
   },
   es: {
     name: "Angel Valladares",
@@ -560,6 +597,33 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "Notificaciones automáticas de stock bajo",
         ],
         challenges: "Construir una solución que equilibra funcionalidad de e-commerce con necesidades de gestión de inventario. Creé un sistema de doble interfaz que sirve tanto a clientes como a dueños de negocios a través de una plataforma unificada.",
+      },
+    ],
+    certificates: [
+      {
+        id: "openai-api",
+        title: "OpenAI API Mastery",
+        issuer: "OpenAI",
+        date: "2024",
+        credentialUrl: "https://credentials.example.com/openai",
+        description: "Comprensión profunda de la API de OpenAI, incluyendo modelos GPT, embeddings, function calling y mejores prácticas para despliegues en producción.",
+      },
+      {
+        id: "nextjs-advanced",
+        title: "Next.js Avanzado",
+        issuer: "Next.js",
+        date: "2024",
+        credentialUrl: "https://nextjs.org/learn",
+        description: "Patrones avanzados en Next.js incluyendo Server Components, Server Actions, App Router y optimización de rendimiento.",
+      },
+      {
+        id: "aws-cloud-practitioner",
+        title: "AWS Cloud Practitioner",
+        issuer: "Amazon Web Services",
+        date: "2023",
+        credentialUrl: "https://aws.amazon.com/certification/",
+        credentialId: "AWS-CP-123456",
+        description: "Comprensión fundamental de conceptos de AWS Cloud, seguridad, arquitectura y servicios principales.",
       },
     ],
   },

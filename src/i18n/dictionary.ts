@@ -11,6 +11,15 @@ type SectionLabels = {
   sideProjects: string;
 };
 
+type CertificateLabels = {
+  title: string;
+  backToResume: string;
+  viewCredential: string;
+  issuedBy: string;
+  credentialId: string;
+  noCertificates: string;
+};
+
 export type Dictionary = {
   meta: {
     resumeTitle: string;
@@ -71,6 +80,12 @@ export type Dictionary = {
     viewDemo: string;
     viewRepo: string;
     gallery: string;
+  };
+  certificates: CertificateLabels;
+  upworkSection: {
+    heading: string;
+    description: string;
+    ctaLabel: string;
   };
   upwork: {
     heading: string;
@@ -186,6 +201,19 @@ const dictionaries: Record<Locale, Dictionary> = {
       viewDemo: "View Demo",
       viewRepo: "View Repository",
       gallery: "Gallery",
+    },
+    certificates: {
+      title: "Certificates & Certifications",
+      backToResume: "Back to Resume",
+      viewCredential: "View Credential",
+      issuedBy: "Issued by",
+      credentialId: "Credential ID",
+      noCertificates: "No certificates to display.",
+    },
+    upworkSection: {
+      heading: "For Upwork Employers",
+      description: "Learn more about my competitive advantage and why you should hire me for your next project.",
+      ctaLabel: "View Details",
     },
     upwork: {
       heading: "For Upwork Employers",
@@ -310,6 +338,19 @@ const dictionaries: Record<Locale, Dictionary> = {
       viewDemo: "Ver Demo",
       viewRepo: "Ver Repositorio",
       gallery: "Galería",
+    },
+    certificates: {
+      title: "Certificados y Acreditaciones",
+      backToResume: "Volver al Currículum",
+      viewCredential: "Ver Credencial",
+      issuedBy: "Emitido por",
+      credentialId: "ID de Credencial",
+      noCertificates: "No hay certificados para mostrar.",
+    },
+    upworkSection: {
+      heading: "Para Empleadores de Upwork",
+      description: "Conoce más sobre mi ventaja competitiva y por qué deberías contratarme para tu próximo proyecto.",
+      ctaLabel: "Ver Detalles",
     },
     upwork: {
       heading: "Para empleadores en Upwork",
