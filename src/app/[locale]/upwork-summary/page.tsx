@@ -5,6 +5,8 @@ import { getDictionary } from "@/i18n/dictionary";
 import { DEFAULT_LOCALE, LOCALES, type Locale, isLocale } from "@/i18n/config";
 import type { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 function resolveLocale(value: string): Locale {
   return isLocale(value) ? value : DEFAULT_LOCALE;
@@ -111,6 +113,8 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
     sameAs: [upworkProfile, ...resume.contact.social.map((item) => item.url)],
   };
 
+  const backToHomeLabel = dictionary.certificates?.backToResume || "Back to Resume";
+
   return (
     <>
       <Script
@@ -124,6 +128,15 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
         className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
         id="main-content"
       >
+      {/* Back button */}
+      <Link
+        href={`/${resolvedLocale}`}
+        className="mb-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <ArrowLeft className="size-4" />
+        {backToHomeLabel}
+      </Link>
+
       <div className="sr-only">
         <h1>
           {resume.name}&apos;s Upwork Profile
