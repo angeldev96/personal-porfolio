@@ -59,10 +59,12 @@ function SocialButton({ href, icon, label }: { href: string; icon: SocialIconNam
 interface ContactButtonsProps {
   contact: ResumeData["contact"];
   personalWebsiteUrl?: string | null;
+  upworkUrl?: string | null;
+  upworkLabel?: string;
   labels: Dictionary["header"];
 }
 
-function ContactButtons({ contact, personalWebsiteUrl, labels }: ContactButtonsProps) {
+function ContactButtons({ contact, personalWebsiteUrl, upworkUrl, upworkLabel, labels }: ContactButtonsProps) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const toastTimer = useRef<NodeJS.Timeout | null>(null);
 
@@ -99,12 +101,12 @@ function ContactButtons({ contact, personalWebsiteUrl, labels }: ContactButtonsP
       className="flex list-none gap-x-1 p-0 pt-1 font-mono text-sm text-foreground/80 print:hidden"
       aria-label="Contact links"
     >
-      {personalWebsiteUrl && (
+      {(upworkUrl || personalWebsiteUrl) && (
         <li>
           <Button className="size-8" variant="outline" size="icon" asChild>
             <a
-              href={personalWebsiteUrl}
-              aria-label={labels.personalWebsite}
+              href={upworkUrl ?? personalWebsiteUrl ?? undefined}
+              aria-label={upworkUrl ? upworkLabel ?? "Upwork profile" : labels.personalWebsite}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -241,6 +243,8 @@ export function Header({
         <ContactButtons
           contact={resume.contact}
           personalWebsiteUrl={resume.personalWebsiteUrl}
+          upworkUrl={resume.work?.[0]?.link}
+          upworkLabel={"Upwork"}
           labels={labels}
         />
 
