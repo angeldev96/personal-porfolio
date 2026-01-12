@@ -330,7 +330,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       },
       {
         id: "frontend-g5-one",
-        title: "Formação Front End G5 - ONE",
+        title: "Front-End Training G5 - ONE",
         issuer: "Alura Latam",
         date: "July 2023",
         credentialUrl: "https://app.aluracursos.com/degree/certificate/dde9c8e7-ea6c-46ce-b056-ce2bbce39d55",

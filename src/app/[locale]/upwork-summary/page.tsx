@@ -5,6 +5,7 @@ import { getDictionary } from "@/i18n/dictionary";
 import { DEFAULT_LOCALE, LOCALES, type Locale, isLocale } from "@/i18n/config";
 import type { Metadata } from "next";
 import Script from "next/script";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -168,10 +169,13 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
 
               {/* Upwork Profile Screenshot */}
               <div className="rounded-lg border overflow-hidden">
-                <img
+                <Image
                   src="https://res.cloudinary.com/dqy0f7skk/image/upload/v1768176845/SCR-20260111-pych_zdcfcv.jpg"
                   alt="Upwork profile showing $7K+ earnings, 17 jobs completed, 433 hours worked, 100% Job Success, and Top Rated badge"
-                  className="w-full h-auto"
+                  width={1200}
+                  height={800}
+                  unoptimized
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
 

@@ -198,10 +198,12 @@ export default async function ProjectPage({
                   key={index}
                   className="relative aspect-video overflow-hidden rounded-lg border"
                 >
-                  <img
+                  <Image
                     src={image}
                     alt={`${project.title} screenshot ${index + 1}`}
-                    className="size-full object-cover"
+                    fill
+                    unoptimized
+                    className="object-cover"
                   />
                 </div>
               ))}
