@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 import React from "react";
 
 import { DEFAULT_LOCALE, isLocale } from "@/i18n/config";
+import { getResumeData } from "@/data/resume-data";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
@@ -15,28 +16,27 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev"),
-  title: "Angel Valladares | Full-Stack Software Engineer & Web Developer",
+  title: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
   description:
-    "Full-stack software engineer and web developer specialized in Node.js, Python, Next.js, and automation with n8n. Upwork Top Rated with 100% Job Success.",
+    "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations. Hire a reliable freelancer for web apps, APIs and AI features.",
   keywords: [
+    "Freelancer Honduras",
+    "Full-Stack Developer Honduras",
+    "Freelance developer Tegucigalpa",
     "Full-Stack Developer",
     "Software Engineer",
-    "Backend Developer",
     "Node.js",
-    "Python",
     "Next.js",
     "React",
-    "n8n",
-    "Programador Web",
-    "Desarrollador",
-    "Ingeniero de Software",
+    "TypeScript",
+    "Python",
   ],
   authors: [{ name: "Angel Valladares", url: "https://angelvalladares.dev" }],
   creator: "Angel Valladares",
   openGraph: {
-    title: "Angel Valladares | Full-Stack Software Engineer & Web Developer",
+    title: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
     description:
-      "Full-stack software engineer and web developer specialized in Node.js, Python, Next.js, and automation with n8n. Upwork Top Rated with 100% Job Success.",
+      "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations.",
     type: "profile",
     locale: "en_US",
     url: "https://angelvalladares.dev",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angel Valladares | Full-Stack Software Engineer & Web Developer",
+    title: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
     description:
-      "Full-stack software engineer and web developer specialized in Node.js, Python, Next.js, and automation with n8n. Upwork Top Rated with 100% Job Success.",
+      "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations.",
     site: "@angeldev96",
     creator: "@angeldev96",
   },
@@ -73,6 +73,7 @@ async function getCurrentLocale() {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getCurrentLocale();
+  const resume = getResumeData(locale);
 
   return (
     <html lang={locale} className={inter.className} suppressHydrationWarning>
@@ -93,6 +94,28 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 document.documentElement.classList.add(theme);
               })();
             `,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: resume.name,
+              url: process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev",
+              image: resume.avatarUrl,
+              jobTitle: resume.work?.[0]?.title || "Full-Stack Developer",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: resume.location || "Tegucigalpa",
+                addressCountry: "HN",
+              },
+              sameAs: [
+                resume.personalWebsiteUrl || process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev",
+                ...resume.contact.social.map((s) => s.url),
+              ],
+            }),
           }}
         />
       </head>

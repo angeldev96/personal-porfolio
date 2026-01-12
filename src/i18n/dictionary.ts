@@ -111,8 +111,9 @@ export type Dictionary = {
 const dictionaries: Record<Locale, Dictionary> = {
   en: {
     meta: {
-      resumeTitle: "Resume",
-      resumeDescription: "Full-stack software engineer and web developer specializing in Node.js, Python, and Next.js",
+      resumeTitle: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
+      resumeDescription:
+        "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations. Hire a reliable freelancer for web apps, APIs and AI features.",
       upworkTitle: "Upwork Summary",
       upworkDescription: "Experienced software engineer with solid fundamentals, AI expertise, and automation skills",
     },
@@ -250,8 +251,9 @@ const dictionaries: Record<Locale, Dictionary> = {
   },
   es: {
     meta: {
-      resumeTitle: "Currículum",
-      resumeDescription: "Ingeniero de software full-stack y desarrollador web especializado en Node.js, Python y Next.js",
+      resumeTitle: "Angel Valladares — Desarrollador Full-Stack y Freelancer en Honduras",
+      resumeDescription:
+        "Desarrollador Full-Stack freelance en Tegucigalpa, Honduras. Especialista en Next.js, Node.js, React, TypeScript, Python, Supabase e integraciones de IA. Disponible para proyectos web, APIs y funcionalidades basadas en IA.",
       upworkTitle: "Resumen Upwork",
       upworkDescription: "Ingeniero de software con fundamentos sólidos, experiencia en IA y automatización",
     },
