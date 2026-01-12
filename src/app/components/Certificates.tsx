@@ -29,14 +29,14 @@ export function Certificates({ certificates, labels, locale }: CertificatesProps
           <ExternalLink className="size-3" />
         </Link>
       </div>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {certificates.slice(0, 3).map((cert) => (
           <Link
             key={cert.id}
             href={`/${locale}/certificates#${cert.id}`}
             className="group"
           >
-            <Card className="h-full transition-all hover:shadow-md hover:border-primary/50">
+            <Card className="h-full transition-all hover:shadow-md hover:border-primary/50 p-4">
               <CardHeader className="space-y-2">
                 <div className="flex items-start gap-2">
                   <Award className="size-5 text-primary shrink-0 mt-0.5" />

@@ -91,12 +91,12 @@ export default async function CertificatesPage({
             <p className="text-muted-foreground text-center py-12">{labels.noCertificates}</p>
           </Section>
         ) : (
-          <div className="space-y-4">
+          <div className="space-y-6">
             {certificates.map((cert, index) => (
-              <Card key={cert.id} className="overflow-hidden">
-                <CardHeader>
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                    <div className="space-y-2 flex-1">
+              <Card key={cert.id} className="overflow-hidden p-6">
+                <CardHeader className="sm:space-y-0">
+                  <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="space-y-3 flex-1">
                       <CardTitle className="text-xl">{cert.title}</CardTitle>
                       <CardDescription className="flex flex-wrap items-center gap-2">
                         <span className="font-medium text-foreground">
