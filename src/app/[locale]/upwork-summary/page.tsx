@@ -8,24 +8,30 @@ import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { UpworkIcon } from "@/components/icons/UpworkIcon";
 
 function resolveLocale(value: string): Locale {
   return isLocale(value) ? value : DEFAULT_LOCALE;
 }
 
-function getCommandMenuLinks(
-  resume: ReturnType<typeof getResumeData>,
-  personalWebsiteLabel: string,
-) {
-  const links = [] as { url: string; title: string }[];
+function getCommandMenuLinks(resume: ReturnType<typeof getResumeData>, dictionary: ReturnType<typeof getDictionary>) {
+  const links = [] as { url: string; title: React.ReactNode }[];
 
-  if (resume.personalWebsiteUrl) {
-    links.push({
-      url: resume.personalWebsiteUrl,
-      title: personalWebsiteLabel,
-    });
-  }
+  // Add Upwork profile first (replace personal portfolio link since we're on the portfolio)
+  const upworkUrl = resume.work?.[0]?.link ?? "https://www.upwork.com/freelancers/~0116803452ac7b4ff7";
+  links.push({
+    url: upworkUrl,
+    title: (
+      <>
+        <span className="inline-block w-5 h-5">
+          <UpworkIcon className="w-5 h-5" />
+        </span>
+        <span>{dictionary.upwork.upworkLabel}</span>
+      </>
+    ),
+  });
 
+  // Then add other social links
   return [
     ...links,
     ...resume.contact.social.map((socialMediaLink) => ({
@@ -263,7 +269,7 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
 
       <nav className="print:hidden" aria-label="Quick navigation">
         <CommandMenu
-          links={getCommandMenuLinks(resume, dictionary.header.personalWebsite)}
+          links={getCommandMenuLinks(resume, dictionary)}
           labels={dictionary.commandMenu}
         />
       </nav>

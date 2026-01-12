@@ -16,7 +16,7 @@ import { Button } from "./ui/button";
 import { type Dictionary } from "@/i18n/dictionary";
 
 interface Props {
-  links: { url: string; title: string }[];
+  links: { url: string; title: React.ReactNode }[];
   labels: Dictionary["commandMenu"];
 }
 
@@ -81,7 +81,7 @@ export const CommandMenu = ({ links, labels }: Props) => {
                   window.open(url, "_blank");
                 }}
               >
-                <span>{title}</span>
+                <span className="flex items-center gap-2">{title}</span>
               </CommandItem>
             ))}
           </CommandGroup>
