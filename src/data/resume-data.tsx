@@ -61,16 +61,16 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Full-Stack Software Engineer & Web Developer (Node.js/Python) · n8n Automation Specialist · Upwork Top Rated",
+      "Full-Stack Software Engineer & Web Developer (MERN/PERN, Next.js) · AI & LLM Integration Specialist · Upwork Top Rated",
     summary: (
       <>
-        I am a full-stack freelance software engineer with a strong focus on backend web development. I specialize in building scalable and efficient server-side applications using Node.js (NestJS, Express) and Python (FastAPI, Flask). My experience spans designing robust APIs, managing data workflows, and integrating AI models into production systems for startups and established teams.
+        I am a full-stack freelance software engineer specializing in MERN (MongoDB, Express, React, Node.js) and PERN (PostgreSQL, Express, React, Node.js) stacks, with extensive experience in Next.js and Supabase for building modern, scalable web applications. I focus on delivering complete end-to-end solutions from responsive frontends to robust backend architectures.
         <br />
         <br />
-        I have a solid background in implementing AI features such as large language model (LLM) integration, speech recognition, text-to-speech, and other intelligent services. While my core expertise is backend architecture and AI integration, I am also proficient in frontend development using React and Next.js, allowing me to deliver complete, end-to-end web applications as a web developer and software engineer.
+        I have deep expertise in <strong>AI and LLM integrations</strong>, implementing features like chatbots with OpenAI/Claude APIs, RAG (Retrieval-Augmented Generation) systems, AI-powered content generation, speech-to-text, and text-to-speech capabilities. I build production-ready AI features that seamlessly integrate with web applications.
         <br />
         <br />
-        I am a <strong>Top Rated freelancer on Upwork with 100% Job Success Score</strong>. This achievement represents hundreds of hours of high-quality delivery and satisfied clients. My profile highlights clear communication and on-time delivery for companies hiring a software engineer, backend developer, or web developer (programador web). Whether you need a complex React application or an intricate n8n automation, I deliver maintainable code with reliable deadlines.
+        I am a <strong>Top Rated freelancer on Upwork with 100% Job Success Score</strong>. This achievement represents hundreds of hours of high-quality delivery and satisfied clients. My profile highlights clear communication and on-time delivery for companies hiring a full-stack developer. Whether you need a complex Next.js application, a MERN/PERN platform, or AI-powered features integrated into your product, I deliver maintainable code with reliable deadlines.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
@@ -109,16 +109,21 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         company: "Freelance (Upwork)",
         link: "https://www.upwork.com/freelancers/~0116803452ac7b4ff7",
         badges: [
+          "MERN",
+          "PERN",
+          "Next.js",
+          "React",
           "Node.js",
           "NestJS",
           "Express",
+          "TypeScript",
           "Python",
           "FastAPI",
-          "Flask",
-          "n8n",
-          "Next.js",
-          "React",
           "PostgreSQL",
+          "MongoDB",
+          "Supabase",
+          "OpenAI API",
+          "LLM Integration",
         ],
         title: "Full-Stack Software Engineer · Top Rated · 100% Job Success",
         logo: null,
@@ -126,7 +131,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: null,
         description: (
           <>
-            As a <strong>Top Rated freelancer with 100% Job Success Score</strong>, I deliver backend-first solutions and end-to-end applications for clients worldwide. My Upwork profile shows hundreds of hours of high-quality delivery with excellent reviews and consistent positive feedback from satisfied clients.
+            As a <strong>Top Rated freelancer with 100% Job Success Score</strong>, I deliver full-stack solutions and end-to-end applications for clients worldwide. My Upwork profile shows hundreds of hours of high-quality delivery with excellent reviews and consistent positive feedback from satisfied clients.
             <ul className="list-inside list-disc">
               <li>
                 <strong>100% Job Success Score:</strong> Proven history of happy clients and exceptional project delivery.
@@ -134,10 +139,11 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
               <li>
                 <strong>Top Rated Badge:</strong> Recognition for consistently delivering high-quality work with excellent client satisfaction.
               </li>
-              <li>Designed and built production-grade REST/GraphQL APIs and services in Node.js and Python.</li>
-              <li>Implemented AI-powered features: LLM integrations, speech-to-text, and text-to-speech.</li>
-              <li>Created automation workflows and internal tools using n8n, integrating third-party services.</li>
-              <li>Delivered full-stack web apps with Next.js/React, focusing on performance and maintainability.</li>
+              <li>Built complete web applications using MERN stack (MongoDB, Express, React, Node.js) and PERN stack (PostgreSQL, Express, React, Node.js).</li>
+              <li>Developed modern applications with Next.js, TypeScript, and Supabase for serverless architectures.</li>
+              <li>Implemented AI-powered features: OpenAI/Claude API integrations, RAG systems, chatbots, and LLM-powered content generation.</li>
+              <li>Designed and built production-grade REST/GraphQL APIs with Node.js (NestJS, Express) and Python (FastAPI).</li>
+              <li>Integrated third-party APIs and services including payment gateways, authentication providers, and AI/ML models.</li>
               <li>
                 <strong>Clear communication and reliable deadlines</strong> are my priority for every project.
               </li>
@@ -233,27 +239,28 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       },
     ],
     skills: [
+      "MERN Stack",
+      "PERN Stack",
+      "Next.js",
+      "React",
+      "TypeScript",
       "Node.js",
       "NestJS",
       "Express",
       "Python",
       "FastAPI",
-      "Flask",
-      "n8n",
-      "Next.js",
-      "React",
-      "TypeScript",
       "PostgreSQL",
-      "MySQL",
       "MongoDB",
+      "Supabase",
       "GraphQL",
       "REST APIs",
-      "Docker",
       "OpenAI API",
-      "LLMs",
+      "Claude API",
+      "LLM Integration",
+      "RAG Systems",
+      "API Integration",
+      "Docker",
       "Tailwind CSS",
-      "Oracle",
-      "SQL Server",
       "HTML/CSS",
     ],
     projects: [
@@ -308,16 +315,16 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Ingeniero de software y desarrollador web Full-Stack (Node/Python) · Especialista en automatización con n8n · Top Rated en Upwork",
+      "Ingeniero de software y desarrollador web Full-Stack (MERN/PERN, Next.js) · Especialista en integraciones de IA y LLM · Top Rated en Upwork",
     summary: (
       <>
-        Soy un desarrollador web full-stack e ingeniero de software freelance con fuerte enfoque en backend. Construyo aplicaciones de servidor escalables con Node.js (NestJS, Express) y Python (FastAPI, Flask), diseñando APIs robustas, manejando flujos de datos e integrando modelos de IA en producción.
+        Soy un desarrollador web full-stack e ingeniero de software freelance especializado en los stacks MERN (MongoDB, Express, React, Node.js) y PERN (PostgreSQL, Express, React, Node.js), con amplia experiencia en Next.js y Supabase para construir aplicaciones web modernas y escalables. Me enfoco en entregar soluciones completas de extremo a extremo, desde frontends responsivos hasta arquitecturas backend robustas.
         <br />
         <br />
-        Tengo experiencia implementando características de IA como integración de LLMs, reconocimiento de voz y texto a voz. Aunque mi especialidad es la arquitectura backend y la integración de IA, también domino frontend con React y Next.js para entregar aplicaciones web completas, de extremo a extremo, como desarrollador y programador web.
+        Tengo gran experiencia en <strong>integraciones de IA y LLMs</strong>, implementando características como chatbots con APIs de OpenAI/Claude, sistemas RAG (Retrieval-Augmented Generation), generación de contenido con IA, reconocimiento de voz y síntesis de voz. Construyo funcionalidades de IA listas para producción que se integran perfectamente en aplicaciones web.
         <br />
         <br />
-        Soy <strong>freelancer Top Rated en Upwork con 100% Job Success Score</strong>. Esto representa cientos de horas de entregas de calidad y clientes satisfechos. Mi perfil con reseñas positivas respalda mi compromiso con la excelencia. Me enfoco en construir apps web escalables y flujos automatizados que ahorran tiempo y recursos. Ya sea una app compleja en React o una automatización en n8n, entrego código mantenible y comunicación clara para empresas que buscan un desarrollador o ingeniero de software confiable.
+        Soy <strong>freelancer Top Rated en Upwork con 100% Job Success Score</strong>. Esto representa cientos de horas de entregas de calidad y clientes satisfechos. Mi perfil con reseñas positivas respalda mi compromiso con la excelencia. Ya sea una aplicación compleja en Next.js, una plataforma MERN/PERN, o características potenciadas con IA integradas en tu producto, entrego código mantenible y comunicación clara para empresas que buscan un desarrollador full-stack confiable.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
@@ -356,16 +363,21 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         company: "Freelance (Upwork)",
         link: "https://www.upwork.com/freelancers/~0116803452ac7b4ff7",
         badges: [
+          "MERN",
+          "PERN",
+          "Next.js",
+          "React",
           "Node.js",
           "NestJS",
           "Express",
+          "TypeScript",
           "Python",
           "FastAPI",
-          "Flask",
-          "n8n",
-          "Next.js",
-          "React",
           "PostgreSQL",
+          "MongoDB",
+          "Supabase",
+          "OpenAI API",
+          "LLM Integration",
         ],
         title: "Ingeniero de Software Full-Stack · Top Rated · 100% Job Success",
         logo: null,
@@ -373,7 +385,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: null,
         description: (
           <>
-            Como <strong>freelancer Top Rated con 100% Job Success Score</strong>, entrego soluciones backend-first y apps end-to-end para clientes globales. Mi perfil en Upwork muestra cientos de horas de entrega con excelentes reseñas y retroalimentación consistente.
+            Como <strong>freelancer Top Rated con 100% Job Success Score</strong>, entrego soluciones full-stack y apps end-to-end para clientes globales. Mi perfil en Upwork muestra cientos de horas de entrega con excelentes reseñas y retroalimentación consistente.
             <ul className="list-inside list-disc">
               <li>
                 <strong>100% Job Success Score:</strong> Historial probado de clientes satisfechos y proyectos bien entregados.
@@ -381,10 +393,11 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
               <li>
                 <strong>Insignia Top Rated:</strong> Reconocimiento por entregar trabajo de calidad con alta satisfacción.
               </li>
-              <li>Diseñé y construí APIs REST/GraphQL de producción en Node.js y Python.</li>
-              <li>Implementé funciones con IA: integraciones LLM, speech-to-text y text-to-speech.</li>
-              <li>Creé flujos de automatización e internal tools con n8n, integrando servicios externos.</li>
-              <li>Entregué apps full-stack con Next.js/React enfocadas en rendimiento y mantenibilidad.</li>
+              <li>Construí aplicaciones web completas usando stack MERN (MongoDB, Express, React, Node.js) y PERN (PostgreSQL, Express, React, Node.js).</li>
+              <li>Desarrollé aplicaciones modernas con Next.js, TypeScript y Supabase para arquitecturas serverless.</li>
+              <li>Implementé características potenciadas con IA: integraciones de APIs OpenAI/Claude, sistemas RAG, chatbots y generación de contenido con LLMs.</li>
+              <li>Diseñé y construí APIs REST/GraphQL de producción con Node.js (NestJS, Express) y Python (FastAPI).</li>
+              <li>Integré APIs de terceros incluyendo pasarelas de pago, proveedores de autenticación y modelos de IA/ML.</li>
               <li>
                 <strong>Comunicación clara y deadlines fiables</strong> son prioridad en cada proyecto.
               </li>
@@ -480,27 +493,28 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       },
     ],
     skills: [
+      "MERN Stack",
+      "PERN Stack",
+      "Next.js",
+      "React",
+      "TypeScript",
       "Node.js",
       "NestJS",
       "Express",
       "Python",
       "FastAPI",
-      "Flask",
-      "n8n",
-      "Next.js",
-      "React",
-      "TypeScript",
       "PostgreSQL",
-      "MySQL",
       "MongoDB",
+      "Supabase",
       "GraphQL",
       "REST APIs",
-      "Docker",
       "OpenAI API",
-      "LLMs",
+      "Claude API",
+      "LLM Integration",
+      "RAG Systems",
+      "API Integration",
+      "Docker",
       "Tailwind CSS",
-      "Oracle",
-      "SQL Server",
       "HTML/CSS",
     ],
     projects: [

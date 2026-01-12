@@ -194,11 +194,11 @@ const dictionaries: Record<Locale, Dictionary> = {
       advantageHeading: "My Competitive Advantage:",
       advantages: {
         fundamentals:
-          "Solid Fundamentals: Unlike newer developers known as \"vibe coders\" who rely exclusively on AI tools without understanding the fundamental concepts, my experience allows me to identify and solve complex problems efficiently.",
+          "Solid Fundamentals: Unlike \"vibe coders\" who rely exclusively on AI without understanding the fundamentals, I have years of experience from before the AI boom. I've fixed countless codebases built only with AI that break when scaling—I understand what's happening under the hood.",
         aiTools:
-          "Experience with AI Tools: I know current AI tools perfectly and use them strategically to accelerate development, always maintaining control over the code and understanding exactly what I'm implementing.",
+          "AI as an Accelerator: I use Cloud Code, Cursor, and OpenCode strategically to accelerate development, but I never depend on them. My solid foundation allows me to deliver faster without the code quality issues that plague AI-only developers.",
         reliable:
-          "Accelerated and Reliable Development: The combination of my fundamental knowledge with the efficient use of AI tools allows me to deliver projects in less time, without the problems faced by developers who only rely on AI without understanding where errors might occur.",
+          "Best of Both Worlds: You get the technical solidity of an experienced developer combined with the efficiency of modern AI tools. Faster delivery, cleaner code, and solutions that scale without breaking.",
       },
       whyHeading: "Why Hire Me?",
       whyIntro:
@@ -318,11 +318,11 @@ const dictionaries: Record<Locale, Dictionary> = {
       advantageHeading: "Mi ventaja competitiva:",
       advantages: {
         fundamentals:
-          "Fundamentos sólidos: A diferencia de desarrolladores nuevos conocidos como \"vibe coders\" que dependen exclusivamente de herramientas de IA sin comprender los conceptos base, mi experiencia me permite identificar y resolver problemas complejos de forma eficiente.",
+          "Fundamentos sólidos: A diferencia de los \"vibe coders\" que dependen exclusivamente de IA sin entender los fundamentos, tengo años de experiencia de antes del auge de la IA. He corregido countless codebases construidos solo con IA que se rompen al escalar—entiendo qué pasa bajo el capó.",
         aiTools:
-          "Experiencia con IA: Conozco a fondo las herramientas actuales de IA y las uso de manera estratégica para acelerar el desarrollo, manteniendo siempre el control del código y entendiendo exactamente qué implemento.",
+          "IA como acelerador: Uso Cloud Code, Cursor y OpenCode estratégicamente para acelerar el desarrollo, pero nunca dependo de ellas. Mis fundamentos sólidos me permiten entregar más rápido sin los problemas de calidad que aquejan a los desarrolladores que solo usan IA.",
         reliable:
-          "Desarrollo más rápido y confiable: La combinación de mis fundamentos con el uso eficiente de IA me permite entregar proyectos en menos tiempo, sin los problemas de quienes solo dependen de la IA sin entender dónde pueden aparecer errores.",
+          "Lo mejor de ambos mundos: Obtienes la solidez técnica de un desarrollador experimentado combinada con la eficiencia de las herramientas modernas de IA. Entrega más rápida, código más limpio y soluciones que escalan sin romperse.",
       },
       whyHeading: "¿Por qué contratarme?",
       whyIntro:
