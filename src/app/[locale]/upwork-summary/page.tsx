@@ -153,6 +153,24 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
             >
               <p>{dictionary.upwork.intro}</p>
 
+              {/* Upwork Profile Screenshot */}
+              <div className="rounded-lg border overflow-hidden">
+                <img
+                  src="https://res.cloudinary.com/dqy0f7skk/image/upload/v1768176845/SCR-20260111-pych_zdcfcv.jpg"
+                  alt="Upwork profile showing $7K+ earnings, 17 jobs completed, 433 hours worked, 100% Job Success, and Top Rated badge"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              <div className="bg-muted/50 rounded-lg p-4 border border-dashed">
+                <p className="text-sm font-medium text-foreground mb-1">
+                  {dictionary.upwork.hiringNote || "Note: You don't need to hire me through Upwork"}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {dictionary.upwork.hiringNoteDesc || "These stats are just to demonstrate my experience and reliability. We can work directly—contact me through the details below."}
+                </p>
+              </div>
+
               <div className="space-y-2">
                 <h3 className="text-lg font-semibold">{dictionary.upwork.advantageHeading}</h3>
                 <ul className="list-disc space-y-2 pl-5">

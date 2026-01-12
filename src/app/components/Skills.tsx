@@ -19,7 +19,7 @@ interface SkillsListProps {
 function SkillsList({ skills, className, label, ariaLabelledby }: SkillsListProps) {
   return (
     <ul
-      className={cn("flex list-none flex-wrap gap-1 p-0", className)}
+      className={cn("flex list-none flex-wrap gap-1.5 p-0", className)}
       aria-label={label}
       aria-labelledby={ariaLabelledby}
     >

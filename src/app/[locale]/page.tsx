@@ -165,6 +165,13 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
       >
         <Header resume={resume} labels={dictionary.header} />
 
+        <UpworkSection
+          heading={dictionary.upworkSection.heading}
+          description={dictionary.upworkSection.description}
+          ctaLabel={dictionary.upworkSection.ctaLabel}
+          locale={resolvedLocale}
+        />
+
         <div className="space-y-8 print:space-y-4">
           <Summary summary={resume.summary} title={dictionary.summary.title} />
 
@@ -178,13 +185,6 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
 
           <Certificates certificates={resume.certificates} labels={dictionary.certificates} locale={resolvedLocale} />
         </div>
-
-        <UpworkSection
-          heading={dictionary.upworkSection.heading}
-          description={dictionary.upworkSection.description}
-          ctaLabel={dictionary.upworkSection.ctaLabel}
-          locale={resolvedLocale}
-        />
       </section>
 
       <nav className="print:hidden" aria-label="Quick navigation">

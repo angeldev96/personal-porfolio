@@ -90,6 +90,8 @@ export type Dictionary = {
   upwork: {
     heading: string;
     intro: string;
+    hiringNote: string;
+    hiringNoteDesc: string;
     advantageHeading: string;
     advantages: {
       fundamentals: string;
@@ -219,6 +221,8 @@ const dictionaries: Record<Locale, Dictionary> = {
       heading: "For Upwork Employers",
       intro:
         "Thank you for visiting my specialized profile for Upwork. As a developer with several years of experience, I possess solid technical fundamentals that make my work more reliable and efficient.",
+      hiringNote: "You don't need to hire me through Upwork",
+      hiringNoteDesc: "The stats below demonstrate my experience and reliability. We can work together directly—feel free to contact me through any of the channels at the bottom of this page.",
       advantageHeading: "My Competitive Advantage:",
       advantages: {
         fundamentals:
@@ -356,6 +360,8 @@ const dictionaries: Record<Locale, Dictionary> = {
       heading: "Para empleadores en Upwork",
       intro:
         "Gracias por visitar mi perfil especializado de Upwork. Como desarrollador con varios años de experiencia, tengo fundamentos técnicos sólidos que hacen mi trabajo más fiable y eficiente.",
+      hiringNote: "No necesitas contratarme a través de Upwork",
+      hiringNoteDesc: "Las estadísticas abajo demuestran mi experiencia y confiabilidad. Podemos trabajar directamente—no dudes en contactarme por cualquiera de los canales al final de esta página.",
       advantageHeading: "Mi ventaja competitiva:",
       advantages: {
         fundamentals:
