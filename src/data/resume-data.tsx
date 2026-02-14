@@ -71,16 +71,18 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Full-Stack Software Engineer & Web Developer (MERN/PERN, Next.js) · AI & LLM Integration Specialist · Upwork Top Rated",
+      "Top Rated Full-Stack Developer · 100% Job Success on Upwork · AI & LLM Integration Specialist",
     summary: (
       <>
-        I am a full-stack freelance software engineer specializing in MERN (MongoDB, Express, React, Node.js) and PERN (PostgreSQL, Express, React, Node.js) stacks, with extensive experience in Next.js and Supabase for building modern, scalable web applications. I focus on delivering complete end-to-end solutions from responsive frontends to robust backend architectures.
+        I am a <strong>Top Rated freelancer on Upwork with a 100% Job Success Score</strong>, which places me in the <strong>top 10% of talent</strong> on the entire platform. My earnings, consistent delivery, and excellent client reviews have earned me this distinction. I invite you to visit my{" "}
+        <a href="https://www.upwork.com/freelancers/~0116803452ac7b4ff7" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground/70">Upwork profile</a>{" "}
+        to see my track record firsthand.
         <br />
         <br />
-        I have deep expertise in <strong>AI and LLM integrations</strong>, implementing features like chatbots with OpenAI/Claude APIs, RAG (Retrieval-Augmented Generation) systems, AI-powered content generation, speech-to-text, and text-to-speech capabilities. I build production-ready AI features that seamlessly integrate with web applications.
+        I&apos;m open to working through Upwork or through <strong>independent/direct contracts</strong>—whatever works best for you. While I currently work as a freelancer, I&apos;m also very open to <strong>full-time positions</strong>. If you&apos;re a recruiter with a full-time role that matches my skill set, don&apos;t hesitate to reach out—I&apos;d love to hear from you.
         <br />
         <br />
-        I am a <strong>Top Rated freelancer on Upwork with 100% Job Success Score</strong>. This achievement represents hundreds of hours of high-quality delivery and satisfied clients. My profile highlights clear communication and on-time delivery for companies hiring a full-stack developer. Whether you need a complex Next.js application, a MERN/PERN platform, or AI-powered features integrated into your product, I deliver maintainable code with reliable deadlines.
+        On the technical side, I specialize in MERN/PERN stacks, Next.js, and Supabase for building modern, scalable web applications. I also have deep expertise in <strong>AI and LLM integrations</strong>, including chatbots with OpenAI/Claude APIs, RAG systems, AI-powered content generation, and speech-to-text/text-to-speech capabilities. I deliver complete end-to-end solutions with maintainable code and reliable deadlines.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
@@ -353,16 +355,18 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Ingeniero de software y desarrollador web Full-Stack (MERN/PERN, Next.js) · Especialista en integraciones de IA y LLM · Top Rated en Upwork",
+      "Desarrollador Full-Stack Top Rated · 100% Job Success en Upwork · Especialista en Integraciones de IA y LLM",
     summary: (
       <>
-        Soy un desarrollador web full-stack e ingeniero de software freelance especializado en los stacks MERN (MongoDB, Express, React, Node.js) y PERN (PostgreSQL, Express, React, Node.js), con amplia experiencia en Next.js y Supabase para construir aplicaciones web modernas y escalables. Me enfoco en entregar soluciones completas de extremo a extremo, desde frontends responsivos hasta arquitecturas backend robustas.
+        Soy <strong>freelancer Top Rated en Upwork con un 100% Job Success Score</strong>, lo que me ubica en el <strong>top 10% del talento</strong> de toda la plataforma. Mis ganancias, entregas consistentes y excelentes reseñas de clientes me han otorgado esta distinción. Te invito a visitar mi{" "}
+        <a href="https://www.upwork.com/freelancers/~0116803452ac7b4ff7" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground/70">perfil de Upwork</a>{" "}
+        para ver mi historial de primera mano.
         <br />
         <br />
-        Tengo gran experiencia en <strong>integraciones de IA y LLMs</strong>, implementando características como chatbots con APIs de OpenAI/Claude, sistemas RAG (Retrieval-Augmented Generation), generación de contenido con IA, reconocimiento de voz y síntesis de voz. Construyo funcionalidades de IA listas para producción que se integran perfectamente en aplicaciones web.
+        Estoy abierto a trabajar a través de Upwork o mediante <strong>contratos independientes/directos</strong>—lo que funcione mejor para ti. Aunque actualmente trabajo como freelancer, también estoy muy interesado en <strong>posiciones full-time</strong>. Si eres reclutador y tienes una posición full-time que se adecúe a mis habilidades, no dudes en escribirme—me encantaría saber de ti.
         <br />
         <br />
-        Soy <strong>freelancer Top Rated en Upwork con 100% Job Success Score</strong>. Esto representa cientos de horas de entregas de calidad y clientes satisfechos. Mi perfil con reseñas positivas respalda mi compromiso con la excelencia. Ya sea una aplicación compleja en Next.js, una plataforma MERN/PERN, o características potenciadas con IA integradas en tu producto, entrego código mantenible y comunicación clara para empresas que buscan un desarrollador full-stack confiable.
+        En lo técnico, me especializo en los stacks MERN/PERN, Next.js y Supabase para construir aplicaciones web modernas y escalables. También tengo amplia experiencia en <strong>integraciones de IA y LLMs</strong>, incluyendo chatbots con APIs de OpenAI/Claude, sistemas RAG, generación de contenido con IA, y reconocimiento/síntesis de voz. Entrego soluciones completas de extremo a extremo con código mantenible y deadlines confiables.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",

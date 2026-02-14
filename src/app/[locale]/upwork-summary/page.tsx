@@ -177,7 +177,7 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
               {/* Upwork Profile Screenshot */}
               <div className="rounded-lg border overflow-hidden">
                 <UpworkImage
-                  src="https://res.cloudinary.com/dqy0f7skk/image/upload/v1768176845/SCR-20260111-pych_zdcfcv.jpg"
+                  src="https://res.cloudinary.com/dqy0f7skk/image/upload/v1771090517/SCR-20260214-kmpr_b2bl1q.png"
                   alt="Upwork profile showing $7K+ earnings, 17 jobs completed, 433 hours worked, 100% Job Success, and Top Rated badge"
                   unoptimized
                 />
