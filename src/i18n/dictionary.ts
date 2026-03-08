@@ -38,6 +38,14 @@ export type Dictionary = {
   };
   summary: {
     title: string;
+    mySetup: string;
+  };
+  setup: {
+    title: string;
+    description: string;
+    hardware: string;
+    software: string;
+    backToResume: string;
   };
   work: SectionLabels;
   projects: SectionLabels;
@@ -126,7 +134,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       copiedEmail: "Email copied",
       copyFailed: "Could not copy email",
     },
-    summary: { title: "About" },
+    summary: { title: "About", mySetup: "My Setup" },
     work: {
       about: "",
       work: "Work Experience",
@@ -248,6 +256,13 @@ const dictionaries: Record<Locale, Dictionary> = {
       contactIntro: "If you're interested in working with me, you can contact me through:",
       upworkLabel: "My Upwork Profile",
     },
+    setup: {
+      title: "My Setup",
+      description: "A collection of the hardware and software I use to build and create.",
+      hardware: "Hardware",
+      software: "Software",
+      backToResume: "Back to Resume",
+    },
   },
   es: {
     meta: {
@@ -266,7 +281,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       copiedEmail: "Correo copiado",
       copyFailed: "No se pudo copiar el correo",
     },
-    summary: { title: "Sobre mí" },
+    summary: { title: "Sobre mí", mySetup: "Mi Setup" },
     work: {
       about: "",
       work: "Experiencia Laboral",
@@ -387,8 +402,13 @@ const dictionaries: Record<Locale, Dictionary> = {
       contact: "Contáctame",
       contactIntro: "Si te interesa trabajar conmigo, puedes contactarme por:",
       upworkLabel: "Mi perfil de Upwork",
-    },
-  },
+    },    setup: {
+      title: "Mi Setup",
+      description: "Una colección del hardware y software que utilizo para construir y crear.",
+      hardware: "Hardware",
+      software: "Software",
+      backToResume: "Volver al Currículum",
+    },  },
 };
 
 export function getDictionary(locale: Locale = DEFAULT_LOCALE): Dictionary {

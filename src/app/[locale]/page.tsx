@@ -173,7 +173,12 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
         />
 
         <div className="space-y-8 print:space-y-4">
-          <Summary summary={resume.summary} title={dictionary.summary.title} />
+          <Summary 
+            summary={resume.summary} 
+            title={dictionary.summary.title} 
+            mySetupLabel={dictionary.summary.mySetup}
+            locale={resolvedLocale}
+          />
 
           <WorkExperience work={resume.work} labels={dictionary.work} />
 

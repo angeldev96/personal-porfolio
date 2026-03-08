@@ -62,6 +62,16 @@ export type ResumeData = {
     description?: string;
     badgeUrl?: string;
   }[];
+  setup: {
+    hardware: {
+      name: string;
+      description: string;
+    }[];
+    software: {
+      name: string;
+      description: string;
+    }[];
+  };
 };
 
 const RESUME_DATA: Record<Locale, ResumeData> = {
@@ -348,6 +358,60 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         description: "English language certification at B2 Upper Intermediate level, demonstrating proficiency in English as a foreign language.",
       },
     ],
+    setup: {
+      hardware: [
+        {
+          name: "MacBook Pro 16\" (M1 Pro, 32GB RAM)",
+          description: "High-performance workstation, incredibly fast and reliable for all development tasks.",
+        },
+        {
+          name: "Logitech MX Master 3S",
+          description: "Ergonomic and highly recommended mouse for productivity.",
+        },
+        {
+          name: "Samsung 24\" Monitor",
+          description: "Secondary display for extended workspace.",
+        },
+        {
+          name: "JBL Headphones",
+          description: "High-quality audio for client calls and team meetings.",
+        },
+        {
+          name: "Fiber Optic Internet (200 Mbps)",
+          description: "Stable and high-speed connection for seamless remote work and client communication.",
+        },
+        {
+          name: "Ecoflow River 2 Max (512Wh)",
+          description: "Reliable power backup that can keep both the laptop and router running for an entire day in case of power outages.",
+        },
+        {
+          name: "VPS (16GB RAM, 4 vCPU)",
+          description: "High-performance server for hosting multiple Dockerized applications and services.",
+        },
+      ],
+      software: [
+        {
+          name: "Dokploy",
+          description: "Self-hosted PaaS platform managed on my VPS. Hosts multiple instances of Supabase, n8n, backends, frontends, and client demos.",
+        },
+        {
+          name: "OpenCode & Claude Code",
+          description: "Advanced AI coding agents used daily to accelerate development workflows.",
+        },
+        {
+          name: "ChatGPT Plus (GPT 5.4)",
+          description: "Latest AI model subscription for complex problem solving and AI-assisted coding through OpenCode.",
+        },
+        {
+          name: "VS Code & Antigravity",
+          description: "Primary editors for different development use cases, leveraging Antigravity's unique features.",
+        },
+        {
+          name: "Cursor",
+          description: "AI-native code editor with a monthly subscription for seamless AI integration.",
+        },
+      ],
+    },
   },
   es: {
     name: "Angel Valladares",
@@ -632,6 +696,60 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         description: "Certificación de idioma inglés nivel B2 Upper Intermediate, demostrando dominio de inglés como idioma extranjero.",
       },
     ],
+    setup: {
+      hardware: [
+        {
+          name: "MacBook Pro 16\" (M1 Pro, 32GB RAM)",
+          description: "Estación de trabajo de alto rendimiento, increíblemente rápida y confiable.",
+        },
+        {
+          name: "Logitech MX Master 3S",
+          description: "Mouse ergonómico y altamente recomendado para la productividad.",
+        },
+        {
+          name: "Monitor Samsung 24\"",
+          description: "Pantalla secundaria para extender el espacio de trabajo.",
+        },
+        {
+          name: "Audífonos JBL",
+          description: "Audio de alta calidad para llamadas con clientes y reuniones de equipo.",
+        },
+        {
+          name: "Internet de Fibra Óptica (200 Mbps)",
+          description: "Conexión estable y de alta velocidad para un trabajo remoto fluido y comunicación con clientes.",
+        },
+        {
+          name: "Ecoflow River 2 Max (512Wh)",
+          description: "Respaldo de energía confiable capaz de mantener la laptop y el router encendidos durante un día completo ante fallas eléctricas.",
+        },
+        {
+          name: "VPS (16GB RAM, 4 vCPU)",
+          description: "Servidor de alto rendimiento para hosting de múltiples aplicaciones y servicios Dockerizados.",
+        },
+      ],
+      software: [
+        {
+          name: "Dokploy",
+          description: "Plataforma PaaS auto-hospedada en mi VPS. Aloja múltiples instancias de Supabase, n8n, backends, frontends y demos de clientes.",
+        },
+        {
+          name: "OpenCode y Cloud Code",
+          description: "Agentes de código con IA avanzados utilizados diariamente para acelerar los flujos de trabajo de desarrollo.",
+        },
+        {
+          name: "ChatGPT Plus (GPT 5.4)",
+          description: "Suscripción al último modelo de IA para resolución de problemas complejos y codificación asistida a través de OpenCode.",
+        },
+        {
+          name: "VS Code y Antigravity",
+          description: "Editores principales para diferentes casos de uso de desarrollo, aprovechando las características únicas de Antigravity.",
+        },
+        {
+          name: "Cursor",
+          description: "Editor de código nativo de IA con suscripción mensual para una integración fluida de IA.",
+        },
+      ],
+    },
   },
 };
 
