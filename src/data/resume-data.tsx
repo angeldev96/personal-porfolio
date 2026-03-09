@@ -71,6 +71,10 @@ export type ResumeData = {
       name: string;
       description: string;
     }[];
+    platforms: {
+      name: string;
+      description: string;
+    }[];
   };
 };
 
@@ -156,21 +160,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: null,
         description: (
           <>
-            As a <strong>Top Rated freelancer with 100% Job Success Score</strong>, I deliver full-stack solutions and end-to-end applications for clients worldwide. My Upwork profile shows hundreds of hours of high-quality delivery with excellent reviews and consistent positive feedback from satisfied clients.
+            As a <strong>Top Rated freelancer with 100% Job Success Score</strong>, I architect and deliver production-grade applications for global clients, specializing in full-stack ecosystems and AI-driven automation.
             <ul className="list-inside list-disc">
               <li>
-                <strong>100% Job Success Score:</strong> Proven history of happy clients and exceptional project delivery.
+                <strong>AI & LLM Architecture:</strong> Engineered custom RAG systems, complex chatbots, and autonomous agents using OpenAI/Claude APIs, significantly accelerating business workflows.
               </li>
               <li>
-                <strong>Top Rated Badge:</strong> Recognition for consistently delivering high-quality work with excellent client satisfaction.
+                <strong>End-to-End Development:</strong> Design and deployment of scalable web apps using MERN/PERN stacks, Next.js, and Supabase with a focus on performance and maintainability.
               </li>
-              <li>Built complete web applications using MERN stack (MongoDB, Express, React, Node.js) and PERN stack (PostgreSQL, Express, React, Node.js).</li>
-              <li>Developed modern applications with Next.js, TypeScript, and Supabase for serverless architectures.</li>
-              <li>Implemented AI-powered features: OpenAI/Claude API integrations, RAG systems, chatbots, and LLM-powered content generation.</li>
-              <li>Designed and built production-grade REST/GraphQL APIs with Node.js (NestJS, Express) and Python (FastAPI).</li>
-              <li>Integrated third-party APIs and services including payment gateways, authentication providers, and AI/ML models.</li>
               <li>
-                <strong>Clear communication and reliable deadlines</strong> are my priority for every project.
+                <strong>Cloud & Infrastructure:</strong> Proficient in Dockerized environments, managing high-performance VPS infrastructure for reliable hosting of client and internal projects.
+              </li>
+              <li>
+                <strong>Project Leadership:</strong> Directly managed client relationships, technical requirements, and production deadlines with a proven 100% success rate.
               </li>
             </ul>
           </>
@@ -410,8 +412,34 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           description: "Primary editors for different development use cases, leveraging Antigravity's unique features.",
         },
         {
+          name: "Warp",
+          description: "Modern terminal emulator with AI-powered autocompletion and high speed to save development time.",
+        },
+        {
+          name: "Stitch (Google)",
+          description: "Used for rapid frontend prototyping with excellent results.",
+        },
+        {
           name: "Cursor",
           description: "AI-native code editor with a monthly subscription for seamless AI integration.",
+        },
+      ],
+      platforms: [
+        {
+          name: "Upwork",
+          description: "Primary freelancing platform. Top Rated status with 100% success rate, though I'm fully open to direct contracts off-platform.",
+        },
+        {
+          name: "LinkedIn",
+          description: "Professional networking and high-quality client acquisition channel.",
+        },
+        {
+          name: "X (Twitter)",
+          description: "My main source for staying updated with AI trends, following industry leaders, and refining my development process with the latest tools.",
+        },
+        {
+          name: "Reddit",
+          description: "Used to follow 'state of the art' AI subreddits for deep technical insights and community tips.",
         },
       ],
     },
@@ -497,21 +525,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: null,
         description: (
           <>
-            Como <strong>freelancer Top Rated con 100% Job Success Score</strong>, entrego soluciones full-stack y apps end-to-end para clientes globales. Mi perfil en Upwork muestra cientos de horas de entrega con excelentes reseñas y retroalimentación consistente.
+            Como <strong>freelancer Top Rated con 100% Job Success Score</strong>, diseño y construyo aplicaciones de nivel de producción para clientes globales, especializándome en automatización impulsada por IA.
             <ul className="list-inside list-disc">
               <li>
-                <strong>100% Job Success Score:</strong> Historial probado de clientes satisfechos y proyectos bien entregados.
+                <strong>Arquitectura de IA y LLM:</strong> Implementación de sistemas RAG personalizados y agentes autónomos utilizando APIs de OpenAI/Claude para optimizar procesos de negocio.
               </li>
               <li>
-                <strong>Insignia Top Rated:</strong> Reconocimiento por entregar trabajo de calidad con alta satisfacción.
+                <strong>Desarrollo End-to-End:</strong> Creación de aplicaciones escalables con stacks MERN/PERN, Next.js y Supabase, priorizando el rendimiento y la mantenibilidad.
               </li>
-              <li>Construí aplicaciones web completas usando stack MERN (MongoDB, Express, React, Node.js) y PERN (PostgreSQL, Express, React, Node.js).</li>
-              <li>Desarrollé aplicaciones modernas con Next.js, TypeScript y Supabase para arquitecturas serverless.</li>
-              <li>Implementé características potenciadas con IA: integraciones de APIs OpenAI/Claude, sistemas RAG, chatbots y generación de contenido con LLMs.</li>
-              <li>Diseñé y construí APIs REST/GraphQL de producción con Node.js (NestJS, Express) y Python (FastAPI).</li>
-              <li>Integré APIs de terceros incluyendo pasarelas de pago, proveedores de autenticación y modelos de IA/ML.</li>
               <li>
-                <strong>Comunicación clara y deadlines fiables</strong> son prioridad en cada proyecto.
+                <strong>Infraestructura y Cloud:</strong> Gestión de entornos Dockerizados y administración de infraestructura VPS de alto rendimiento para el hosting de proyectos de clientes.
+              </li>
+              <li>
+                <strong>Liderazgo Técnico:</strong> Gestión directa de requerimientos técnicos y cumplimiento de deadlines críticos con un historial de satisfacción del cliente del 100%.
               </li>
             </ul>
           </>
@@ -751,8 +777,34 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           description: "Editores principales para diferentes casos de uso de desarrollo, aprovechando las características únicas de Antigravity.",
         },
         {
+          name: "Warp",
+          description: "Emulador de terminal moderno con autocompletado impulsado por IA y alta velocidad para ahorrar tiempo en desarrollo.",
+        },
+        {
+          name: "Stitch (Google)",
+          description: "Utilizado para el prototipado rápido de Frontend con excelentes resultados.",
+        },
+        {
           name: "Cursor",
           description: "Editor de código nativo de IA con suscripción mensual para una integración fluida de IA.",
+        },
+      ],
+      platforms: [
+        {
+          name: "Upwork",
+          description: "Plataforma principal de freelancing. Estatus Top Rated con 100% de éxito, aunque abierto a contratos directos fuera de la plataforma.",
+        },
+        {
+          name: "LinkedIn",
+          description: "Red profesional y canal de adquisición de clientes de alta calidad.",
+        },
+        {
+          name: "X (Twitter)",
+          description: "Mi fuente principal para estar al tanto de las tendencias de IA, siguiendo a líderes industriales y refinando mi proceso con las últimas herramientas.",
+        },
+        {
+          name: "Reddit",
+          description: "Utilizado para seguir subreddits del 'estado del arte' en IA para obtener conocimientos técnicos profundos y consejos de la comunidad.",
         },
       ],
     },

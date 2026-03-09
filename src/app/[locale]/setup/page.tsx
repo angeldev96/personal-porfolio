@@ -77,6 +77,22 @@ export default async function SetupPage({ params }: { params: Promise<{ locale: 
             ))}
           </div>
         </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold mb-4">{dictionary.setup.platforms}</h2>
+          <div className="grid gap-4">
+            {resume.setup.platforms.map((item) => (
+              <Card key={item.name}>
+                <CardHeader className="p-4 pb-2">
+                  <h3 className="font-semibold">{item.name}</h3>
+                </CardHeader>
+                <CardContent className="p-4 pt-0 text-sm font-mono text-foreground/80">
+                  {item.description}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Section>
       </div>
     </main>
   );

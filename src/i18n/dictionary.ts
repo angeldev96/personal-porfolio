@@ -45,6 +45,7 @@ export type Dictionary = {
     description: string;
     hardware: string;
     software: string;
+    platforms: string;
     backToResume: string;
   };
   work: SectionLabels;
@@ -258,9 +259,10 @@ const dictionaries: Record<Locale, Dictionary> = {
     },
     setup: {
       title: "My Setup",
-      description: "A collection of the hardware and software I use to build and create.",
+      description: "A collection of the hardware, software, and platforms I use to build and create.",
       hardware: "Hardware",
       software: "Software",
+      platforms: "Platforms",
       backToResume: "Back to Resume",
     },
   },
@@ -404,11 +406,13 @@ const dictionaries: Record<Locale, Dictionary> = {
       upworkLabel: "Mi perfil de Upwork",
     },    setup: {
       title: "Mi Setup",
-      description: "Una colección del hardware y software que utilizo para construir y crear.",
+      description: "Una colección del hardware, software y plataformas que utilizo para construir y crear.",
       hardware: "Hardware",
       software: "Software",
+      platforms: "Plataformas",
       backToResume: "Volver al Currículum",
-    },  },
+    },
+  },
 };
 
 export function getDictionary(locale: Locale = DEFAULT_LOCALE): Dictionary {
