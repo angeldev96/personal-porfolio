@@ -7,6 +7,7 @@ import React from "react";
 import { DEFAULT_LOCALE, isLocale } from "@/i18n/config";
 import { getResumeData } from "@/data/resume-data";
 import { ThemeProvider } from "@/components/theme-provider";
+import PageTransition from "@/components/PageTransition";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,7 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev",
+  ),
   title: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
   description:
     "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations. Hire a reliable freelancer for web apps, APIs and AI features.",
@@ -66,7 +69,8 @@ export const metadata: Metadata = {
   },
 };
 
-const enableAnalytics = process.env.NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS === "true";
+const enableAnalytics =
+  process.env.NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS === "true";
 
 async function getCurrentLocale() {
   const cookieStore = await cookies();
@@ -74,7 +78,11 @@ async function getCurrentLocale() {
   return stored && isLocale(stored) ? stored : DEFAULT_LOCALE;
 }
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const locale = await getCurrentLocale();
   const resume = getResumeData(locale);
 
@@ -106,7 +114,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               "@context": "https://schema.org",
               "@type": "Person",
               name: resume.name,
-              url: process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev",
+              url:
+                process.env.NEXT_PUBLIC_SITE_URL ||
+                "https://angelvalladares.dev",
               image: resume.avatarUrl,
               jobTitle: resume.work?.[0]?.title || "Full-Stack Developer",
               address: {
@@ -115,7 +125,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 addressCountry: "HN",
               },
               sameAs: [
-                resume.personalWebsiteUrl || process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev",
+                resume.personalWebsiteUrl ||
+                  process.env.NEXT_PUBLIC_SITE_URL ||
+                  "https://angelvalladares.dev",
                 ...resume.contact.social.map((s) => s.url),
               ],
             }),
@@ -124,7 +136,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body suppressHydrationWarning>
         <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </ThemeProvider>
         {enableAnalytics && <Analytics />}
       </body>

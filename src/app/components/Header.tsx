@@ -15,22 +15,13 @@ interface LocationLinkProps {
 }
 
 function LocationLink({ location, locationLink, label }: LocationLinkProps) {
-  const [time, setTime] = useState<string>(() => {
-    try {
-      return new Intl.DateTimeFormat(undefined, {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        timeZone: "America/Tegucigalpa",
-        timeZoneName: "short",
-      }).format(new Date());
-    } catch (e) {
-      return "";
-    }
-  });
+  // Initialize empty to avoid SSR/client hydration mismatch from Date on server
+  const [time, setTime] = useState<string>("");
 
   useEffect(() => {
-    const id = setInterval(() => {
+    let mounted = true;
+
+    const update = () => {
       try {
         const formatted = new Intl.DateTimeFormat(undefined, {
           hour: "2-digit",
@@ -39,13 +30,20 @@ function LocationLink({ location, locationLink, label }: LocationLinkProps) {
           timeZone: "America/Tegucigalpa",
           timeZoneName: "short",
         }).format(new Date());
-        setTime(formatted);
+        if (mounted) setTime(formatted);
       } catch (e) {
         // ignore
       }
-    }, 1000);
+    };
 
-    return () => clearInterval(id);
+    // set immediately on mount, then every second
+    update();
+    const id = setInterval(update, 1000);
+
+    return () => {
+      mounted = false;
+      clearInterval(id);
+    };
   }, []);
 
   return (
@@ -55,7 +53,11 @@ function LocationLink({ location, locationLink, label }: LocationLinkProps) {
         href={locationLink}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${label}: ${location}. Hora actual: ${time}`}
+        aria-label={
+          time
+            ? `${label}: ${location}. Hora actual: ${time}`
+            : `${label}: ${location}`
+        }
       >
         <GlobeIcon className="size-3" aria-hidden="true" />
         <span>{location}</span>
