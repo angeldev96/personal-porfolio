@@ -93,6 +93,9 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         <br />
         <br />
         On the technical side, I specialize in MERN/PERN stacks, Next.js, and Supabase for building modern, scalable web applications. I also have deep expertise in <strong>AI and LLM integrations</strong>, including chatbots with OpenAI/Claude APIs, RAG systems, AI-powered content generation, and speech-to-text/text-to-speech capabilities. I deliver complete end-to-end solutions with maintainable code and reliable deadlines.
+        <br />
+        <br />
+        Communication is never a barrier: I hold a <strong>B2 English proficiency level</strong>. I am fully capable of maintaining professional conversations, participating in technical interviews, and collaborating in team meetings without difficulty. My written communication is excellent, ensuring clear documentation and smooth coordination with international clients.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
@@ -431,6 +434,9 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         <br />
         <br />
         En lo técnico, me especializo en los stacks MERN/PERN, Next.js y Supabase para construir aplicaciones web modernas y escalables. También tengo amplia experiencia en <strong>integraciones de IA y LLMs</strong>, incluyendo chatbots con APIs de OpenAI/Claude, sistemas RAG, generación de contenido con IA, y reconocimiento/síntesis de voz. Entrego soluciones completas de extremo a extremo con código mantenible y deadlines confiables.
+        <br />
+        <br />
+        El idioma no es una barrera: cuento con un nivel de <strong>inglés B2</strong>. Soy capaz de mantener conversaciones profesionales, participar en entrevistas técnicas y colaborar en reuniones de equipo sin dificultad. Mi comunicación escrita es excelente, asegurando documentación clara y una coordinación fluida con clientes internacionales.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
