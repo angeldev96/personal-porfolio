@@ -456,6 +456,16 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         description:
           "English language certification at B2 Upper Intermediate level, demonstrating proficiency in English as a foreign language.",
       },
+      {
+        id: "agent-skills-anthropic",
+        title: "Introduction to Agent Skills",
+        issuer: "Anthropic Education",
+        date: "March 2026",
+        credentialUrl: "http://verify.skilljar.com/c/uv55eiorhc2g",
+        credentialId: "uv55eiorhc2g",
+        description:
+          "Developed expertise in building, optimizing, and scaling custom Claude Code skills. The course covered advanced configuration techniques, including the use of SKILL.md frontmatter, progressive disclosure for context-window optimization, and restricted tool access. Gained practical experience in architecting isolated subagents, implementing enterprise-wide deployment strategies, and troubleshooting complex agentic workflows to ensure consistent, standard-aligned performance.",
+      },
     ],
     setup: {
       hardware: [
@@ -930,6 +940,16 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         credentialUrl: "https://cert.efset.org/spHzVR",
         description:
           "Certificación de idioma inglés nivel B2 Upper Intermediate, demostrando dominio de inglés como idioma extranjero.",
+      },
+      {
+        id: "agent-skills-anthropic",
+        title: "Introducción a las habilidades de agentes",
+        issuer: "Anthropic Education",
+        date: "marzo 2026",
+        credentialUrl: "http://verify.skilljar.com/c/uv55eiorhc2g",
+        credentialId: "uv55eiorhc2g",
+        description:
+          "Desarrollé experiencia en la creación, optimización y escalado de skills personalizados para Claude Code. El curso cubrió técnicas avanzadas de configuración, incluido el uso de frontmatter en SKILL.md, la divulgación progresiva para optimizar la ventana de contexto y el acceso restringido a herramientas. Adquirí experiencia práctica en la arquitectura de subagentes aislados, la implementación de estrategias de despliegue a nivel empresarial y la resolución de flujos de trabajo agenticos complejos para garantizar un rendimiento consistente y alineado con estándares.",
       },
     ],
     setup: {
