@@ -15,17 +15,56 @@ interface LocationLinkProps {
 }
 
 function LocationLink({ location, locationLink, label }: LocationLinkProps) {
+  const [time, setTime] = useState<string>(() => {
+    try {
+      return new Intl.DateTimeFormat(undefined, {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        timeZone: "America/Tegucigalpa",
+        timeZoneName: "short",
+      }).format(new Date());
+    } catch (e) {
+      return "";
+    }
+  });
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      try {
+        const formatted = new Intl.DateTimeFormat(undefined, {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          timeZone: "America/Tegucigalpa",
+          timeZoneName: "short",
+        }).format(new Date());
+        setTime(formatted);
+      } catch (e) {
+        // ignore
+      }
+    }, 1000);
+
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
       <a
-        className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+        className="inline-flex items-baseline gap-x-2 leading-none hover:underline"
         href={locationLink}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${label}: ${location}`}
+        aria-label={`${label}: ${location}. Hora actual: ${time}`}
       >
         <GlobeIcon className="size-3" aria-hidden="true" />
-        {location}
+        <span>{location}</span>
+        <span
+          className="ml-2 font-mono text-xs text-foreground/70"
+          aria-live="polite"
+        >
+          {time}
+        </span>
       </a>
     </p>
   );
@@ -39,7 +78,15 @@ const socialIconMap: Record<SocialIconName, React.ElementType> = {
   x: XIcon,
 };
 
-function SocialButton({ href, icon, label }: { href: string; icon: SocialIconName; label: string }) {
+function SocialButton({
+  href,
+  icon,
+  label,
+}: {
+  href: string;
+  icon: SocialIconName;
+  label: string;
+}) {
   const Icon = socialIconMap[icon];
 
   return (
@@ -64,7 +111,13 @@ interface ContactButtonsProps {
   labels: Dictionary["header"];
 }
 
-function ContactButtons({ contact, personalWebsiteUrl, upworkUrl, upworkLabel, labels }: ContactButtonsProps) {
+function ContactButtons({
+  contact,
+  personalWebsiteUrl,
+  upworkUrl,
+  upworkLabel,
+  labels,
+}: ContactButtonsProps) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const toastTimer = useRef<NodeJS.Timeout | null>(null);
 
@@ -106,7 +159,11 @@ function ContactButtons({ contact, personalWebsiteUrl, upworkUrl, upworkLabel, l
           <Button className="size-8" variant="outline" size="icon" asChild>
             <a
               href={upworkUrl ?? personalWebsiteUrl ?? undefined}
-              aria-label={upworkUrl ? upworkLabel ?? "Upwork profile" : labels.personalWebsite}
+              aria-label={
+                upworkUrl
+                  ? upworkLabel ?? "Upwork profile"
+                  : labels.personalWebsite
+              }
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -133,10 +190,7 @@ function ContactButtons({ contact, personalWebsiteUrl, upworkUrl, upworkLabel, l
       {contact.tel && (
         <li>
           <Button className="size-8" variant="outline" size="icon" asChild>
-            <a
-              href={`tel:${contact.tel}`}
-              aria-label={labels.phone}
-            >
+            <a href={`tel:${contact.tel}`} aria-label={labels.phone}>
               <PhoneIcon className="size-4" aria-hidden="true" />
             </a>
           </Button>
@@ -154,7 +208,7 @@ function ContactButtons({ contact, personalWebsiteUrl, upworkUrl, upworkLabel, l
 
       {toastMessage && (
         <div
-          className="fixed left-1/2 bottom-6 -translate-x-1/2 rounded-md bg-foreground px-3 py-1 text-xs font-medium text-background shadow-lg"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 rounded-md bg-foreground px-3 py-1 text-xs font-medium text-background shadow-lg"
           role="status"
           aria-live="polite"
         >
@@ -169,7 +223,6 @@ interface PrintContactProps {
   contact: ResumeData["contact"];
   personalWebsiteUrl?: string | null;
 }
-
 
 function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
   return (
