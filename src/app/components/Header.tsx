@@ -47,9 +47,9 @@ function LocationLink({ location, locationLink, label }: LocationLinkProps) {
   }, []);
 
   return (
-    <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
+    <p className="max-w-md text-pretty font-mono text-xs text-foreground">
       <a
-        className="inline-flex items-baseline gap-x-2 leading-none hover:underline"
+        className="inline-flex flex-wrap items-center gap-x-1.5 leading-snug hover:underline"
         href={locationLink}
         target="_blank"
         rel="noopener noreferrer"
@@ -59,10 +59,10 @@ function LocationLink({ location, locationLink, label }: LocationLinkProps) {
             : `${label}: ${location}`
         }
       >
-        <GlobeIcon className="size-3" aria-hidden="true" />
+        <GlobeIcon className="size-3 shrink-0" aria-hidden="true" />
         <span>{location}</span>
         <span
-          className="ml-2 font-mono text-xs text-foreground/70"
+          className="ml-1 font-mono text-xs text-foreground/70"
           aria-live="polite"
         >
           {time}
@@ -153,7 +153,7 @@ function ContactButtons({
 
   return (
     <ul
-      className="flex list-none gap-x-1 p-0 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+      className="flex list-none flex-wrap gap-2 p-0 pt-1 font-mono text-sm text-foreground/80 print:hidden"
       aria-label="Contact links"
     >
       {(upworkUrl || personalWebsiteUrl) && (
@@ -277,8 +277,8 @@ export function Header({
   labels: Dictionary["header"];
 }) {
   return (
-    <header className="flex items-center justify-between">
-      <div className="flex-1 space-y-1.5">
+    <header className="flex flex-col-reverse items-start gap-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+      <div className="min-w-0 flex-1 space-y-1.5">
         <h1 className="text-2xl font-bold" id="resume-name">
           {resume.name}
         </h1>
@@ -309,7 +309,7 @@ export function Header({
         />
       </div>
 
-      <Avatar className="size-28" aria-hidden="true">
+      <Avatar className="size-24 shrink-0 sm:size-28" aria-hidden="true">
         <AvatarImage
           alt={`${resume.name}'s profile picture`}
           src={resume.avatarUrl}

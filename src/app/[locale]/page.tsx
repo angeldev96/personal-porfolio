@@ -43,12 +43,17 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const resolvedLocale = resolveLocale(locale);
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
   const canonicalUrl = `${siteUrl}/${resolvedLocale}`;
   const title = `${resume.name} - ${dictionary.meta.resumeTitle}`;
 
@@ -105,12 +110,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function ResumePage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ResumePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const resolvedLocale = resolveLocale(locale);
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
   const profileUrl = `${siteUrl}/${resolvedLocale}`;
   const sameAs = resume.contact.social.map((item) => item.url);
 
@@ -150,54 +160,68 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
       />
 
       <main
-        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
+        className="container relative mx-auto scroll-my-12 overflow-auto p-4 pt-16 print:p-11 md:p-16"
         id="main-content"
       >
-      <div className="sr-only">
-        <h1>
-          {resume.name} - {dictionary.meta.resumeTitle}
-        </h1>
-      </div>
+        <div className="sr-only">
+          <h1>
+            {resume.name} - {dictionary.meta.resumeTitle}
+          </h1>
+        </div>
 
-      <section
-        className="mx-auto w-full max-w-2xl space-y-8 bg-background dark:bg-background print:space-y-4"
-        aria-label="Resume Content"
-      >
-        <Header resume={resume} labels={dictionary.header} />
+        <section
+          className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-4 dark:bg-background"
+          aria-label="Resume Content"
+        >
+          <Header resume={resume} labels={dictionary.header} />
 
-        <UpworkSection
-          heading={dictionary.upworkSection.heading}
-          description={dictionary.upworkSection.description}
-          ctaLabel={dictionary.upworkSection.ctaLabel}
-          locale={resolvedLocale}
-        />
-
-        <div className="space-y-8 print:space-y-4">
-          <Summary 
-            summary={resume.summary} 
-            title={dictionary.summary.title} 
-            mySetupLabel={dictionary.summary.mySetup}
+          <UpworkSection
+            heading={dictionary.upworkSection.heading}
+            description={dictionary.upworkSection.description}
+            ctaLabel={dictionary.upworkSection.ctaLabel}
             locale={resolvedLocale}
           />
 
-          <Projects projects={resume.projects} labels={dictionary.projects} locale={resolvedLocale} />
+          <div className="space-y-8 print:space-y-4">
+            <Summary
+              summary={resume.summary}
+              title={dictionary.summary.title}
+              mySetupLabel={dictionary.summary.mySetup}
+              locale={resolvedLocale}
+            />
 
-          <WorkExperience work={resume.work} labels={dictionary.work} />
+            <Projects
+              projects={resume.projects}
+              labels={dictionary.projects}
+              locale={resolvedLocale}
+            />
 
-          <Education education={resume.education} labels={dictionary.education} />
+            <WorkExperience work={resume.work} labels={dictionary.work} />
 
-          <Skills skills={resume.skills} title={dictionary.skills.skills} />
+            <Education
+              education={resume.education}
+              labels={dictionary.education}
+            />
 
-          <Certificates certificates={resume.certificates} labels={dictionary.certificates} locale={resolvedLocale} />
-        </div>
-      </section>
+            <Skills skills={resume.skills} title={dictionary.skills.skills} />
 
-      <nav className="print:hidden" aria-label="Quick navigation">
-        <CommandMenu
-          links={getCommandMenuLinks(resume, dictionary.header.personalWebsite)}
-          labels={dictionary.commandMenu}
-        />
-      </nav>
+            <Certificates
+              certificates={resume.certificates}
+              labels={dictionary.certificates}
+              locale={resolvedLocale}
+            />
+          </div>
+        </section>
+
+        <nav className="print:hidden" aria-label="Quick navigation">
+          <CommandMenu
+            links={getCommandMenuLinks(
+              resume,
+              dictionary.header.personalWebsite,
+            )}
+            labels={dictionary.commandMenu}
+          />
+        </nav>
       </main>
     </>
   );
