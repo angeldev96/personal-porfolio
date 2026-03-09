@@ -88,18 +88,47 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "Top Rated Full-Stack Developer · 100% Job Success on Upwork · AI & LLM Integration Specialist",
     summary: (
       <>
-        I am a <strong>Top Rated freelancer on Upwork with a 100% Job Success Score</strong>, which places me in the <strong>top 10% of talent</strong> on the entire platform. My earnings, consistent delivery, and excellent client reviews have earned me this distinction. I invite you to visit my{" "}
-        <a href="https://www.upwork.com/freelancers/~0116803452ac7b4ff7" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground/70">Upwork profile</a>{" "}
+        I am a{" "}
+        <strong>
+          Top Rated freelancer on Upwork with a 100% Job Success Score
+        </strong>
+        , which places me in the <strong>top 10% of talent</strong> on the
+        entire platform. My earnings, consistent delivery, and excellent client
+        reviews have earned me this distinction. I invite you to visit my{" "}
+        <a
+          href="https://www.upwork.com/freelancers/~0116803452ac7b4ff7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-foreground/70"
+        >
+          Upwork profile
+        </a>{" "}
         to see my track record firsthand.
         <br />
         <br />
-        I&apos;m open to working through Upwork or through <strong>independent/direct contracts</strong>—whatever works best for you. While I currently work as a freelancer, I&apos;m also very open to <strong>full-time positions</strong>. If you&apos;re a recruiter with a full-time role that matches my skill set, don&apos;t hesitate to reach out—I&apos;d love to hear from you.
+        I&apos;m open to working through Upwork or through{" "}
+        <strong>independent/direct contracts</strong>—whatever works best for
+        you. While I currently work as a freelancer, I&apos;m also very open to{" "}
+        <strong>full-time positions</strong>. If you&apos;re a recruiter with a
+        full-time role that matches my skill set, don&apos;t hesitate to reach
+        out—I&apos;d love to hear from you.
         <br />
         <br />
-        On the technical side, I specialize in MERN/PERN stacks, Next.js, and Supabase for building modern, scalable web applications. I also have deep expertise in <strong>AI and LLM integrations</strong>, including chatbots with OpenAI/Claude APIs, RAG systems, AI-powered content generation, and speech-to-text/text-to-speech capabilities. I deliver complete end-to-end solutions with maintainable code and reliable deadlines.
+        On the technical side, I specialize in MERN/PERN stacks, Next.js, and
+        Supabase for building modern, scalable web applications. I also have
+        deep expertise in <strong>AI and LLM integrations</strong>, including
+        chatbots with OpenAI/Claude APIs, RAG systems, AI-powered content
+        generation, and speech-to-text/text-to-speech capabilities. I deliver
+        complete end-to-end solutions with maintainable code and reliable
+        deadlines.
         <br />
         <br />
-        Communication is never a barrier: I hold a <strong>B2 English proficiency level</strong>. I am fully capable of maintaining professional conversations, participating in technical interviews, and collaborating in team meetings without difficulty. My written communication is excellent, ensuring clear documentation and smooth coordination with international clients.
+        Communication is never a barrier: I hold a{" "}
+        <strong>B2 English proficiency level</strong>. I am fully capable of
+        maintaining professional conversations, participating in technical
+        interviews, and collaborating in team meetings without difficulty. My
+        written communication is excellent, ensuring clear documentation and
+        smooth coordination with international clients.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
@@ -160,19 +189,33 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: null,
         description: (
           <>
-            As a <strong>Top Rated freelancer with 100% Job Success Score</strong>, I architect and deliver production-grade applications for global clients, specializing in full-stack ecosystems and AI-driven automation.
+            As a{" "}
+            <strong>Top Rated freelancer with 100% Job Success Score</strong>, I
+            architect and deliver production-grade applications for global
+            clients, specializing in full-stack ecosystems and AI-driven
+            automation.
             <ul className="list-inside list-disc">
               <li>
-                <strong>AI & LLM Architecture:</strong> Engineered custom RAG systems, complex chatbots, and autonomous agents using OpenAI/Claude APIs, significantly accelerating business workflows.
+                <strong>AI & LLM Architecture:</strong> Engineered custom RAG
+                systems, complex chatbots, and autonomous agents using
+                OpenAI/Claude APIs, significantly accelerating business
+                workflows.
               </li>
               <li>
-                <strong>End-to-End Development:</strong> Design and deployment of scalable web apps using MERN/PERN stacks, Next.js, and Supabase with a focus on performance and maintainability.
+                <strong>End-to-End Development:</strong> Design and deployment
+                of scalable web apps using MERN/PERN stacks, Next.js, and
+                Supabase with a focus on performance and maintainability.
               </li>
               <li>
-                <strong>Cloud & Infrastructure:</strong> Proficient in Dockerized environments, managing high-performance VPS infrastructure for reliable hosting of client and internal projects.
+                <strong>Cloud & Infrastructure:</strong> Proficient in
+                Dockerized environments, managing high-performance VPS
+                infrastructure for reliable hosting of client and internal
+                projects.
               </li>
               <li>
-                <strong>Project Leadership:</strong> Directly managed client relationships, technical requirements, and production deadlines with a proven 100% success rate.
+                <strong>Project Leadership:</strong> Directly managed client
+                relationships, technical requirements, and production deadlines
+                with a proven 100% success rate.
               </li>
             </ul>
           </>
@@ -196,13 +239,32 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: "Dec 2025",
         description: (
           <>
-            Passionate professional combining software development expertise with operational management in the energy sector. Create and maintain applications that optimize operations and monitoring in the electrical plant, while developing web applications for various departments.
+            Passionate professional combining software development expertise
+            with operational management in the energy sector. Create and
+            maintain applications that optimize operations and monitoring in the
+            electrical plant, while developing web applications for various
+            departments.
             <ul className="list-inside list-disc">
-              <li>Developed web applications to optimize electrical plant operations and monitoring systems.</li>
-              <li>Managed electrical plant machinery and monitored systems for efficient and safe operation.</li>
-              <li>Combined technical and operational knowledge to deliver tailored solutions for business needs.</li>
-              <li>Committed to innovation and sustainability, improving existing processes through technology.</li>
-              <li>Contributed to a collaborative work environment with continuous improvement mindset.</li>
+              <li>
+                Developed web applications to optimize electrical plant
+                operations and monitoring systems.
+              </li>
+              <li>
+                Managed electrical plant machinery and monitored systems for
+                efficient and safe operation.
+              </li>
+              <li>
+                Combined technical and operational knowledge to deliver tailored
+                solutions for business needs.
+              </li>
+              <li>
+                Committed to innovation and sustainability, improving existing
+                processes through technology.
+              </li>
+              <li>
+                Contributed to a collaborative work environment with continuous
+                improvement mindset.
+              </li>
             </ul>
           </>
         ),
@@ -217,11 +279,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: "Jan 2024",
         description: (
           <>
-            Provided IT support and development services in a hybrid work environment.
+            Provided IT support and development services in a hybrid work
+            environment.
             <ul className="list-inside list-disc">
-              <li>Assisted in web development projects using C# and Microsoft SQL Server.</li>
-              <li>Provided technical support and maintenance for internal systems.</li>
-              <li>Collaborated with cross-functional teams on IT initiatives.</li>
+              <li>
+                Assisted in web development projects using C# and Microsoft SQL
+                Server.
+              </li>
+              <li>
+                Provided technical support and maintenance for internal systems.
+              </li>
+              <li>
+                Collaborated with cross-functional teams on IT initiatives.
+              </li>
             </ul>
           </>
         ),
@@ -238,8 +308,13 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           <>
             Completed internship focusing on web development and IT support.
             <ul className="list-inside list-disc">
-              <li>Gained hands-on experience in web development with C# and SQL Server.</li>
-              <li>Assisted in developing and maintaining internal applications.</li>
+              <li>
+                Gained hands-on experience in web development with C# and SQL
+                Server.
+              </li>
+              <li>
+                Assisted in developing and maintaining internal applications.
+              </li>
               <li>Participated in code reviews and team meetings.</li>
             </ul>
           </>
@@ -257,36 +332,45 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           <>
             Completed internship at Tigo Honduras as a Systems Analyst.
             <ul className="list-inside list-disc">
-              <li>Analyzed and documented system requirements and processes.</li>
-              <li>Provided IT support and assistance in telecommunications projects.</li>
-              <li>Gained exposure to large-scale telecommunications infrastructure.</li>
+              <li>
+                Analyzed and documented system requirements and processes.
+              </li>
+              <li>
+                Provided IT support and assistance in telecommunications
+                projects.
+              </li>
+              <li>
+                Gained exposure to large-scale telecommunications
+                infrastructure.
+              </li>
             </ul>
           </>
         ),
       },
     ],
     skills: [
-      "MERN Stack",
-      "PERN Stack",
+      "AI-Driven Development",
       "Next.js",
-      "React",
-      "TypeScript",
-      "Node.js",
-      "NestJS",
-      "Express",
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "MongoDB",
       "Supabase",
-      "GraphQL",
-      "REST APIs",
+      "PostgreSQL",
       "OpenAI API",
       "Claude API",
       "LLM Integration",
       "RAG Systems",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MERN Stack",
+      "PERN Stack",
+      "Express",
+      "NestJS",
+      "GraphQL",
+      "REST APIs",
       "API Integration",
       "Docker",
+      "Python",
+      "FastAPI",
+      "MongoDB",
       "Tailwind CSS",
       "HTML/CSS",
     ],
@@ -295,13 +379,15 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         slug: "yiddish-jobs",
         title: "Yiddish Jobs",
         techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-        description: "Platform helping the Yiddish community in Boro Park, New York find employment. Assisted with web platform development, internal tools, and automation to support job seekers and local businesses.",
+        description:
+          "Platform helping the Yiddish community in Boro Park, New York find employment. Assisted with web platform development, internal tools, and automation to support job seekers and local businesses.",
         logo: null,
         link: {
           label: "yiddishjobs.com",
           href: "https://www.yiddishjobs.com/",
         },
-        longDescription: "A comprehensive job platform built specifically for the Yiddish-speaking community in Boro Park, New York. The platform connects job seekers with local employers, featuring advanced search filters, real-time job postings, and an intuitive interface designed to serve the community's unique needs.",
+        longDescription:
+          "A comprehensive job platform built specifically for the Yiddish-speaking community in Boro Park, New York. The platform connects job seekers with local employers, featuring advanced search filters, real-time job postings, and an intuitive interface designed to serve the community's unique needs.",
         images: [],
         features: [
           "Advanced job search with filters for location, job type, and industry",
@@ -310,19 +396,22 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "Internal tools for employers to manage listings",
           "Responsive design working on all devices",
         ],
-        challenges: "Creating a platform that bridges cultural and language barriers while maintaining modern usability standards. Implemented intuitive UI patterns that work seamlessly with RTL text considerations and community-specific workflows.",
+        challenges:
+          "Creating a platform that bridges cultural and language barriers while maintaining modern usability standards. Implemented intuitive UI patterns that work seamlessly with RTL text considerations and community-specific workflows.",
       },
       {
         slug: "pinkys-store",
         title: "Pinky's Store",
         techStack: ["Next.js", "React", "Node.js", "PostgreSQL"],
-        description: "E-commerce platform and inventory management system for a local cosmetics business. Automated sales processes and provided the owner with an internal tool for efficient inventory tracking and sales management.",
+        description:
+          "E-commerce platform and inventory management system for a local cosmetics business. Automated sales processes and provided the owner with an internal tool for efficient inventory tracking and sales management.",
         logo: null,
         link: {
           label: "GitHub",
           href: "https://github.com/angeldev96/pinkys-store",
         },
-        longDescription: "A complete e-commerce and inventory management solution designed for a local cosmetics business. The system includes both a customer-facing storefront and an admin dashboard for managing products, tracking inventory, processing orders, and analyzing sales data.",
+        longDescription:
+          "A complete e-commerce and inventory management solution designed for a local cosmetics business. The system includes both a customer-facing storefront and an admin dashboard for managing products, tracking inventory, processing orders, and analyzing sales data.",
         images: [],
         features: [
           "Product catalog with image galleries and detailed descriptions",
@@ -332,7 +421,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "Order tracking and status updates",
           "Automated low-stock notifications",
         ],
-        challenges: "Building a solution that balances e-commerce functionality with inventory management needs. Created a dual-interface system that serves both customers and business owners through a single, unified platform.",
+        challenges:
+          "Building a solution that balances e-commerce functionality with inventory management needs. Created a dual-interface system that serves both customers and business owners through a single, unified platform.",
       },
     ],
     certificates: [
@@ -343,16 +433,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         date: "January 2026",
         credentialUrl: "https://verify.skilljar.com/c/drieo6sfe3kq",
         credentialId: "drieo6sfe3kq",
-        description: "Comprehensive training on building applications with Claude AI, including API integration, prompt engineering, and production deployment patterns.",
+        description:
+          "Comprehensive training on building applications with Claude AI, including API integration, prompt engineering, and production deployment patterns.",
       },
       {
         id: "frontend-g5-one",
         title: "Front-End Training G5 - ONE",
         issuer: "Alura Latam",
         date: "July 2023",
-        credentialUrl: "https://app.aluracursos.com/degree/certificate/dde9c8e7-ea6c-46ce-b056-ce2bbce39d55",
+        credentialUrl:
+          "https://app.aluracursos.com/degree/certificate/dde9c8e7-ea6c-46ce-b056-ce2bbce39d55",
         credentialId: "dde9c8e7-ea6c-46ce-b056-ce2bbce39d55",
-        description: "Front-end development certification covering JavaScript, React.js, and modern web development practices.",
+        description:
+          "Front-end development certification covering JavaScript, React.js, and modern web development practices.",
       },
       {
         id: "efset-english",
@@ -360,21 +453,24 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         issuer: "EF Standard English Test (EF SET)",
         date: "October 2022",
         credentialUrl: "https://cert.efset.org/spHzVR",
-        description: "English language certification at B2 Upper Intermediate level, demonstrating proficiency in English as a foreign language.",
+        description:
+          "English language certification at B2 Upper Intermediate level, demonstrating proficiency in English as a foreign language.",
       },
     ],
     setup: {
       hardware: [
         {
-          name: "MacBook Pro 16\" (M1 Pro, 32GB RAM)",
-          description: "High-performance workstation, incredibly fast and reliable for all development tasks.",
+          name: 'MacBook Pro 16" (M1 Pro, 32GB RAM)',
+          description:
+            "High-performance workstation, incredibly fast and reliable for all development tasks.",
         },
         {
           name: "Logitech MX Master 3S",
-          description: "Ergonomic and highly recommended mouse for productivity.",
+          description:
+            "Ergonomic and highly recommended mouse for productivity.",
         },
         {
-          name: "Samsung 24\" Monitor",
+          name: 'Samsung 24" Monitor',
           description: "Secondary display for extended workspace.",
         },
         {
@@ -383,63 +479,77 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         },
         {
           name: "Fiber Optic Internet (200 Mbps)",
-          description: "Stable and high-speed connection for seamless remote work and client communication.",
+          description:
+            "Stable and high-speed connection for seamless remote work and client communication.",
         },
         {
           name: "Ecoflow River 2 Max (512Wh)",
-          description: "Reliable power backup that can keep both the laptop and router running for an entire day in case of power outages.",
+          description:
+            "Reliable power backup that can keep both the laptop and router running for an entire day in case of power outages.",
         },
         {
           name: "VPS (16GB RAM, 4 vCPU)",
-          description: "High-performance server for hosting multiple Dockerized applications and services.",
+          description:
+            "High-performance server for hosting multiple Dockerized applications and services.",
         },
       ],
       software: [
         {
           name: "Dokploy",
-          description: "Self-hosted PaaS platform managed on my VPS. Hosts multiple instances of Supabase, n8n, backends, frontends, and client demos.",
+          description:
+            "Self-hosted PaaS platform managed on my VPS. Hosts multiple instances of Supabase, n8n, backends, frontends, and client demos.",
         },
         {
           name: "OpenCode & Claude Code",
-          description: "Advanced AI coding agents used daily to accelerate development workflows.",
+          description:
+            "Advanced AI coding agents used daily to accelerate development workflows.",
         },
         {
           name: "ChatGPT Plus (GPT 5.4)",
-          description: "Latest AI model subscription for complex problem solving and AI-assisted coding through OpenCode.",
+          description:
+            "Latest AI model subscription for complex problem solving and AI-assisted coding through OpenCode.",
         },
         {
           name: "VS Code & Antigravity",
-          description: "Primary editors for different development use cases, leveraging Antigravity's unique features.",
+          description:
+            "Primary editors for different development use cases, leveraging Antigravity's unique features.",
         },
         {
           name: "Warp",
-          description: "Modern terminal emulator with AI-powered autocompletion and high speed to save development time.",
+          description:
+            "Modern terminal emulator with AI-powered autocompletion and high speed to save development time.",
         },
         {
           name: "Stitch (Google)",
-          description: "Used for rapid frontend prototyping with excellent results.",
+          description:
+            "Used for rapid frontend prototyping with excellent results.",
         },
         {
           name: "Cursor",
-          description: "AI-native code editor with a monthly subscription for seamless AI integration.",
+          description:
+            "AI-native code editor with a monthly subscription for seamless AI integration.",
         },
       ],
       platforms: [
         {
           name: "Upwork",
-          description: "Primary freelancing platform. Top Rated status with 100% success rate, though I'm fully open to direct contracts off-platform.",
+          description:
+            "Primary freelancing platform. Top Rated status with 100% success rate, though I'm fully open to direct contracts off-platform.",
         },
         {
           name: "LinkedIn",
-          description: "Professional networking and high-quality client acquisition channel.",
+          description:
+            "Professional networking and high-quality client acquisition channel.",
         },
         {
           name: "X (Twitter)",
-          description: "My main source for staying updated with AI trends, following industry leaders, and refining my development process with the latest tools.",
+          description:
+            "My main source for staying updated with AI trends, following industry leaders, and refining my development process with the latest tools.",
         },
         {
           name: "Reddit",
-          description: "Used to follow 'state of the art' AI subreddits for deep technical insights and community tips.",
+          description:
+            "Used to follow 'state of the art' AI subreddits for deep technical insights and community tips.",
         },
       ],
     },
@@ -453,18 +563,47 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "Desarrollador Full-Stack Top Rated · 100% Job Success en Upwork · Especialista en Integraciones de IA y LLM",
     summary: (
       <>
-        Soy <strong>freelancer Top Rated en Upwork con un 100% Job Success Score</strong>, lo que me ubica en el <strong>top 10% del talento</strong> de toda la plataforma. Mis ganancias, entregas consistentes y excelentes reseñas de clientes me han otorgado esta distinción. Te invito a visitar mi{" "}
-        <a href="https://www.upwork.com/freelancers/~0116803452ac7b4ff7" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground/70">perfil de Upwork</a>{" "}
+        Soy{" "}
+        <strong>
+          freelancer Top Rated en Upwork con un 100% Job Success Score
+        </strong>
+        , lo que me ubica en el <strong>top 10% del talento</strong> de toda la
+        plataforma. Mis ganancias, entregas consistentes y excelentes reseñas de
+        clientes me han otorgado esta distinción. Te invito a visitar mi{" "}
+        <a
+          href="https://www.upwork.com/freelancers/~0116803452ac7b4ff7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-foreground/70"
+        >
+          perfil de Upwork
+        </a>{" "}
         para ver mi historial de primera mano.
         <br />
         <br />
-        Estoy abierto a trabajar a través de Upwork o mediante <strong>contratos independientes/directos</strong>—lo que funcione mejor para ti. Aunque actualmente trabajo como freelancer, también estoy muy interesado en <strong>posiciones full-time</strong>. Si eres reclutador y tienes una posición full-time que se adecúe a mis habilidades, no dudes en escribirme—me encantaría saber de ti.
+        Estoy abierto a trabajar a través de Upwork o mediante{" "}
+        <strong>contratos independientes/directos</strong>—lo que funcione mejor
+        para ti. Aunque actualmente trabajo como freelancer, también estoy muy
+        interesado en <strong>posiciones full-time</strong>. Si eres reclutador
+        y tienes una posición full-time que se adecúe a mis habilidades, no
+        dudes en escribirme—me encantaría saber de ti.
         <br />
         <br />
-        En lo técnico, me especializo en los stacks MERN/PERN, Next.js y Supabase para construir aplicaciones web modernas y escalables. También tengo amplia experiencia en <strong>integraciones de IA y LLMs</strong>, incluyendo chatbots con APIs de OpenAI/Claude, sistemas RAG, generación de contenido con IA, y reconocimiento/síntesis de voz. Entrego soluciones completas de extremo a extremo con código mantenible y deadlines confiables.
+        En lo técnico, me especializo en los stacks MERN/PERN, Next.js y
+        Supabase para construir aplicaciones web modernas y escalables. También
+        tengo amplia experiencia en <strong>integraciones de IA y LLMs</strong>,
+        incluyendo chatbots con APIs de OpenAI/Claude, sistemas RAG, generación
+        de contenido con IA, y reconocimiento/síntesis de voz. Entrego
+        soluciones completas de extremo a extremo con código mantenible y
+        deadlines confiables.
         <br />
         <br />
-        El idioma no es una barrera: cuento con un nivel de <strong>inglés B2</strong>. Soy capaz de mantener conversaciones profesionales, participar en entrevistas técnicas y colaborar en reuniones de equipo sin dificultad. Mi comunicación escrita es excelente, asegurando documentación clara y una coordinación fluida con clientes internacionales.
+        El idioma no es una barrera: cuento con un nivel de{" "}
+        <strong>inglés B2</strong>. Soy capaz de mantener conversaciones
+        profesionales, participar en entrevistas técnicas y colaborar en
+        reuniones de equipo sin dificultad. Mi comunicación escrita es
+        excelente, asegurando documentación clara y una coordinación fluida con
+        clientes internacionales.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
@@ -519,25 +658,37 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "OpenAI API",
           "LLM Integration",
         ],
-        title: "Ingeniero de Software Full-Stack · Top Rated · 100% Job Success",
+        title:
+          "Ingeniero de Software Full-Stack · Top Rated · 100% Job Success",
         logo: null,
         start: "2024",
         end: null,
         description: (
           <>
-            Como <strong>freelancer Top Rated con 100% Job Success Score</strong>, diseño y construyo aplicaciones de nivel de producción para clientes globales, especializándome en automatización impulsada por IA.
+            Como{" "}
+            <strong>freelancer Top Rated con 100% Job Success Score</strong>,
+            diseño y construyo aplicaciones de nivel de producción para clientes
+            globales, especializándome en automatización impulsada por IA.
             <ul className="list-inside list-disc">
               <li>
-                <strong>Arquitectura de IA y LLM:</strong> Implementación de sistemas RAG personalizados y agentes autónomos utilizando APIs de OpenAI/Claude para optimizar procesos de negocio.
+                <strong>Arquitectura de IA y LLM:</strong> Implementación de
+                sistemas RAG personalizados y agentes autónomos utilizando APIs
+                de OpenAI/Claude para optimizar procesos de negocio.
               </li>
               <li>
-                <strong>Desarrollo End-to-End:</strong> Creación de aplicaciones escalables con stacks MERN/PERN, Next.js y Supabase, priorizando el rendimiento y la mantenibilidad.
+                <strong>Desarrollo End-to-End:</strong> Creación de aplicaciones
+                escalables con stacks MERN/PERN, Next.js y Supabase, priorizando
+                el rendimiento y la mantenibilidad.
               </li>
               <li>
-                <strong>Infraestructura y Cloud:</strong> Gestión de entornos Dockerizados y administración de infraestructura VPS de alto rendimiento para el hosting de proyectos de clientes.
+                <strong>Infraestructura y Cloud:</strong> Gestión de entornos
+                Dockerizados y administración de infraestructura VPS de alto
+                rendimiento para el hosting de proyectos de clientes.
               </li>
               <li>
-                <strong>Liderazgo Técnico:</strong> Gestión directa de requerimientos técnicos y cumplimiento de deadlines críticos con un historial de satisfacción del cliente del 100%.
+                <strong>Liderazgo Técnico:</strong> Gestión directa de
+                requerimientos técnicos y cumplimiento de deadlines críticos con
+                un historial de satisfacción del cliente del 100%.
               </li>
             </ul>
           </>
@@ -561,13 +712,32 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: "Dic 2025",
         description: (
           <>
-            Profesional apasionado que combina experiencia en desarrollo de software con gestión operativa en el sector energético. Desarrollo y mantengo aplicaciones que optimizan operaciones y monitoreo en la planta eléctrica, además de crear aplicaciones web para varios departamentos.
+            Profesional apasionado que combina experiencia en desarrollo de
+            software con gestión operativa en el sector energético. Desarrollo y
+            mantengo aplicaciones que optimizan operaciones y monitoreo en la
+            planta eléctrica, además de crear aplicaciones web para varios
+            departamentos.
             <ul className="list-inside list-disc">
-              <li>Desarrollé aplicaciones web para optimizar operaciones y sistemas de monitoreo de la planta eléctrica.</li>
-              <li>Administré maquinaria de planta eléctrica y monitoreé sistemas para operación eficiente y segura.</li>
-              <li>Combiné conocimiento técnico y operacional para entregar soluciones adaptadas a necesidades del negocio.</li>
-              <li>Comprometido con la innovación y sostenibilidad, mejorando procesos existentes a través de tecnología.</li>
-              <li>Contribuí a un ambiente colaborativo con mentalidad de mejora continua.</li>
+              <li>
+                Desarrollé aplicaciones web para optimizar operaciones y
+                sistemas de monitoreo de la planta eléctrica.
+              </li>
+              <li>
+                Administré maquinaria de planta eléctrica y monitoreé sistemas
+                para operación eficiente y segura.
+              </li>
+              <li>
+                Combiné conocimiento técnico y operacional para entregar
+                soluciones adaptadas a necesidades del negocio.
+              </li>
+              <li>
+                Comprometido con la innovación y sostenibilidad, mejorando
+                procesos existentes a través de tecnología.
+              </li>
+              <li>
+                Contribuí a un ambiente colaborativo con mentalidad de mejora
+                continua.
+              </li>
             </ul>
           </>
         ),
@@ -582,11 +752,20 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: "Ene 2024",
         description: (
           <>
-            Brindé soporte de TI y servicios de desarrollo en entorno de trabajo híbrido.
+            Brindé soporte de TI y servicios de desarrollo en entorno de trabajo
+            híbrido.
             <ul className="list-inside list-disc">
-              <li>Asistí en proyectos de desarrollo web usando C# y Microsoft SQL Server.</li>
-              <li>Proporcioné soporte técnico y mantenimiento de sistemas internos.</li>
-              <li>Colaboré con equipos multidisciplinarios en iniciativas de TI.</li>
+              <li>
+                Asistí en proyectos de desarrollo web usando C# y Microsoft SQL
+                Server.
+              </li>
+              <li>
+                Proporcioné soporte técnico y mantenimiento de sistemas
+                internos.
+              </li>
+              <li>
+                Colaboré con equipos multidisciplinarios en iniciativas de TI.
+              </li>
             </ul>
           </>
         ),
@@ -603,8 +782,14 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           <>
             Completé pasantía enfocada en desarrollo web y soporte de TI.
             <ul className="list-inside list-disc">
-              <li>Adquirí experiencia práctica en desarrollo web con C# y SQL Server.</li>
-              <li>Asistí en el desarrollo y mantenimiento de aplicaciones internas.</li>
+              <li>
+                Adquirí experiencia práctica en desarrollo web con C# y SQL
+                Server.
+              </li>
+              <li>
+                Asistí en el desarrollo y mantenimiento de aplicaciones
+                internas.
+              </li>
               <li>Participé en revisiones de código y reuniones de equipo.</li>
             </ul>
           </>
@@ -622,36 +807,45 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           <>
             Realicé pasantía en Tigo Honduras como Analista de Sistemas.
             <ul className="list-inside list-disc">
-              <li>Analicé y documenté requerimientos y procesos de sistemas.</li>
-              <li>Proporcioné soporte de TI y asistencia en proyectos de telecomunicaciones.</li>
-              <li>Obtuve exposición a infraestructura de telecomunicaciones a gran escala.</li>
+              <li>
+                Analicé y documenté requerimientos y procesos de sistemas.
+              </li>
+              <li>
+                Proporcioné soporte de TI y asistencia en proyectos de
+                telecomunicaciones.
+              </li>
+              <li>
+                Obtuve exposición a infraestructura de telecomunicaciones a gran
+                escala.
+              </li>
             </ul>
           </>
         ),
       },
     ],
     skills: [
-      "MERN Stack",
-      "PERN Stack",
+      "AI-Driven Development",
       "Next.js",
-      "React",
-      "TypeScript",
-      "Node.js",
-      "NestJS",
-      "Express",
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "MongoDB",
       "Supabase",
-      "GraphQL",
-      "REST APIs",
+      "PostgreSQL",
       "OpenAI API",
       "Claude API",
       "LLM Integration",
       "RAG Systems",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MERN Stack",
+      "PERN Stack",
+      "Express",
+      "NestJS",
+      "GraphQL",
+      "REST APIs",
       "API Integration",
       "Docker",
+      "Python",
+      "FastAPI",
+      "MongoDB",
       "Tailwind CSS",
       "HTML/CSS",
     ],
@@ -660,13 +854,15 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         slug: "yiddish-jobs",
         title: "Yiddish Jobs",
         techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-        description: "Plataforma que ayuda a la comunidad Yiddish en Boro Park, Nueva York a encontrar empleo. Asistí con el desarrollo de la plataforma web, herramientas internas y automatización para apoyar a buscadores de empleo y negocios locales.",
+        description:
+          "Plataforma que ayuda a la comunidad Yiddish en Boro Park, Nueva York a encontrar empleo. Asistí con el desarrollo de la plataforma web, herramientas internas y automatización para apoyar a buscadores de empleo y negocios locales.",
         logo: null,
         link: {
           label: "yiddishjobs.com",
           href: "https://www.yiddishjobs.com/",
         },
-        longDescription: "Una plataforma de empleo completa construida específicamente para la comunidad de habla Yiddish en Boro Park, Nueva York. La plataforma conecta a buscadores de empleo con empleadores locales, con filtros de búsqueda avanzados, publicaciones de empleo en tiempo real y una interfaz intuitiva diseñada para servir las necesidades únicas de la comunidad.",
+        longDescription:
+          "Una plataforma de empleo completa construida específicamente para la comunidad de habla Yiddish en Boro Park, Nueva York. La plataforma conecta a buscadores de empleo con empleadores locales, con filtros de búsqueda avanzados, publicaciones de empleo en tiempo real y una interfaz intuitiva diseñada para servir las necesidades únicas de la comunidad.",
         images: [],
         features: [
           "Búsqueda avanzada de empleo con filtros por ubicación, tipo y industria",
@@ -675,19 +871,22 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "Herramientas internas para empleadores gestionar listados",
           "Diseño responsive que funciona en todos los dispositivos",
         ],
-        challenges: "Crear una plataforma que supere las barreras culturales y de idioma manteniendo estándares modernos de usabilidad. Implementé patrones de UI intuitivos que funcionan perfectamente con consideraciones de texto RTL y flujos de trabajo específicos de la comunidad.",
+        challenges:
+          "Crear una plataforma que supere las barreras culturales y de idioma manteniendo estándares modernos de usabilidad. Implementé patrones de UI intuitivos que funcionan perfectamente con consideraciones de texto RTL y flujos de trabajo específicos de la comunidad.",
       },
       {
         slug: "pinkys-store",
         title: "Pinky's Store",
         techStack: ["Next.js", "React", "Node.js", "PostgreSQL"],
-        description: "Plataforma de e-commerce y sistema de gestión de inventario para un negocio local de cosméticos. Automaticé procesos de ventas y proporcioné a la dueña una herramienta interna para gestión eficiente de inventario y ventas.",
+        description:
+          "Plataforma de e-commerce y sistema de gestión de inventario para un negocio local de cosméticos. Automaticé procesos de ventas y proporcioné a la dueña una herramienta interna para gestión eficiente de inventario y ventas.",
         logo: null,
         link: {
           label: "GitHub",
           href: "https://github.com/angeldev96/pinkys-store",
         },
-        longDescription: "Una solución completa de e-commerce y gestión de inventario diseñada para un negocio local de cosméticos. El sistema incluye tanto una tienda para clientes como un panel de administración para gestionar productos, rastrear inventario, procesar pedidos y analizar datos de ventas.",
+        longDescription:
+          "Una solución completa de e-commerce y gestión de inventario diseñada para un negocio local de cosméticos. El sistema incluye tanto una tienda para clientes como un panel de administración para gestionar productos, rastrear inventario, procesar pedidos y analizar datos de ventas.",
         images: [],
         features: [
           "Catálogo de productos con galerías de imágenes y descripciones detalladas",
@@ -697,7 +896,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "Seguimiento de pedidos y actualizaciones de estado",
           "Notificaciones automáticas de stock bajo",
         ],
-        challenges: "Construir una solución que equilibra funcionalidad de e-commerce con necesidades de gestión de inventario. Creé un sistema de doble interfaz que sirve tanto a clientes como a dueños de negocios a través de una plataforma unificada.",
+        challenges:
+          "Construir una solución que equilibra funcionalidad de e-commerce con necesidades de gestión de inventario. Creé un sistema de doble interfaz que sirve tanto a clientes como a dueños de negocios a través de una plataforma unificada.",
       },
     ],
     certificates: [
@@ -708,16 +908,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         date: "enero 2026",
         credentialUrl: "https://verify.skilljar.com/c/drieo6sfe3kq",
         credentialId: "drieo6sfe3kq",
-        description: "Capacitación completa sobre construcción de aplicaciones con Claude AI, incluyendo integración de API, prompt engineering y patrones de despliegue en producción.",
+        description:
+          "Capacitación completa sobre construcción de aplicaciones con Claude AI, incluyendo integración de API, prompt engineering y patrones de despliegue en producción.",
       },
       {
         id: "frontend-g5-one",
         title: "Formación Front End G5 - ONE",
         issuer: "Alura Latam",
         date: "julio 2023",
-        credentialUrl: "https://app.aluracursos.com/degree/certificate/dde9c8e7-ea6c-46ce-b056-ce2bbce39d55",
+        credentialUrl:
+          "https://app.aluracursos.com/degree/certificate/dde9c8e7-ea6c-46ce-b056-ce2bbce39d55",
         credentialId: "dde9c8e7-ea6c-46ce-b056-ce2bbce39d55",
-        description: "Certificación de desarrollo front-end que cubre JavaScript, React.js y prácticas modernas de desarrollo web.",
+        description:
+          "Certificación de desarrollo front-end que cubre JavaScript, React.js y prácticas modernas de desarrollo web.",
       },
       {
         id: "efset-english",
@@ -725,86 +928,105 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         issuer: "EF Standard English Test (EF SET)",
         date: "octubre 2022",
         credentialUrl: "https://cert.efset.org/spHzVR",
-        description: "Certificación de idioma inglés nivel B2 Upper Intermediate, demostrando dominio de inglés como idioma extranjero.",
+        description:
+          "Certificación de idioma inglés nivel B2 Upper Intermediate, demostrando dominio de inglés como idioma extranjero.",
       },
     ],
     setup: {
       hardware: [
         {
-          name: "MacBook Pro 16\" (M1 Pro, 32GB RAM)",
-          description: "Estación de trabajo de alto rendimiento, increíblemente rápida y confiable.",
+          name: 'MacBook Pro 16" (M1 Pro, 32GB RAM)',
+          description:
+            "Estación de trabajo de alto rendimiento, increíblemente rápida y confiable.",
         },
         {
           name: "Logitech MX Master 3S",
-          description: "Mouse ergonómico y altamente recomendado para la productividad.",
+          description:
+            "Mouse ergonómico y altamente recomendado para la productividad.",
         },
         {
-          name: "Monitor Samsung 24\"",
-          description: "Pantalla secundaria para extender el espacio de trabajo.",
+          name: 'Monitor Samsung 24"',
+          description:
+            "Pantalla secundaria para extender el espacio de trabajo.",
         },
         {
           name: "Audífonos JBL",
-          description: "Audio de alta calidad para llamadas con clientes y reuniones de equipo.",
+          description:
+            "Audio de alta calidad para llamadas con clientes y reuniones de equipo.",
         },
         {
           name: "Internet de Fibra Óptica (200 Mbps)",
-          description: "Conexión estable y de alta velocidad para un trabajo remoto fluido y comunicación con clientes.",
+          description:
+            "Conexión estable y de alta velocidad para un trabajo remoto fluido y comunicación con clientes.",
         },
         {
           name: "Ecoflow River 2 Max (512Wh)",
-          description: "Respaldo de energía confiable capaz de mantener la laptop y el router encendidos durante un día completo ante fallas eléctricas.",
+          description:
+            "Respaldo de energía confiable capaz de mantener la laptop y el router encendidos durante un día completo ante fallas eléctricas.",
         },
         {
           name: "VPS (16GB RAM, 4 vCPU)",
-          description: "Servidor de alto rendimiento para hosting de múltiples aplicaciones y servicios Dockerizados.",
+          description:
+            "Servidor de alto rendimiento para hosting de múltiples aplicaciones y servicios Dockerizados.",
         },
       ],
       software: [
         {
           name: "Dokploy",
-          description: "Plataforma PaaS auto-hospedada en mi VPS. Aloja múltiples instancias de Supabase, n8n, backends, frontends y demos de clientes.",
+          description:
+            "Plataforma PaaS auto-hospedada en mi VPS. Aloja múltiples instancias de Supabase, n8n, backends, frontends y demos de clientes.",
         },
         {
           name: "OpenCode y Cloud Code",
-          description: "Agentes de código con IA avanzados utilizados diariamente para acelerar los flujos de trabajo de desarrollo.",
+          description:
+            "Agentes de código con IA avanzados utilizados diariamente para acelerar los flujos de trabajo de desarrollo.",
         },
         {
           name: "ChatGPT Plus (GPT 5.4)",
-          description: "Suscripción al último modelo de IA para resolución de problemas complejos y codificación asistida a través de OpenCode.",
+          description:
+            "Suscripción al último modelo de IA para resolución de problemas complejos y codificación asistida a través de OpenCode.",
         },
         {
           name: "VS Code y Antigravity",
-          description: "Editores principales para diferentes casos de uso de desarrollo, aprovechando las características únicas de Antigravity.",
+          description:
+            "Editores principales para diferentes casos de uso de desarrollo, aprovechando las características únicas de Antigravity.",
         },
         {
           name: "Warp",
-          description: "Emulador de terminal moderno con autocompletado impulsado por IA y alta velocidad para ahorrar tiempo en desarrollo.",
+          description:
+            "Emulador de terminal moderno con autocompletado impulsado por IA y alta velocidad para ahorrar tiempo en desarrollo.",
         },
         {
           name: "Stitch (Google)",
-          description: "Utilizado para el prototipado rápido de Frontend con excelentes resultados.",
+          description:
+            "Utilizado para el prototipado rápido de Frontend con excelentes resultados.",
         },
         {
           name: "Cursor",
-          description: "Editor de código nativo de IA con suscripción mensual para una integración fluida de IA.",
+          description:
+            "Editor de código nativo de IA con suscripción mensual para una integración fluida de IA.",
         },
       ],
       platforms: [
         {
           name: "Upwork",
-          description: "Plataforma principal de freelancing. Estatus Top Rated con 100% de éxito, aunque abierto a contratos directos fuera de la plataforma.",
+          description:
+            "Plataforma principal de freelancing. Estatus Top Rated con 100% de éxito, aunque abierto a contratos directos fuera de la plataforma.",
         },
         {
           name: "LinkedIn",
-          description: "Red profesional y canal de adquisición de clientes de alta calidad.",
+          description:
+            "Red profesional y canal de adquisición de clientes de alta calidad.",
         },
         {
           name: "X (Twitter)",
-          description: "Mi fuente principal para estar al tanto de las tendencias de IA, siguiendo a líderes industriales y refinando mi proceso con las últimas herramientas.",
+          description:
+            "Mi fuente principal para estar al tanto de las tendencias de IA, siguiendo a líderes industriales y refinando mi proceso con las últimas herramientas.",
         },
         {
           name: "Reddit",
-          description: "Utilizado para seguir subreddits del 'estado del arte' en IA para obtener conocimientos técnicos profundos y consejos de la comunidad.",
+          description:
+            "Utilizado para seguir subreddits del 'estado del arte' en IA para obtener conocimientos técnicos profundos y consejos de la comunidad.",
         },
       ],
     },
