@@ -175,13 +175,6 @@ export default async function ResumePage({
         >
           <Header resume={resume} labels={dictionary.header} />
 
-          <UpworkSection
-            heading={dictionary.upworkSection.heading}
-            description={dictionary.upworkSection.description}
-            ctaLabel={dictionary.upworkSection.ctaLabel}
-            locale={resolvedLocale}
-          />
-
           <div className="space-y-8 print:space-y-4">
             <Summary
               summary={resume.summary}
@@ -190,13 +183,13 @@ export default async function ResumePage({
               locale={resolvedLocale}
             />
 
+            <WorkExperience work={resume.work} labels={dictionary.work} />
+
             <Projects
               projects={resume.projects}
               labels={dictionary.projects}
               locale={resolvedLocale}
             />
-
-            <WorkExperience work={resume.work} labels={dictionary.work} />
 
             <Education
               education={resume.education}

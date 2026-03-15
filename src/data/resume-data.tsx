@@ -85,42 +85,30 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Top Rated Full-Stack Developer · 100% Job Success on Upwork · AI & LLM Integration Specialist",
+      "Full-Stack Software Developer at Airplex · AI & LLM Integration Specialist",
     summary: (
       <>
-        I am a{" "}
-        <strong>
-          Top Rated freelancer on Upwork with a 100% Job Success Score
-        </strong>
-        , which places me in the <strong>top 10% of talent</strong> on the
-        entire platform. My earnings, consistent delivery, and excellent client
-        reviews have earned me this distinction. I invite you to visit my{" "}
-        <a
-          href="https://www.upwork.com/freelancers/~0116803452ac7b4ff7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-foreground/70"
-        >
-          Upwork profile
-        </a>{" "}
-        to see my track record firsthand.
+        I am a <strong>Full-Stack Software Developer at Airplex</strong>, where I
+        build high-performance platforms that optimize hangar and ramp
+        operations through 3D visualization and AI-driven algorithms. My work
+        directly impacts efficiency and safety for the aviation industry, helping
+        FBOs and MROs maximize their facility capacity.
         <br />
         <br />
-        I&apos;m open to working through Upwork or through{" "}
-        <strong>independent/direct contracts</strong>—whatever works best for
-        you. While I currently work as a freelancer, I&apos;m also very open to{" "}
-        <strong>full-time positions</strong>. If you&apos;re a recruiter with a
-        full-time role that matches my skill set, don&apos;t hesitate to reach
-        out—I&apos;d love to hear from you.
+        Prior to joining <strong>Airplex</strong>, I built a strong track record
+        as a <strong>Top Rated freelancer on Upwork</strong> with a 100% Job
+        Success Score, placing me in the top 10% of global talent. During this
+        time, I successfully delivered production-grade solutions for clients
+        worldwide, ranging from complex RAG systems to full-scale web
+        applications.
         <br />
         <br />
-        On the technical side, I specialize in MERN/PERN stacks, Next.js, and
-        Supabase for building modern, scalable web applications. I also have
-        deep expertise in <strong>AI and LLM integrations</strong>, including
-        chatbots with OpenAI/Claude APIs, RAG systems, AI-powered content
-        generation, and speech-to-text/text-to-speech capabilities. I deliver
-        complete end-to-end solutions with maintainable code and reliable
-        deadlines.
+        On the technical side, I specialize in <strong>Node.js, React, and PostgreSQL</strong>, 
+        with extensive experience in <strong>AI and LLM integrations</strong>, 
+        including chatbots with OpenAI/Claude APIs, RAG systems, AI-powered 
+        content generation, and speech-to-text/text-to-speech capabilities. 
+        I deliver complete end-to-end solutions focused on performance, 
+        maintainability, and real-world impact.
         <br />
         <br />
         Communication is never a barrier: I hold a{" "}
@@ -128,7 +116,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         maintaining professional conversations, participating in technical
         interviews, and collaborating in team meetings without difficulty. My
         written communication is excellent, ensuring clear documentation and
-        smooth coordination with international clients.
+        smooth coordination with international partners.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
@@ -164,6 +152,49 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     ],
     work: [
       {
+        company: "Airplex",
+        link: "https://www.airplx.com/",
+        badges: [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "3D Visualization",
+          "AI Optimization",
+        ],
+        title: "Full-Stack Software Developer",
+        logo: null,
+        start: "March 2026",
+        end: null,
+        description: (
+          <>
+            Developing high-performance digital platform to optimize
+            aviation hangar and ramp operations.
+            <ul className="list-inside list-disc">
+              <li>
+                <strong>Platform Development:</strong> Building robust full-stack
+                features using React, Node.js, and TypeScript for real-time
+                hangar management and facility optimization.
+              </li>
+              <li>
+                <strong>Spatial Optimization:</strong> Supporting the improvement
+                of AI-driven algorithms (AutoStack) and 3D visualization tools
+                to maximize facility capacity for FBOs and MROs globally.
+              </li>
+              <li>
+                <strong>System Architecture:</strong> Contributing to scalable
+                database design and real-time conflict detection systems for
+                enhanced ground operation safety.
+              </li>
+              <li>
+                <strong>Aviation Tech:</strong> Working with manufacturer-verified
+                data and spatial models to digitize complex aviation logistics.
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
         company: "Freelance (Upwork)",
         link: "https://www.upwork.com/freelancers/~0116803452ac7b4ff7",
         badges: [
@@ -186,12 +217,12 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         title: "Full-Stack Software Engineer · Top Rated · 100% Job Success",
         logo: null,
         start: "April 2025",
-        end: null,
+        end: "March 2026",
         description: (
           <>
             As a{" "}
             <strong>Top Rated freelancer with 100% Job Success Score</strong>, I
-            architect and deliver production-grade applications for global
+            architected and delivered production-grade applications for global
             clients, specializing in full-stack ecosystems and AI-driven
             automation.
             <ul className="list-inside list-disc">
@@ -202,8 +233,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
                 workflows.
               </li>
               <li>
-                <strong>End-to-End Development:</strong> Design and deployment
-                of scalable web apps using MERN/PERN stacks, Next.js, and
+                <strong>End-to-End Development:</strong> Designed and deployed
+                scalable web apps using MERN/PERN stacks, Next.js, and
                 Supabase with a focus on performance and maintainability.
               </li>
               <li>
@@ -570,50 +601,38 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Desarrollador Full-Stack Top Rated · 100% Job Success en Upwork · Especialista en Integraciones de IA y LLM",
+      "Desarrollador de Software Full-Stack en Airplex · Especialista en Integraciones de IA y LLM",
     summary: (
       <>
-        Soy{" "}
-        <strong>
-          freelancer Top Rated en Upwork con un 100% Job Success Score
-        </strong>
-        , lo que me ubica en el <strong>top 10% del talento</strong> de toda la
-        plataforma. Mis ganancias, entregas consistentes y excelentes reseñas de
-        clientes me han otorgado esta distinción. Te invito a visitar mi{" "}
-        <a
-          href="https://www.upwork.com/freelancers/~0116803452ac7b4ff7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-foreground/70"
-        >
-          perfil de Upwork
-        </a>{" "}
-        para ver mi historial de primera mano.
+        Soy <strong>Desarrollador de Software Full-Stack en Airplex</strong>,
+        donde construyo plataformas de alto rendimiento que optimizan las
+        operaciones de hangares y rampas mediante visualización 3D y algoritmos
+        impulsados por IA. Mi trabajo impacta directamente en la eficiencia y
+        seguridad de la industria de la aviación.
         <br />
         <br />
-        Estoy abierto a trabajar a través de Upwork o mediante{" "}
-        <strong>contratos independientes/directos</strong>—lo que funcione mejor
-        para ti. Aunque actualmente trabajo como freelancer, también estoy muy
-        interesado en <strong>posiciones full-time</strong>. Si eres reclutador
-        y tienes una posición full-time que se adecúe a mis habilidades, no
-        dudes en escribirme—me encantaría saber de ti.
+        Antes de unirme a <strong>Airplex</strong>, construí una sólida
+        trayectoria como <strong>freelancer Top Rated en Upwork</strong> con un
+        100% Job Success Score, ubicándome en el top 10% del talento global.
+        Durante este tiempo, entregué con éxito soluciones de nivel de producción
+        para clientes de todo el mundo, desde sistemas RAG complejos hasta
+        aplicaciones web a gran escala.
         <br />
         <br />
-        En lo técnico, me especializo en los stacks MERN/PERN, Next.js y
-        Supabase para construir aplicaciones web modernas y escalables. También
-        tengo amplia experiencia en <strong>integraciones de IA y LLMs</strong>,
-        incluyendo chatbots con APIs de OpenAI/Claude, sistemas RAG, generación
-        de contenido con IA, y reconocimiento/síntesis de voz. Entrego
-        soluciones completas de extremo a extremo con código mantenible y
-        deadlines confiables.
+        En lo técnico, me especializo en <strong>Node.js, React y PostgreSQL</strong>, 
+        con amplia experiencia en <strong>integraciones de IA y LLMs</strong>, 
+        incluyendo chatbots con APIs de OpenAI/Claude, sistemas RAG, generación 
+        de contenido con IA y síntesis de voz. Entrego soluciones completas de 
+        extremo a extremo enfocadas en el rendimiento, la mantenibilidad y el 
+        impacto real.
         <br />
         <br />
         El idioma no es una barrera: cuento con un nivel de{" "}
         <strong>inglés B2</strong>. Soy capaz de mantener conversaciones
         profesionales, participar en entrevistas técnicas y colaborar en
         reuniones de equipo sin dificultad. Mi comunicación escrita es
-        excelente, asegurando documentación clara y una coordinación fluida con
-        clientes internacionales.
+        excelente, asegurando documentación clara y coordinación fluida con
+        socios internacionales.
       </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/37201564?v=4",
@@ -649,6 +668,51 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     ],
     work: [
       {
+        company: "Airplex",
+        link: "https://www.airplx.com/",
+        badges: [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Visualización 3D",
+          "Optimización IA",
+        ],
+        title: "Desarrollador de Software Full-Stack",
+        logo: null,
+        start: "Marzo 2026",
+        end: null,
+        description: (
+          <>
+            Desarrollo de plataformas de gemelos digitales de alto rendimiento para
+            optimizar las operaciones de hangares y rampas de aviación.
+            <ul className="list-inside list-disc">
+              <li>
+                <strong>Desarrollo de Plataforma:</strong> Construcción de
+                funcionalidades full-stack robustas utilizando React, Node.js y
+                TypeScript para la gestión de hangares en tiempo real.
+              </li>
+              <li>
+                <strong>Optimización Espacial:</strong> Apoyo en la mejora de
+                algoritmos impulsados por IA (AutoStack) y herramientas de
+                visualización 3D para maximizar la capacidad de las instalaciones
+                a nivel global.
+              </li>
+              <li>
+                <strong>Arquitectura de Sistemas:</strong> Contribución al diseño
+                de bases de datos escalables y sistemas de detección de conflictos
+                en tiempo real para mejorar la seguridad operativa.
+              </li>
+              <li>
+                <strong>Tecnología de Aviación:</strong> Trabajo con datos
+                verificados de fabricantes y modelos espaciales para digitalizar
+                logística compleja de aviación.
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
         company: "Freelance (Upwork)",
         link: "https://www.upwork.com/freelancers/~0116803452ac7b4ff7",
         badges: [
@@ -672,12 +736,12 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "Ingeniero de Software Full-Stack · Top Rated · 100% Job Success",
         logo: null,
         start: "2024",
-        end: null,
+        end: "Marzo 2026",
         description: (
           <>
             Como{" "}
             <strong>freelancer Top Rated con 100% Job Success Score</strong>,
-            diseño y construyo aplicaciones de nivel de producción para clientes
+            diseñé y construí aplicaciones de nivel de producción para clientes
             globales, especializándome en automatización impulsada por IA.
             <ul className="list-inside list-disc">
               <li>
