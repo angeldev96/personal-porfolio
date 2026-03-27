@@ -107,17 +107,11 @@ function SocialButton({
 
 interface ContactButtonsProps {
   contact: ResumeData["contact"];
-  personalWebsiteUrl?: string | null;
-  upworkUrl?: string | null;
-  upworkLabel?: string;
   labels: Dictionary["header"];
 }
 
 function ContactButtons({
   contact,
-  personalWebsiteUrl,
-  upworkUrl,
-  upworkLabel,
   labels,
 }: ContactButtonsProps) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -156,24 +150,6 @@ function ContactButtons({
       className="flex list-none flex-wrap gap-2 p-0 pt-1 font-mono text-sm text-foreground/80 print:hidden"
       aria-label="Contact links"
     >
-      {(upworkUrl || personalWebsiteUrl) && (
-        <li>
-          <Button className="size-8" variant="outline" size="icon" asChild>
-            <a
-              href={upworkUrl ?? personalWebsiteUrl ?? undefined}
-              aria-label={
-                upworkUrl
-                  ? upworkLabel ?? "Upwork profile"
-                  : labels.personalWebsite
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GlobeIcon className="size-4" aria-hidden="true" />
-            </a>
-          </Button>
-        </li>
-      )}
       {contact.email && (
         <li>
           <Button
@@ -297,9 +273,6 @@ export function Header({
 
         <ContactButtons
           contact={resume.contact}
-          personalWebsiteUrl={resume.personalWebsiteUrl}
-          upworkUrl={resume.work?.[0]?.link}
-          upworkLabel={"Upwork"}
           labels={labels}
         />
 

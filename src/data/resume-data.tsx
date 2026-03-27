@@ -351,33 +351,6 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           </>
         ),
       },
-      {
-        company: "TIGO (Milicom)",
-        link: "https://www.tigo.com.hn",
-        badges: ["Systems Analysis", "IT Support", "Telecommunications"],
-        title: "Systems Analyst Intern",
-        logo: null,
-        start: "Mar 2019",
-        end: "Jul 2019",
-        description: (
-          <>
-            Completed internship at Tigo Honduras as a Systems Analyst.
-            <ul className="list-inside list-disc">
-              <li>
-                Analyzed and documented system requirements and processes.
-              </li>
-              <li>
-                Provided IT support and assistance in telecommunications
-                projects.
-              </li>
-              <li>
-                Gained exposure to large-scale telecommunications
-                infrastructure.
-              </li>
-            </ul>
-          </>
-        ),
-      },
     ],
     skills: [
       "AI-Driven Development",
@@ -865,33 +838,6 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
                 internas.
               </li>
               <li>Participé en revisiones de código y reuniones de equipo.</li>
-            </ul>
-          </>
-        ),
-      },
-      {
-        company: "TIGO (Milicom)",
-        link: "https://www.tigo.com.hn",
-        badges: ["Análisis de Sistemas", "Soporte TI", "Telecomunicaciones"],
-        title: "Pasante Analista de Sistemas",
-        logo: null,
-        start: "Mar 2019",
-        end: "Jul 2019",
-        description: (
-          <>
-            Realicé pasantía en Tigo Honduras como Analista de Sistemas.
-            <ul className="list-inside list-disc">
-              <li>
-                Analicé y documenté requerimientos y procesos de sistemas.
-              </li>
-              <li>
-                Proporcioné soporte de TI y asistencia en proyectos de
-                telecomunicaciones.
-              </li>
-              <li>
-                Obtuve exposición a infraestructura de telecomunicaciones a gran
-                escala.
-              </li>
             </ul>
           </>
         ),
