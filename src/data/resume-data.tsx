@@ -85,17 +85,17 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Full-Stack Software Developer at Airplex · AI & LLM Integration Specialist",
+      "Full-Stack & AI Software Engineer at AirPlx",
     summary: (
       <>
-        I am a <strong>Full-Stack Software Developer at Airplex</strong>, where
+        I am a <strong>Full-Stack Software Engineer at AirPlx</strong>, where
         I build high-performance platforms that optimize hangar and ramp
         operations through 3D visualization and AI-driven algorithms. My work
         directly impacts efficiency and safety for the aviation industry,
         helping FBOs and MROs maximize their facility capacity.
         <br />
         <br />
-        Prior to joining <strong>Airplex</strong>, I built a strong track record
+        Prior to joining <strong>AirPlx</strong>, I built a strong track record
         as a <strong>Top Rated freelancer on Upwork</strong> with a 100% Job
         Success Score, placing me in the top 10% of global talent. During this
         time, I successfully delivered production-grade solutions for clients
@@ -153,7 +153,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     ],
     work: [
       {
-        company: "Airplex",
+        company: "AirPlx",
         link: "https://www.airplx.com/",
         badges: [
           "React",
@@ -163,7 +163,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           "3D Visualization",
           "AI Optimization",
         ],
-        title: "Full-Stack Software Developer",
+        title: "Full-Stack & AI Software Engineer",
         logo: null,
         start: "March 2026",
         end: null,
@@ -576,17 +576,17 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Tegucigalpa, Honduras (CST)",
     locationLink: "https://www.google.com/maps/place/Tegucigalpa",
     about:
-      "Desarrollador de Software Full-Stack en Airplex · Especialista en Integraciones de IA y LLM",
+      "Desarrollador de Software Full-Stack en AirPlx · Especialista en Integraciones de IA y LLM",
     summary: (
       <>
-        Soy <strong>Desarrollador de Software Full-Stack en Airplex</strong>,
+        Soy <strong>Desarrollador de Software Full-Stack en AirPlx</strong>,
         donde construyo plataformas de alto rendimiento que optimizan las
         operaciones de hangares y rampas mediante visualización 3D y algoritmos
         impulsados por IA. Mi trabajo impacta directamente en la eficiencia y
         seguridad de la industria de la aviación.
         <br />
         <br />
-        Antes de unirme a <strong>Airplex</strong>, construí una sólida
+        Antes de unirme a <strong>AirPlx</strong>, construí una sólida
         trayectoria como <strong>freelancer Top Rated en Upwork</strong> con un
         100% Job Success Score, ubicándome en el top 10% del talento global.
         Durante este tiempo, entregué con éxito soluciones de nivel de
@@ -643,7 +643,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     ],
     work: [
       {
-        company: "Airplex",
+        company: "AirPlx",
         link: "https://www.airplx.com/",
         badges: [
           "React",
