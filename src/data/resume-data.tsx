@@ -88,27 +88,28 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "Full-Stack Software Developer at Airplex · AI & LLM Integration Specialist",
     summary: (
       <>
-        I am a <strong>Full-Stack Software Developer at Airplex</strong>, where I
-        build high-performance platforms that optimize hangar and ramp
+        I am a <strong>Full-Stack Software Developer at Airplex</strong>, where
+        I build high-performance platforms that optimize hangar and ramp
         operations through 3D visualization and AI-driven algorithms. My work
-        directly impacts efficiency and safety for the aviation industry, helping
-        FBOs and MROs maximize their facility capacity.
+        directly impacts efficiency and safety for the aviation industry,
+        helping FBOs and MROs maximize their facility capacity.
         <br />
         <br />
         Prior to joining <strong>Airplex</strong>, I built a strong track record
         as a <strong>Top Rated freelancer on Upwork</strong> with a 100% Job
         Success Score, placing me in the top 10% of global talent. During this
         time, I successfully delivered production-grade solutions for clients
-        worldwide, ranging from complex RAG systems to full-scale web
+        worldwide, ranging from data-driven automation tools to full-scale web
         applications.
         <br />
         <br />
-        On the technical side, I specialize in <strong>Node.js, React, and PostgreSQL</strong>, 
-        with extensive experience in <strong>AI and LLM integrations</strong>, 
-        including chatbots with OpenAI/Claude APIs, RAG systems, AI-powered 
-        content generation, and speech-to-text/text-to-speech capabilities. 
-        I deliver complete end-to-end solutions focused on performance, 
-        maintainability, and real-world impact.
+        On the technical side, I specialize in{" "}
+        <strong>Node.js, React, and PostgreSQL</strong>, with extensive
+        experience in <strong>AI and LLM integrations</strong>, including
+        chatbots with OpenAI/Claude APIs, AI-powered content generation, and
+        speech-to-text/text-to-speech capabilities. I deliver complete
+        end-to-end solutions focused on performance, maintainability, and
+        real-world impact.
         <br />
         <br />
         Communication is never a barrier: I hold a{" "}
@@ -168,18 +169,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: null,
         description: (
           <>
-            Developing high-performance digital platform to optimize
-            aviation hangar and ramp operations.
+            Developing high-performance digital platform to optimize aviation
+            hangar and ramp operations.
             <ul className="list-inside list-disc">
               <li>
-                <strong>Platform Development:</strong> Building robust full-stack
-                features using React, Node.js, and TypeScript for real-time
-                hangar management and facility optimization.
+                <strong>Platform Development:</strong> Building robust
+                full-stack features using React, Node.js, and TypeScript for
+                real-time hangar management and facility optimization.
               </li>
               <li>
-                <strong>Spatial Optimization:</strong> Supporting the improvement
-                of AI-driven algorithms (AutoStack) and 3D visualization tools
-                to maximize facility capacity for FBOs and MROs globally.
+                <strong>Spatial Optimization:</strong> Supporting the
+                improvement of AI-driven algorithms (AutoStack) and 3D
+                visualization tools to maximize facility capacity for FBOs and
+                MROs globally.
               </li>
               <li>
                 <strong>System Architecture:</strong> Contributing to scalable
@@ -187,8 +189,9 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
                 enhanced ground operation safety.
               </li>
               <li>
-                <strong>Aviation Tech:</strong> Working with manufacturer-verified
-                data and spatial models to digitize complex aviation logistics.
+                <strong>Aviation Tech:</strong> Working with
+                manufacturer-verified data and spatial models to digitize
+                complex aviation logistics.
               </li>
             </ul>
           </>
@@ -227,15 +230,14 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
             automation.
             <ul className="list-inside list-disc">
               <li>
-                <strong>AI & LLM Architecture:</strong> Engineered custom RAG
-                systems, complex chatbots, and autonomous agents using
-                OpenAI/Claude APIs, significantly accelerating business
-                workflows.
+                <strong>AI & LLM Architecture:</strong> Built production-grade
+                chatbots and AI-powered automation using OpenAI/Claude APIs,
+                significantly accelerating business workflows.
               </li>
               <li>
                 <strong>End-to-End Development:</strong> Designed and deployed
-                scalable web apps using MERN/PERN stacks, Next.js, and
-                Supabase with a focus on performance and maintainability.
+                scalable web apps using MERN/PERN stacks, Next.js, and Supabase
+                with a focus on performance and maintainability.
               </li>
               <li>
                 <strong>Cloud & Infrastructure:</strong> Proficient in
@@ -360,7 +362,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "OpenAI API",
       "Claude API",
       "LLM Integration",
-      "RAG Systems",
+      "Document Retrieval",
       "React",
       "TypeScript",
       "Node.js",
@@ -587,17 +589,17 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         Antes de unirme a <strong>Airplex</strong>, construí una sólida
         trayectoria como <strong>freelancer Top Rated en Upwork</strong> con un
         100% Job Success Score, ubicándome en el top 10% del talento global.
-        Durante este tiempo, entregué con éxito soluciones de nivel de producción
-        para clientes de todo el mundo, desde sistemas RAG complejos hasta
-        aplicaciones web a gran escala.
+        Durante este tiempo, entregué con éxito soluciones de nivel de
+        producción para clientes de todo el mundo, desde herramientas de
+        automatización basadas en datos hasta aplicaciones web a gran escala.
         <br />
         <br />
-        En lo técnico, me especializo en <strong>Node.js, React y PostgreSQL</strong>, 
-        con amplia experiencia en <strong>integraciones de IA y LLMs</strong>, 
-        incluyendo chatbots con APIs de OpenAI/Claude, sistemas RAG, generación 
-        de contenido con IA y síntesis de voz. Entrego soluciones completas de 
-        extremo a extremo enfocadas en el rendimiento, la mantenibilidad y el 
-        impacto real.
+        En lo técnico, me especializo en{" "}
+        <strong>Node.js, React y PostgreSQL</strong>, con amplia experiencia en{" "}
+        <strong>integraciones de IA y LLMs</strong>, incluyendo chatbots con
+        APIs de OpenAI/Claude, generación de contenido con IA y síntesis de voz.
+        Entrego soluciones completas de extremo a extremo enfocadas en el
+        rendimiento, la mantenibilidad y el impacto real.
         <br />
         <br />
         El idioma no es una barrera: cuento con un nivel de{" "}
@@ -657,8 +659,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         end: null,
         description: (
           <>
-            Desarrollo de plataformas de gemelos digitales de alto rendimiento para
-            optimizar las operaciones de hangares y rampas de aviación.
+            Desarrollo de plataformas de gemelos digitales de alto rendimiento
+            para optimizar las operaciones de hangares y rampas de aviación.
             <ul className="list-inside list-disc">
               <li>
                 <strong>Desarrollo de Plataforma:</strong> Construcción de
@@ -668,13 +670,13 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
               <li>
                 <strong>Optimización Espacial:</strong> Apoyo en la mejora de
                 algoritmos impulsados por IA (AutoStack) y herramientas de
-                visualización 3D para maximizar la capacidad de las instalaciones
-                a nivel global.
+                visualización 3D para maximizar la capacidad de las
+                instalaciones a nivel global.
               </li>
               <li>
-                <strong>Arquitectura de Sistemas:</strong> Contribución al diseño
-                de bases de datos escalables y sistemas de detección de conflictos
-                en tiempo real para mejorar la seguridad operativa.
+                <strong>Arquitectura de Sistemas:</strong> Contribución al
+                diseño de bases de datos escalables y sistemas de detección de
+                conflictos en tiempo real para mejorar la seguridad operativa.
               </li>
               <li>
                 <strong>Tecnología de Aviación:</strong> Trabajo con datos
@@ -719,8 +721,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
             <ul className="list-inside list-disc">
               <li>
                 <strong>Arquitectura de IA y LLM:</strong> Implementación de
-                sistemas RAG personalizados y agentes autónomos utilizando APIs
-                de OpenAI/Claude para optimizar procesos de negocio.
+                soluciones de IA a medida y agentes autónomos utilizando APIs de
+                OpenAI/Claude para optimizar procesos de negocio.
               </li>
               <li>
                 <strong>Desarrollo End-to-End:</strong> Creación de aplicaciones
@@ -851,7 +853,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "OpenAI API",
       "Claude API",
       "LLM Integration",
-      "RAG Systems",
+      "Document Retrieval",
       "React",
       "TypeScript",
       "Node.js",
