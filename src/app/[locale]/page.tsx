@@ -5,6 +5,7 @@ import { WorkExperience } from "@/app/components/WorkExperience";
 import { Education } from "@/app/components/Education";
 import { Skills } from "@/app/components/Skills";
 import { Projects } from "@/app/components/Projects";
+import { BlogSection } from "@/app/components/BlogSection";
 import { UpworkSection } from "@/app/components/UpworkSection";
 import { Certificates } from "@/app/components/Certificates";
 import { getResumeData } from "@/data/resume-data";
@@ -160,7 +161,7 @@ export default async function ResumePage({
       />
 
       <main
-        className="container relative mx-auto scroll-my-12 overflow-auto p-4 pt-16 print:p-11 md:p-16"
+        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
         id="main-content"
       >
         <div className="sr-only">
@@ -197,6 +198,12 @@ export default async function ResumePage({
             />
 
             <Skills skills={resume.skills} title={dictionary.skills.skills} />
+
+            <BlogSection
+              locale={resolvedLocale}
+              title={dictionary.blog.latestPosts}
+              readMore={dictionary.blog.readMore}
+            />
 
             <Certificates
               certificates={resume.certificates}

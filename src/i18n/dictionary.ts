@@ -21,6 +21,12 @@ type CertificateLabels = {
 };
 
 export type Dictionary = {
+  nav: {
+    home: string;
+    blog: string;
+    certificates: string;
+    setup: string;
+  };
   meta: {
     resumeTitle: string;
     resumeDescription: string;
@@ -91,6 +97,17 @@ export type Dictionary = {
     gallery: string;
   };
   certificates: CertificateLabels;
+  blog: {
+    title: string;
+    description: string;
+    backToHome: string;
+    backToBlog: string;
+    readMore: string;
+    latestPosts: string;
+    noPosts: string;
+    tags: string;
+    publishedOn: string;
+  };
   upworkSection: {
     heading: string;
     description: string;
@@ -119,6 +136,12 @@ export type Dictionary = {
 
 const dictionaries: Record<Locale, Dictionary> = {
   en: {
+    nav: {
+      home: "Home",
+      blog: "Blog",
+      certificates: "Certificates",
+      setup: "Setup",
+    },
     meta: {
       resumeTitle: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
       resumeDescription:
@@ -222,6 +245,17 @@ const dictionaries: Record<Locale, Dictionary> = {
       credentialId: "Credential ID",
       noCertificates: "No certificates to display.",
     },
+    blog: {
+      title: "Blog",
+      description: "Thoughts on software engineering, AI, and building things that matter.",
+      backToHome: "Back to Home",
+      backToBlog: "Back to Blog",
+      readMore: "Read more",
+      latestPosts: "Latest Posts",
+      noPosts: "No posts yet.",
+      tags: "Tags",
+      publishedOn: "Published on",
+    },
     upworkSection: {
       heading: "For Upwork Employers",
       description: "Learn more about my competitive advantage and why you should hire me for your next project.",
@@ -267,6 +301,12 @@ const dictionaries: Record<Locale, Dictionary> = {
     },
   },
   es: {
+    nav: {
+      home: "Inicio",
+      blog: "Blog",
+      certificates: "Certificados",
+      setup: "Setup",
+    },
     meta: {
       resumeTitle: "Angel Valladares — Desarrollador Full-Stack y Freelancer en Honduras",
       resumeDescription:
@@ -404,7 +444,19 @@ const dictionaries: Record<Locale, Dictionary> = {
       contact: "Contáctame",
       contactIntro: "Si te interesa trabajar conmigo, puedes contactarme por:",
       upworkLabel: "Mi perfil de Upwork",
-    },    setup: {
+    },
+    blog: {
+      title: "Blog",
+      description: "Pensamientos sobre ingeniería de software, IA y construir cosas que importan.",
+      backToHome: "Volver al Inicio",
+      backToBlog: "Volver al Blog",
+      readMore: "Leer más",
+      latestPosts: "Últimos Artículos",
+      noPosts: "Aún no hay artículos.",
+      tags: "Etiquetas",
+      publishedOn: "Publicado el",
+    },
+    setup: {
       title: "Mi Setup",
       description: "Una colección del hardware, software y plataformas que utilizo para construir y crear.",
       hardware: "Hardware",

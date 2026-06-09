@@ -511,19 +511,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       ],
       software: [
         {
+          name: "Claude Code CLI & VS Code Extension",
+          description:
+            "My go-to AI coding tool—primarily the CLI for daily development, with the VS Code extension for IDE-integrated workflows. Max subscription for the best models and higher limits.",
+        },
+        {
           name: "Dokploy",
           description:
             "Self-hosted PaaS platform managed on my VPS. Hosts multiple instances of Supabase, n8n, backends, frontends, and client demos.",
         },
         {
-          name: "OpenCode & Claude Code",
+          name: "Codex (Latest GPT Model)",
           description:
-            "Advanced AI coding agents used daily to accelerate development workflows.",
-        },
-        {
-          name: "ChatGPT Plus (GPT 5.4)",
-          description:
-            "Latest AI model subscription for complex problem solving and AI-assisted coding through OpenCode.",
+            "Latest GPT model subscription for complex problem solving and AI-assisted coding through Codex.",
         },
         {
           name: "VS Code & Antigravity",
@@ -1004,19 +1004,19 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       ],
       software: [
         {
+          name: "Claude Code CLI y Extensión VS Code",
+          description:
+            "Mi herramienta de IA principal—principalmente la CLI para el día a día, con la extensión de VS Code para flujos integrados en el IDE. Suscripción Max para los mejores modelos y límites más altos.",
+        },
+        {
           name: "Dokploy",
           description:
             "Plataforma PaaS auto-hospedada en mi VPS. Aloja múltiples instancias de Supabase, n8n, backends, frontends y demos de clientes.",
         },
         {
-          name: "OpenCode y Cloud Code",
+          name: "Codex (Último Modelo GPT)",
           description:
-            "Agentes de código con IA avanzados utilizados diariamente para acelerar los flujos de trabajo de desarrollo.",
-        },
-        {
-          name: "ChatGPT Plus (GPT 5.4)",
-          description:
-            "Suscripción al último modelo de IA para resolución de problemas complejos y codificación asistida a través de OpenCode.",
+            "Suscripción al último modelo GPT para resolución de problemas complejos y codificación asistida a través de Codex.",
         },
         {
           name: "VS Code y Antigravity",
