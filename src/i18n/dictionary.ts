@@ -73,13 +73,6 @@ export type Dictionary = {
     print: string;
     cancel: string;
   };
-  chatBot: {
-    title: string;
-    inputPlaceholder: string;
-    initialMessage: string;
-    errorMessage: string;
-    fallbackMessage: string;
-  };
   languageToggle: {
     label: string;
   };
@@ -107,11 +100,6 @@ export type Dictionary = {
     noPosts: string;
     tags: string;
     publishedOn: string;
-  };
-  upworkSection: {
-    heading: string;
-    description: string;
-    ctaLabel: string;
   };
   upwork: {
     heading: string;
@@ -143,7 +131,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       setup: "Setup",
     },
     meta: {
-      resumeTitle: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
+      resumeTitle: "Full-Stack Developer & Freelancer in Honduras",
       resumeDescription:
         "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations. Hire a reliable freelancer for web apps, APIs and AI features.",
       upworkTitle: "Upwork Summary",
@@ -214,13 +202,6 @@ const dictionaries: Record<Locale, Dictionary> = {
       print: "Print",
       cancel: "Cancel",
     },
-    chatBot: {
-      title: "Chat Assistant",
-      inputPlaceholder: "Type your message...",
-      initialMessage: "Hello! How can I help you today?",
-      errorMessage: "Sorry, there was an error processing your request.",
-      fallbackMessage: "Sorry, I could not generate a response.",
-    },
     languageToggle: {
       label: "Change language",
     },
@@ -256,11 +237,6 @@ const dictionaries: Record<Locale, Dictionary> = {
       tags: "Tags",
       publishedOn: "Published on",
     },
-    upworkSection: {
-      heading: "For Upwork Employers",
-      description: "Learn more about my competitive advantage and why you should hire me for your next project.",
-      ctaLabel: "View Details",
-    },
     upwork: {
       heading: "For Upwork Employers",
       intro:
@@ -272,7 +248,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         fundamentals:
           "Solid Fundamentals: Unlike \"vibe coders\" who rely exclusively on AI without understanding the fundamentals, I have years of experience from before the AI boom. I've fixed countless codebases built only with AI that break when scaling—I understand what's happening under the hood.",
         aiTools:
-          "AI as an Accelerator: I use Cloud Code, Cursor, and OpenCode strategically to accelerate development, but I never depend on them. My solid foundation allows me to deliver faster without the code quality issues that plague AI-only developers.",
+          "AI as an Accelerator: I use Claude Code, Cursor, and Codex strategically to accelerate development, but I never depend on them. My solid foundation allows me to deliver faster without the code quality issues that plague AI-only developers.",
         reliable:
           "Best of Both Worlds: You get the technical solidity of an experienced developer combined with the efficiency of modern AI tools. Faster delivery, cleaner code, and solutions that scale without breaking.",
       },
@@ -308,7 +284,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       setup: "Setup",
     },
     meta: {
-      resumeTitle: "Angel Valladares — Desarrollador Full-Stack y Freelancer en Honduras",
+      resumeTitle: "Desarrollador Full-Stack y Freelancer en Honduras",
       resumeDescription:
         "Desarrollador Full-Stack freelance en Tegucigalpa, Honduras. Especialista en Next.js, Node.js, React, TypeScript, Python, Supabase e integraciones de IA. Disponible para proyectos web, APIs y funcionalidades basadas en IA.",
       upworkTitle: "Resumen Upwork",
@@ -379,13 +355,6 @@ const dictionaries: Record<Locale, Dictionary> = {
       print: "Imprimir",
       cancel: "Cancelar",
     },
-    chatBot: {
-      title: "Asistente de chat",
-      inputPlaceholder: "Escribe tu mensaje...",
-      initialMessage: "¡Hola! ¿En qué puedo ayudarte hoy?",
-      errorMessage: "Hubo un error procesando tu solicitud.",
-      fallbackMessage: "No pude generar una respuesta.",
-    },
     languageToggle: {
       label: "Cambiar idioma",
     },
@@ -410,11 +379,6 @@ const dictionaries: Record<Locale, Dictionary> = {
       credentialId: "ID de Credencial",
       noCertificates: "No hay certificados para mostrar.",
     },
-    upworkSection: {
-      heading: "Para Empleadores de Upwork",
-      description: "Conoce más sobre mi ventaja competitiva y por qué deberías contratarme para tu próximo proyecto.",
-      ctaLabel: "Ver Detalles",
-    },
     upwork: {
       heading: "Para empleadores en Upwork",
       intro:
@@ -424,9 +388,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       advantageHeading: "Mi ventaja competitiva:",
       advantages: {
         fundamentals:
-          "Fundamentos sólidos: A diferencia de los \"vibe coders\" que dependen exclusivamente de IA sin entender los fundamentos, tengo años de experiencia de antes del auge de la IA. He corregido countless codebases construidos solo con IA que se rompen al escalar—entiendo qué pasa bajo el capó.",
+          "Fundamentos sólidos: A diferencia de los \"vibe coders\" que dependen exclusivamente de IA sin entender los fundamentos, tengo años de experiencia de antes del auge de la IA. He corregido incontables bases de código construidas solo con IA que se rompen al escalar—entiendo qué pasa bajo el capó.",
         aiTools:
-          "IA como acelerador: Uso Cloud Code, Cursor y OpenCode estratégicamente para acelerar el desarrollo, pero nunca dependo de ellas. Mis fundamentos sólidos me permiten entregar más rápido sin los problemas de calidad que aquejan a los desarrolladores que solo usan IA.",
+          "IA como acelerador: Uso Claude Code, Cursor y Codex estratégicamente para acelerar el desarrollo, pero nunca dependo de ellas. Mis fundamentos sólidos me permiten entregar más rápido sin los problemas de calidad que aquejan a los desarrolladores que solo usan IA.",
         reliable:
           "Lo mejor de ambos mundos: Obtienes la solidez técnica de un desarrollador experimentado combinada con la eficiencia de las herramientas modernas de IA. Entrega más rápida, código más limpio y soluciones que escalan sin romperse.",
       },

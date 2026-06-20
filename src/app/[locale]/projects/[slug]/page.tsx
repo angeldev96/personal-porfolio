@@ -94,7 +94,7 @@ export default async function ProjectPage({
       <div className="mx-auto w-full max-w-4xl">
         {/* Back button */}
         <Link
-          href={`/${resolvedLocale}#projects`}
+          href={`/${resolvedLocale}#side-projects`}
           className="mb-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <ArrowLeft className="size-4" />

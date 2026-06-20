@@ -5,21 +5,29 @@ import { getDictionary } from "@/i18n/dictionary";
 import { DEFAULT_LOCALE, LOCALES, type Locale, isLocale } from "@/i18n/config";
 import type { Metadata } from "next";
 import Script from "next/script";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { UpworkIcon } from "@/components/icons/UpworkIcon";
 import UpworkImage from "@/components/UpworkImage";
 
+const UPWORK_PROFILE_URL = "https://www.upwork.com/freelancers/~0116803452ac7b4ff7";
+
 function resolveLocale(value: string): Locale {
   return isLocale(value) ? value : DEFAULT_LOCALE;
+}
+
+function getUpworkProfileUrl(resume: ReturnType<typeof getResumeData>) {
+  return (
+    resume.work.find((entry) => entry.link.includes("upwork.com"))?.link ??
+    UPWORK_PROFILE_URL
+  );
 }
 
 function getCommandMenuLinks(resume: ReturnType<typeof getResumeData>, dictionary: ReturnType<typeof getDictionary>) {
   const links = [] as { url: string; title: React.ReactNode }[];
 
   // Add Upwork profile first (replace personal portfolio link since we're on the portfolio)
-  const upworkUrl = resume.work?.[0]?.link ?? "https://www.upwork.com/freelancers/~0116803452ac7b4ff7";
+  const upworkUrl = getUpworkProfileUrl(resume);
   links.push({
     url: upworkUrl,
     title: (
@@ -107,7 +115,7 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
   const resolvedLocale = resolveLocale(locale);
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
-  const upworkProfile = resume.work[0]?.link ?? "https://www.upwork.com/freelancers/~0116803452ac7b4ff7";
+  const upworkProfile = getUpworkProfileUrl(resume);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
   const pageUrl = `${siteUrl}/${resolvedLocale}/upwork-summary`;
 

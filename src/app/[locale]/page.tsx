@@ -6,7 +6,6 @@ import { Education } from "@/app/components/Education";
 import { Skills } from "@/app/components/Skills";
 import { Projects } from "@/app/components/Projects";
 import { BlogSection } from "@/app/components/BlogSection";
-import { UpworkSection } from "@/app/components/UpworkSection";
 import { Certificates } from "@/app/components/Certificates";
 import { getResumeData } from "@/data/resume-data";
 import { getDictionary } from "@/i18n/dictionary";
