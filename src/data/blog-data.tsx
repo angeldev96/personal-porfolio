@@ -166,7 +166,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
             <h2 className="text-2xl font-bold mt-8 mb-4">Software Stack</h2>
             <p className="mb-4">
               My primary code editor is VS Code with the Antigravity extension, and I use Warp as my
-              terminal. For AI-assisted development, I use OpenCode, Claude Code, and Cursor—each for
+              terminal. For AI-assisted development, I use Claude Code, Codex, and Cursor—each for
               different use cases.
             </p>
 
@@ -309,7 +309,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
             <h2 className="text-2xl font-bold mt-8 mb-4">Software</h2>
             <p className="mb-4">
               Mi editor de código principal es VS Code con la extensión Antigravity, y uso Warp como
-              terminal. Para desarrollo asistido por IA, uso OpenCode, Claude Code y Cursor.
+              terminal. Para desarrollo asistido por IA, uso Claude Code, Codex y Cursor.
             </p>
           </>
         ),
