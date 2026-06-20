@@ -97,7 +97,6 @@ export default async function ProjectPage({
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
   const projectUrl = `${siteUrl}/${resolvedLocale}/projects/${slug}`;
   const creativeWorkLd = {
-    "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: project.title,
     description: project.longDescription || project.description,
@@ -115,6 +114,29 @@ export default async function ProjectPage({
     ...(project.link ? { sameAs: project.link.href } : {}),
   };
 
+  const breadcrumbLd = {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: resolvedLocale === "es" ? "Inicio" : "Home",
+        item: `${siteUrl}/${resolvedLocale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: project.title,
+        item: projectUrl,
+      },
+    ],
+  };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [creativeWorkLd, breadcrumbLd],
+  };
+
   const projectDetailLabels = dictionary.projectDetail || {
     backToProjects: "Back to Projects",
     technologies: "Technologies",
@@ -130,7 +152,7 @@ export default async function ProjectPage({
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="mx-auto w-full max-w-4xl">
         {/* Back button */}

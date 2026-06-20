@@ -96,7 +96,6 @@ export default async function BlogPostPage({
   };
 
   const blogPostingLd = {
-    "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
@@ -111,11 +110,40 @@ export default async function BlogPostPage({
     publisher: author,
   };
 
+  const breadcrumbLd = {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: resolvedLocale === "es" ? "Inicio" : "Home",
+        item: `${siteUrl}/${resolvedLocale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/${resolvedLocale}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: postUrl,
+      },
+    ],
+  };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [blogPostingLd, breadcrumbLd],
+  };
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <article className="mx-auto w-full max-w-3xl">
         <Link
