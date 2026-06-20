@@ -18,27 +18,27 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev",
   ),
-  title: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
+  title: "Angel Valladares — Full-Stack Developer & Freelancer",
   description:
-    "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations. Hire a reliable freelancer for web apps, APIs and AI features.",
+    "Full-Stack Developer and freelancer working with a US-based startup. I build web apps, APIs, and AI/LLM features with Next.js, Node.js, React, TypeScript, Python, and Supabase for clients worldwide.",
   keywords: [
-    "Freelancer Honduras",
-    "Full-Stack Developer Honduras",
-    "Freelance developer Tegucigalpa",
     "Full-Stack Developer",
+    "Freelance Full-Stack Developer",
+    "Remote Full-Stack Developer",
     "Software Engineer",
     "Node.js",
     "Next.js",
     "React",
     "TypeScript",
     "Python",
+    "AI Integration",
   ],
   authors: [{ name: "Angel Valladares", url: "https://angelvalladares.dev" }],
   creator: "Angel Valladares",
   openGraph: {
-    title: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
+    title: "Angel Valladares — Full-Stack Developer & Freelancer",
     description:
-      "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations.",
+      "Full-Stack Developer and freelancer working with a US-based startup. Building web apps, APIs, and AI/LLM features with Next.js, Node.js, React, TypeScript, Python, and Supabase.",
     type: "profile",
     locale: "en_US",
     url: "https://angelvalladares.dev",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
+    title: "Angel Valladares — Full-Stack Developer & Freelancer",
     description:
-      "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations.",
+      "Full-Stack Developer and freelancer working with a US-based startup. Building web apps, APIs, and AI/LLM features with Next.js, Node.js, React, TypeScript, Python, and Supabase.",
     site: "@angeldev96",
     creator: "@angeldev96",
   },
@@ -126,11 +126,6 @@ export default async function RootLayout({
                 "https://angelvalladares.dev",
               image: resume.avatarUrl,
               jobTitle: resume.work?.[0]?.title || "Full-Stack Developer",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: resume.location || "Tegucigalpa",
-                addressCountry: "HN",
-              },
               sameAs: [
                 resume.personalWebsiteUrl ||
                   process.env.NEXT_PUBLIC_SITE_URL ||

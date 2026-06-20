@@ -5,7 +5,7 @@ export type ResumeData = {
   name: string;
   initials: string;
   location: string;
-  locationLink: string;
+  locationLink: string | null;
   about: string;
   summary: React.ReactNode;
   avatarUrl: string;
@@ -82,8 +82,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
   en: {
     name: "Angel Valladares",
     initials: "AV",
-    location: "Tegucigalpa, Honduras (CST)",
-    locationLink: "https://www.google.com/maps/place/Tegucigalpa",
+    location: "Remote · Open to relocation",
+    locationLink: null,
     about:
       "Full-Stack & AI Software Engineer at AirPlx",
     summary: (
@@ -573,8 +573,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
   es: {
     name: "Angel Valladares",
     initials: "AV",
-    location: "Tegucigalpa, Honduras (CST)",
-    locationLink: "https://www.google.com/maps/place/Tegucigalpa",
+    location: "Remoto · Abierto a reubicación",
+    locationLink: null,
     about:
       "Desarrollador de Software Full-Stack en AirPlx · Especialista en Integraciones de IA y LLM",
     summary: (
