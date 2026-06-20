@@ -40,7 +40,7 @@ Este repositorio contiene la versión fuente del portfolio personal de Angel Val
 - Reemplazo de `img` por `next/image` para mejorar LCP y ancho de banda.
 - Ajustes visuales: mayor espaciado entre certificados para mejorar legibilidad.
 - Reemplazo del enlace del portafolio en el header/command menu por el enlace a Upwork (cuando aplica).
-- Metadatos SEO actualizados para posicionar la página como "Freelancer Full-Stack en Honduras".
+- Metadatos SEO orientados a posicionar la página como "Freelance Full-Stack & AI Developer" (sin anclaje geográfico, enfoque remoto/global).
 
 ## Ejecutar localmente
 Requisitos: Node 18+ (o la versión que el proyecto use en tu entorno). Desde la raíz del repo:
@@ -52,9 +52,9 @@ npm run build     # build de producción
 npm run start     # sirve build local
 ```
 
-Variables útiles (opcional):
-- `NEXT_PUBLIC_SITE_URL` — URL pública del sitio (para Open Graph y canonical).
-- `NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS=true` — activa Vercel Analytics en producción.
+Variables de entorno:
+- `NEXT_PUBLIC_SITE_URL` — **CRÍTICO en producción.** URL pública canónica del sitio (canonical, Open Graph, sitemap, robots, JSON-LD). Debe ser `https://angelvalladares.dev`. Si no se define, el código cae al mismo dominio por defecto, pero NO confíes en eso: defínelo explícitamente en el entorno de producción (Vercel) para evitar indexación bajo un dominio incorrecto.
+- `NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS=true` — activa Vercel Analytics en producción (opcional).
 
 ## Tests y lint
 - El proyecto corre checks de lint y tipos durante `next build`. Ejecuta `npm run lint` si quieres revisar manualmente.
@@ -69,7 +69,7 @@ Variables útiles (opcional):
 - Nuevas imágenes/logos: poner en `public/` o `src/images/logos/` y referenciarlas desde `resume-data.tsx`.
 
 ## Buenas prácticas / recomendaciones SEO
-- Mantén las descripciones en `src/i18n/dictionary.ts` cortas y con keywords relevantes (ej. "Freelancer Honduras, Full-Stack Developer, Next.js, Node.js").
+- Mantén las descripciones en `src/i18n/dictionary.ts` cortas (~150-160 chars) y con keywords relevantes (ej. "Freelance Full-Stack Developer, Next.js, Node.js, AI/LLM").
 - Añade `hreflang`/alternates si publicas en dominios multi-región (ya se setea alternates en metadata).
 - Mantén `opengraph-image` actualizado para compartir en redes.
 

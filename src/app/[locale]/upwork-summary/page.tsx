@@ -4,7 +4,6 @@ import { getResumeData } from "@/data/resume-data";
 import { getDictionary } from "@/i18n/dictionary";
 import { DEFAULT_LOCALE, LOCALES, type Locale, isLocale } from "@/i18n/config";
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -71,6 +70,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       languages: {
         en: `${siteUrl}/en/upwork-summary`,
         es: `${siteUrl}/es/upwork-summary`,
+        "x-default": `${siteUrl}/en/upwork-summary`,
       },
     },
     robots: {
@@ -125,10 +125,8 @@ export default async function UpworkSummaryPage({ params }: { params: Promise<{ 
 
   return (
     <>
-      <Script
-        id={`ld-upwork-person-${resolvedLocale}`}
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
       />
 

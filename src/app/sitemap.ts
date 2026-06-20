@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { getBlogData } from "@/data/blog-data";
+import { getResumeData } from "@/data/resume-data";
 import { LOCALES } from "@/i18n/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,16 +12,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const localizedPaths = LOCALES.flatMap((locale) => [
     `${origin}/${locale}`,
     `${origin}/${locale}/blog`,
+    `${origin}/${locale}/certificates`,
+    `${origin}/${locale}/setup`,
     `${origin}/${locale}/upwork-summary`,
     ...getBlogData(locale).posts.map(
       (post) => `${origin}/${locale}/blog/${post.slug}`,
     ),
+    ...getResumeData(locale).projects.map(
+      (project) => `${origin}/${locale}/projects/${project.slug}`,
+    ),
   ]);
 
-  const urls = new Set<string>([
-    `${origin}/`,
-    ...localizedPaths,
-  ]);
+  const urls = new Set<string>(localizedPaths);
 
   return Array.from(urls).map((url) => ({
     url,

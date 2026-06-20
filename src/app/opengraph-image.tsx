@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 import { getResumeData } from "../data/resume-data";
 import { DEFAULT_LOCALE } from "../i18n/config";
 
-export const alt = "Minimalist Resume";
+export const alt = "Angel Valladares — Full-Stack & AI Software Engineer";
 export const size = {
   width: 1200,
   height: 630,
@@ -74,7 +74,7 @@ export default async function Image() {
               gap: "1rem",
             }}
           >
-            {resume.contact.email && (
+            {resume.personalWebsiteUrl && (
               <div style={{ fontSize: "1rem", color: "#666" }}>
                 {resume.personalWebsiteUrl}
               </div>

@@ -41,6 +41,8 @@ export type Dictionary = {
     copyEmail: string;
     copiedEmail: string;
     copyFailed: string;
+    hireMe: string;
+    availableForFreelance: string;
   };
   summary: {
     title: string;
@@ -143,9 +145,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       setup: "Setup",
     },
     meta: {
-      resumeTitle: "Angel Valladares — Full-Stack Developer & Freelancer in Honduras",
+      resumeTitle: "Full-Stack & AI Software Engineer · Freelancer",
       resumeDescription:
-        "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations. Hire a reliable freelancer for web apps, APIs and AI features.",
+        "Top-rated freelance full-stack developer specializing in Next.js, Node.js, React, TypeScript and AI/LLM integrations. Available for web apps, APIs and AI features.",
       upworkTitle: "Upwork Summary",
       upworkDescription: "Experienced software engineer with solid fundamentals, AI expertise, and automation skills",
     },
@@ -157,6 +159,8 @@ const dictionaries: Record<Locale, Dictionary> = {
       copyEmail: "Copy email",
       copiedEmail: "Email copied",
       copyFailed: "Could not copy email",
+      hireMe: "Hire me",
+      availableForFreelance: "Available for freelance & contract work",
     },
     summary: { title: "About", mySetup: "My Setup" },
     work: {
@@ -308,9 +312,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       setup: "Setup",
     },
     meta: {
-      resumeTitle: "Angel Valladares — Desarrollador Full-Stack y Freelancer en Honduras",
+      resumeTitle: "Desarrollador Full-Stack & IA · Freelance",
       resumeDescription:
-        "Desarrollador Full-Stack freelance en Tegucigalpa, Honduras. Especialista en Next.js, Node.js, React, TypeScript, Python, Supabase e integraciones de IA. Disponible para proyectos web, APIs y funcionalidades basadas en IA.",
+        "Desarrollador full-stack freelance especializado en Next.js, Node.js, React, TypeScript e integraciones de IA/LLM. Disponible para apps web, APIs y soluciones con IA.",
       upworkTitle: "Resumen Upwork",
       upworkDescription: "Ingeniero de software con fundamentos sólidos, experiencia en IA y automatización",
     },
@@ -322,6 +326,8 @@ const dictionaries: Record<Locale, Dictionary> = {
       copyEmail: "Copiar correo",
       copiedEmail: "Correo copiado",
       copyFailed: "No se pudo copiar el correo",
+      hireMe: "Contrátame",
+      availableForFreelance: "Disponible para trabajo freelance y por contrato",
     },
     summary: { title: "Sobre mí", mySetup: "Mi Setup" },
     work: {

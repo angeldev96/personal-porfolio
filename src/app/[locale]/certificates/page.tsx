@@ -24,19 +24,39 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const resume = getResumeData(resolvedLocale);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
   const canonicalUrl = `${siteUrl}/${resolvedLocale}/certificates`;
+  const title = `Certificates & Certifications — ${resume.name}`;
+  const description = `Professional certifications and credentials earned by ${resume.name}, freelance full-stack & AI developer.`;
 
   return {
-    title: "Certificates & Certifications",
-    description: `Professional certifications and credentials obtained by ${resume.name}`,
+    metadataBase: new URL(siteUrl),
+    title,
+    description,
     openGraph: {
-      title: "Certificates & Certifications",
-      description: `Professional certifications and credentials obtained by ${resume.name}`,
+      title,
+      description,
       type: "website",
       url: canonicalUrl,
       locale: resolvedLocale === "en" ? "en_US" : "es_ES",
+      images: [`${siteUrl}/opengraph-image`],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      site: "@angeldev96",
+      images: [`${siteUrl}/opengraph-image`],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
     alternates: {
       canonical: canonicalUrl,
+      languages: {
+        en: `${siteUrl}/en/certificates`,
+        es: `${siteUrl}/es/certificates`,
+        "x-default": `${siteUrl}/en/certificates`,
+      },
     },
   };
 }
