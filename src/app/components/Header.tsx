@@ -46,28 +46,43 @@ function LocationLink({ location, locationLink, label }: LocationLinkProps) {
     };
   }, []);
 
+  const ariaLabel = time
+    ? `${label}: ${location}. ${time}`
+    : `${label}: ${location}`;
+
+  const content = (
+    <>
+      <GlobeIcon className="size-3 shrink-0" aria-hidden="true" />
+      <span>{location}</span>
+      <span
+        className="ml-1 font-mono text-xs text-foreground/70"
+        aria-live="polite"
+      >
+        {time}
+      </span>
+    </>
+  );
+
   return (
     <p className="max-w-md text-pretty font-mono text-xs text-foreground">
-      <a
-        className="inline-flex flex-wrap items-center gap-x-1.5 leading-snug hover:underline"
-        href={locationLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={
-          time
-            ? `${label}: ${location}. Hora actual: ${time}`
-            : `${label}: ${location}`
-        }
-      >
-        <GlobeIcon className="size-3 shrink-0" aria-hidden="true" />
-        <span>{location}</span>
-        <span
-          className="ml-1 font-mono text-xs text-foreground/70"
-          aria-live="polite"
+      {locationLink ? (
+        <a
+          className="inline-flex flex-wrap items-center gap-x-1.5 leading-snug hover:underline"
+          href={locationLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={ariaLabel}
         >
-          {time}
+          {content}
+        </a>
+      ) : (
+        <span
+          className="inline-flex flex-wrap items-center gap-x-1.5 leading-snug"
+          aria-label={ariaLabel}
+        >
+          {content}
         </span>
-      </a>
+      )}
     </p>
   );
 }

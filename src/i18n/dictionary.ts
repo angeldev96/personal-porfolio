@@ -131,9 +131,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       setup: "Setup",
     },
     meta: {
-      resumeTitle: "Full-Stack Developer & Freelancer in Honduras",
+      resumeTitle: "Full-Stack Developer & Freelancer",
       resumeDescription:
-        "Top-rated freelance Full-Stack Developer based in Tegucigalpa, Honduras. Specializes in Next.js, Node.js, React, TypeScript, Python, Supabase and AI/LLM integrations. Hire a reliable freelancer for web apps, APIs and AI features.",
+        "Full-Stack Developer and freelancer working with a US-based startup. I build web apps, APIs, and AI/LLM features with Next.js, Node.js, React, TypeScript, Python, and Supabase for clients worldwide.",
       upworkTitle: "Upwork Summary",
       upworkDescription: "Experienced software engineer with solid fundamentals, AI expertise, and automation skills",
     },
@@ -284,9 +284,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       setup: "Setup",
     },
     meta: {
-      resumeTitle: "Desarrollador Full-Stack y Freelancer en Honduras",
+      resumeTitle: "Desarrollador Full-Stack y Freelancer",
       resumeDescription:
-        "Desarrollador Full-Stack freelance en Tegucigalpa, Honduras. Especialista en Next.js, Node.js, React, TypeScript, Python, Supabase e integraciones de IA. Disponible para proyectos web, APIs y funcionalidades basadas en IA.",
+        "Desarrollador Full-Stack y freelancer que colabora con una startup de Estados Unidos. Construyo aplicaciones web, APIs e integraciones de IA con Next.js, Node.js, React, TypeScript, Python y Supabase para clientes de todo el mundo.",
       upworkTitle: "Resumen Upwork",
       upworkDescription: "Ingeniero de software con fundamentos sólidos, experiencia en IA y automatización",
     },
