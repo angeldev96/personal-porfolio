@@ -8,6 +8,8 @@ export type BlogPost = {
   excerpt: string;
   content: React.ReactNode;
   date: string;
+  /** ISO 8601 date (YYYY-MM-DD) for structured data / sitemaps. */
+  isoDate: string;
   tags: readonly string[];
   readingTime: string;
 };
@@ -25,6 +27,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "A practical guide to integrating OpenAI's API into your Next.js applications, from chatbots to content generation.",
         date: "May 15, 2026",
+        isoDate: "2026-05-15",
         tags: ["Next.js", "OpenAI", "AI", "TypeScript"],
         readingTime: "8 min read",
         content: (
@@ -93,6 +96,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "In the age of AI-assisted coding, understanding the fundamentals is what separates professionals from 'vibe coders'.",
         date: "April 28, 2026",
+        isoDate: "2026-04-28",
         tags: ["Software Engineering", "AI", "Career", "Best Practices"],
         readingTime: "6 min read",
         content: (
@@ -146,6 +150,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "A tour of the tools, hardware, and software I use daily to build modern web applications.",
         date: "April 10, 2026",
+        isoDate: "2026-04-10",
         tags: ["Setup", "Tools", "Productivity"],
         readingTime: "5 min read",
         content: (
@@ -200,6 +205,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "Guía práctica para integrar la API de OpenAI en tus aplicaciones Next.js, desde chatbots hasta generación de contenido.",
         date: "15 de mayo, 2026",
+        isoDate: "2026-05-15",
         tags: ["Next.js", "OpenAI", "IA", "TypeScript"],
         readingTime: "8 min de lectura",
         content: (
@@ -255,6 +261,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "En la era de la codificación asistida por IA, entender los fundamentos es lo que separa a los profesionales de los 'vibe coders'.",
         date: "28 de abril, 2026",
+        isoDate: "2026-04-28",
         tags: ["Ingeniería de Software", "IA", "Carrera", "Mejores Prácticas"],
         readingTime: "6 min de lectura",
         content: (
@@ -289,6 +296,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "Un recorrido por las herramientas, hardware y software que uso diariamente para construir aplicaciones web modernas.",
         date: "10 de abril, 2026",
+        isoDate: "2026-04-10",
         tags: ["Setup", "Herramientas", "Productividad"],
         readingTime: "5 min de lectura",
         content: (

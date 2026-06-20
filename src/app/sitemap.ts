@@ -23,10 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   ]);
 
-  const urls = new Set<string>([
-    `${origin}/`,
-    ...localizedPaths,
-  ]);
+  const urls = new Set<string>(localizedPaths);
 
   return Array.from(urls).map((url) => ({
     url,

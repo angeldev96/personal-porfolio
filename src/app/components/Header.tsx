@@ -212,6 +212,41 @@ function ContactButtons({
   );
 }
 
+interface HireCtaProps {
+  email: string;
+  labels: Dictionary["header"];
+}
+
+/**
+ * Always-visible, crawlable contact CTA. Unlike ContactButtons (icon-only,
+ * click-to-copy) and PrintContact (print-only), this renders the email as a
+ * real text mailto link on screen so search engines and visitors can act on it.
+ */
+function HireCta({ email, labels }: HireCtaProps) {
+  if (!email) return null;
+
+  return (
+    <div className="flex flex-col gap-1.5 pt-2 print:hidden">
+      <a
+        href={`mailto:${email}`}
+        className="inline-flex w-fit items-center gap-2 rounded-md bg-foreground px-3 py-1.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
+      >
+        <MailIcon className="size-4" aria-hidden="true" />
+        {labels.hireMe}
+      </a>
+      <a
+        href={`mailto:${email}`}
+        className="w-fit font-mono text-xs text-foreground/70 hover:text-foreground hover:underline"
+      >
+        {email}
+      </a>
+      <span className="font-mono text-xs text-foreground/60">
+        {labels.availableForFreelance}
+      </span>
+    </div>
+  );
+}
+
 interface PrintContactProps {
   contact: ResumeData["contact"];
   personalWebsiteUrl?: string | null;
@@ -290,6 +325,8 @@ export function Header({
           contact={resume.contact}
           labels={labels}
         />
+
+        <HireCta email={resume.contact.email} labels={labels} />
 
         <PrintContact
           contact={resume.contact}

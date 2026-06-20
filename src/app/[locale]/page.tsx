@@ -11,7 +11,8 @@ import { getResumeData } from "@/data/resume-data";
 import { getDictionary } from "@/i18n/dictionary";
 import { DEFAULT_LOCALE, LOCALES, type Locale, isLocale } from "@/i18n/config";
 import type { Metadata } from "next";
-import Script from "next/script";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
 
 function resolveLocale(value: string): Locale {
   return isLocale(value) ? value : DEFAULT_LOCALE;
@@ -52,16 +53,18 @@ export async function generateMetadata({
   const resolvedLocale = resolveLocale(locale);
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
-  const canonicalUrl = `${siteUrl}/${resolvedLocale}`;
+  const canonicalUrl = `${SITE_URL}/${resolvedLocale}`;
   const title = `${resume.name} - ${dictionary.meta.resumeTitle}`;
+  const description = dictionary.meta.resumeDescription;
 
   return {
-    metadataBase: new URL(siteUrl),
+    metadataBase: new URL(SITE_URL),
     title,
-    description: resume.about,
+    description,
     keywords: [
+      "Angel Valladares",
+      "Freelance Full-Stack Developer",
+      "Hire full-stack developer",
       "Full-Stack Developer",
       "Software Engineer",
       "Backend Developer",
@@ -69,16 +72,15 @@ export async function generateMetadata({
       "Python",
       "Next.js",
       "React",
-      "n8n",
-      "Programador Web",
-      "Desarrollador",
-      "Ingeniero de Software",
+      "AI integration",
+      "LLM integration",
     ],
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        en: `${siteUrl}/en`,
-        es: `${siteUrl}/es`,
+        en: `${SITE_URL}/en`,
+        es: `${SITE_URL}/es`,
+        "x-default": `${SITE_URL}/en`,
       },
     },
     robots: {
@@ -87,25 +89,26 @@ export async function generateMetadata({
     },
     openGraph: {
       title,
-      description: resume.about,
+      description,
       type: "profile",
       locale: resolvedLocale === "en" ? "en_US" : "es_ES",
       url: canonicalUrl,
       images: [
         {
-          url: `${siteUrl}/opengraph-image`,
+          url: `${SITE_URL}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: `${resume.name}'s profile picture`,
+          alt: `${resume.name} — ${dictionary.meta.resumeTitle}`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description: resume.about,
+      description,
       site: "@angeldev96",
-      images: [`${siteUrl}/opengraph-image`],
+      creator: "@angeldev96",
+      images: [`${SITE_URL}/opengraph-image`],
     },
   };
 }
@@ -119,56 +122,64 @@ export default async function ResumePage({
   const resolvedLocale = resolveLocale(locale);
   const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
-  const profileUrl = `${siteUrl}/${resolvedLocale}`;
+  const profileUrl = `${SITE_URL}/${resolvedLocale}`;
+  const inLanguage = resolvedLocale === "en" ? "en-US" : "es-ES";
   const sameAs = resume.contact.social.map((item) => item.url);
 
   const personLd = {
-    "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
     name: resume.name,
     url: profileUrl,
     image: resume.avatarUrl,
-    jobTitle: "Full-Stack Software Engineer & Web Developer",
+    jobTitle: "Full-Stack Software Engineer & Freelance Developer",
     description: resume.about,
+    email: `mailto:${resume.contact.email}`,
+    knowsAbout: [...resume.skills],
     sameAs,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Business inquiries",
+      email: resume.contact.email,
+      availableLanguage: ["English", "Spanish"],
+    },
   };
 
   const websiteLd = {
-    "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: `${resume.name} | ${dictionary.meta.resumeTitle}`,
     url: profileUrl,
-    inLanguage: resolvedLocale === "en" ? "en-US" : "es-ES",
-    about: resume.about,
+    inLanguage,
+    about: { "@id": `${SITE_URL}/#person` },
+  };
+
+  const profilePageLd = {
+    "@type": "ProfilePage",
+    "@id": `${profileUrl}#profilepage`,
+    url: profileUrl,
+    name: `${resume.name} — ${dictionary.meta.resumeTitle}`,
+    inLanguage,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    mainEntity: { "@id": `${SITE_URL}/#person` },
+  };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [personLd, websiteLd, profilePageLd],
   };
 
   return (
     <>
-      <Script
-        id={`ld-person-${resolvedLocale}`}
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
-      />
-      <Script
-        id={`ld-website-${resolvedLocale}`}
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <main
         className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
         id="main-content"
       >
-        <div className="sr-only">
-          <h1>
-            {resume.name} - {dictionary.meta.resumeTitle}
-          </h1>
-        </div>
-
         <section
           className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-4 dark:bg-background"
           aria-label="Resume Content"

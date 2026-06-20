@@ -39,9 +39,11 @@ export async function generateMetadata({
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
   const canonicalUrl = `${siteUrl}/${resolvedLocale}/blog/${slug}`;
+  const title = `${post.title} — Angel Valladares`;
 
   return {
-    title: `${post.title} — Angel Valladares`,
+    metadataBase: new URL(siteUrl),
+    title,
     description: post.excerpt,
     openGraph: {
       title: post.title,
@@ -49,11 +51,24 @@ export async function generateMetadata({
       type: "article",
       url: canonicalUrl,
       locale: resolvedLocale === "en" ? "en_US" : "es_ES",
-      publishedTime: post.date,
+      publishedTime: post.isoDate,
       tags: [...post.tags],
+      images: [`${siteUrl}/opengraph-image`],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: post.excerpt,
+      site: "@angeldev96",
+      images: [`${siteUrl}/opengraph-image`],
     },
     alternates: {
       canonical: canonicalUrl,
+      languages: {
+        en: `${siteUrl}/en/blog/${slug}`,
+        es: `${siteUrl}/es/blog/${slug}`,
+        "x-default": `${siteUrl}/en/blog/${slug}`,
+      },
     },
   };
 }
@@ -72,8 +87,36 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+  const postUrl = `${siteUrl}/${resolvedLocale}/blog/${slug}`;
+  const author = {
+    "@type": "Person",
+    name: "Angel Valladares",
+    url: `${siteUrl}/${resolvedLocale}`,
+  };
+
+  const blogPostingLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.isoDate,
+    dateModified: post.isoDate,
+    inLanguage: resolvedLocale === "en" ? "en-US" : "es-ES",
+    keywords: [...post.tags],
+    url: postUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    image: `${siteUrl}/opengraph-image`,
+    author,
+    publisher: author,
+  };
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingLd) }}
+      />
       <article className="mx-auto w-full max-w-3xl">
         <Link
           href={`/${resolvedLocale}/blog`}
@@ -86,6 +129,12 @@ export default async function BlogPostPage({
         <header className="mb-8 space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">{post.title}</h1>
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <Link
+              href={`/${resolvedLocale}`}
+              className="font-medium text-foreground hover:underline"
+            >
+              Angel Valladares
+            </Link>
             <span className="inline-flex items-center gap-1.5">
               <Clock className="size-4" />
               {post.readingTime}

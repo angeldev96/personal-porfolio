@@ -71,11 +71,12 @@ bun run lint     # lint only
 
 ## Environment variables
 
-Both are optional; sensible defaults are used.
+Set `NEXT_PUBLIC_SITE_URL` explicitly in production. The code falls back to the
+correct domain, but defining it avoids any risk of indexing under the wrong host.
 
 | Variable | Purpose | Default |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Public site URL for canonical links, Open Graph, sitemap, and robots | `https://angelvalladares.dev` |
+| `NEXT_PUBLIC_SITE_URL` | **Set in production.** Public site URL for canonical links, Open Graph, sitemap, robots, and JSON-LD | `https://angelvalladares.dev` |
 | `NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS` | Set to `true` to enable Vercel Analytics | _(disabled)_ |
 
 ## Updating content

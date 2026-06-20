@@ -41,6 +41,8 @@ export type Dictionary = {
     copyEmail: string;
     copiedEmail: string;
     copyFailed: string;
+    hireMe: string;
+    availableForFreelance: string;
   };
   summary: {
     title: string;
@@ -131,9 +133,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       setup: "Setup",
     },
     meta: {
-      resumeTitle: "Full-Stack Developer & Freelancer",
+      resumeTitle: "Full-Stack & AI Developer · Freelancer",
       resumeDescription:
-        "Full-Stack Developer and freelancer working with a US-based startup. I build web apps, APIs, and AI/LLM features with Next.js, Node.js, React, TypeScript, Python, and Supabase for clients worldwide.",
+        "Full-Stack & AI freelance developer working with a US-based startup. I build web apps, APIs and AI/LLM features with Next.js and Node for clients worldwide.",
       upworkTitle: "Upwork Summary",
       upworkDescription: "Experienced software engineer with solid fundamentals, AI expertise, and automation skills",
     },
@@ -145,6 +147,8 @@ const dictionaries: Record<Locale, Dictionary> = {
       copyEmail: "Copy email",
       copiedEmail: "Email copied",
       copyFailed: "Could not copy email",
+      hireMe: "Hire me",
+      availableForFreelance: "Available for freelance & contract work",
     },
     summary: { title: "About", mySetup: "My Setup" },
     work: {
@@ -284,9 +288,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       setup: "Setup",
     },
     meta: {
-      resumeTitle: "Desarrollador Full-Stack y Freelancer",
+      resumeTitle: "Desarrollador Full-Stack & IA · Freelance",
       resumeDescription:
-        "Desarrollador Full-Stack y freelancer que colabora con una startup de Estados Unidos. Construyo aplicaciones web, APIs e integraciones de IA con Next.js, Node.js, React, TypeScript, Python y Supabase para clientes de todo el mundo.",
+        "Desarrollador full-stack y de IA freelance que colabora con una startup de EE. UU. Construyo apps web, APIs e integraciones de IA para clientes de todo el mundo.",
       upworkTitle: "Resumen Upwork",
       upworkDescription: "Ingeniero de software con fundamentos sólidos, experiencia en IA y automatización",
     },
@@ -298,6 +302,8 @@ const dictionaries: Record<Locale, Dictionary> = {
       copyEmail: "Copiar correo",
       copiedEmail: "Correo copiado",
       copyFailed: "No se pudo copiar el correo",
+      hireMe: "Contrátame",
+      availableForFreelance: "Disponible para trabajo freelance y por contrato",
     },
     summary: { title: "Sobre mí", mySetup: "Mi Setup" },
     work: {

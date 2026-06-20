@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, isLocale, type Locale } from "@/i18n/config";
+import { DEFAULT_LOCALE, LOCALES, isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 import { getResumeData } from "@/data/resume-data";
 import { Section } from "@/components/ui/section";
@@ -7,18 +7,55 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+
 function resolveLocale(value: string): Locale {
   return isLocale(value) ? value : DEFAULT_LOCALE;
+}
+
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const resolvedLocale = resolveLocale(locale);
+  const resume = getResumeData(resolvedLocale);
   const dictionary = getDictionary(resolvedLocale);
-  
+  const canonicalUrl = `${SITE_URL}/${resolvedLocale}/setup`;
+  const title = `${dictionary.setup.title} — ${resume.name}`;
+
   return {
-    title: `${dictionary.setup.title} | Angel Valladares`,
+    metadataBase: new URL(SITE_URL),
+    title,
     description: dictionary.setup.description,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${SITE_URL}/en/setup`,
+        es: `${SITE_URL}/es/setup`,
+        "x-default": `${SITE_URL}/en/setup`,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title,
+      description: dictionary.setup.description,
+      type: "website",
+      url: canonicalUrl,
+      locale: resolvedLocale === "en" ? "en_US" : "es_ES",
+      images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: dictionary.setup.description,
+      site: "@angeldev96",
+      images: [`${SITE_URL}/opengraph-image`],
+    },
   };
 }
 
