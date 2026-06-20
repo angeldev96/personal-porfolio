@@ -710,7 +710,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         title:
           "Ingeniero de Software Full-Stack · Top Rated · 100% Job Success",
         logo: null,
-        start: "2024",
+        start: "Abril 2025",
         end: "Marzo 2026",
         description: (
           <>
