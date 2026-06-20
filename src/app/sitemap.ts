@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     `${origin}/${locale}/blog`,
     `${origin}/${locale}/certificates`,
     `${origin}/${locale}/setup`,
-    `${origin}/${locale}/upwork-summary`,
     ...getBlogData(locale).posts.map(
       (post) => `${origin}/${locale}/blog/${post.slug}`,
     ),
