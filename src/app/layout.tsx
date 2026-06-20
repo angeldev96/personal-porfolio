@@ -8,7 +8,6 @@ import { DEFAULT_LOCALE, isLocale } from "@/i18n/config";
 import { getResumeData } from "@/data/resume-data";
 import { getDictionary } from "@/i18n/dictionary";
 import { ThemeProvider } from "@/components/theme-provider";
-import PageTransition from "@/components/PageTransition";
 import "./globals.css";
 
 const inter = Inter({
@@ -121,6 +120,14 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={inter.className} suppressHydrationWarning>
       <head>
+        <link
+          rel="preconnect"
+          href="https://avatars.githubusercontent.com"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://avatars.githubusercontent.com"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -142,7 +149,7 @@ export default async function RootLayout({
       </head>
       <body suppressHydrationWarning>
         <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
-          <PageTransition>{children}</PageTransition>
+          <div className="page-transition">{children}</div>
         </ThemeProvider>
         {enableAnalytics && <Analytics />}
       </body>

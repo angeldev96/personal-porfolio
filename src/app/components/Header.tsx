@@ -47,10 +47,10 @@ function LocationLink({ location, locationLink, label }: LocationLinkProps) {
   }, []);
 
   const ariaLabel = time
-    ? `${label}: ${location}. Hora actual: ${time}`
+    ? `${label}: ${location}. ${time}`
     : `${label}: ${location}`;
 
-  const inner = (
+  const content = (
     <>
       <GlobeIcon className="size-3 shrink-0" aria-hidden="true" />
       <span>{location}</span>
@@ -73,14 +73,14 @@ function LocationLink({ location, locationLink, label }: LocationLinkProps) {
           rel="noopener noreferrer"
           aria-label={ariaLabel}
         >
-          {inner}
+          {content}
         </a>
       ) : (
         <span
           className="inline-flex flex-wrap items-center gap-x-1.5 leading-snug"
           aria-label={ariaLabel}
         >
-          {inner}
+          {content}
         </span>
       )}
     </p>
