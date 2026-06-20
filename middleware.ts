@@ -15,13 +15,23 @@ function getMatchedLocale(pathname: string): string | null {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip Next internals and static assets
+  // Skip Next internals, static assets, and file-based metadata routes.
+  // These must NOT be locale-redirected or crawlers get a 404 on
+  // /robots.txt, /sitemap.xml, /opengraph-image, /manifest.webmanifest, etc.
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/assets") ||
     pathname.startsWith("/images") ||
-    pathname === "/favicon.ico"
+    pathname === "/favicon.ico" ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/manifest.webmanifest" ||
+    pathname.startsWith("/opengraph-image") ||
+    pathname.startsWith("/twitter-image") ||
+    pathname.startsWith("/apple-icon") ||
+    pathname.startsWith("/icon") ||
+    /\.[^/]+$/.test(pathname)
   ) {
     return NextResponse.next();
   }
@@ -48,5 +58,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/(.*)"],
+  // Run on everything EXCEPT Next internals, API, file-based metadata
+  // routes, and any path with a file extension (e.g. robots.txt, *.png).
+  matcher: [
+    "/((?!_next|api|assets|images|opengraph-image|twitter-image|apple-icon|icon|.*\\..*).*)",
+  ],
 };

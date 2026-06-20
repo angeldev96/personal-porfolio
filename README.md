@@ -1,86 +1,108 @@
-# Angel Valladares — Personal Portfolio (Codebase)
+# Angel Valladares — Personal Portfolio
 
-Este repositorio contiene la versión fuente del portfolio personal de Angel Valladares, optimizado como currículum web y tarjeta profesional para clientes y empleadores. El objetivo principal es mostrar experiencia, proyectos, certificaciones y facilitar contacto (incluyendo perfil profesional en Upwork).
+Source code for my personal portfolio and web CV: a fast, SEO-friendly, bilingual (English / Spanish) site that showcases my work experience, projects, certifications, blog, and development setup.
+
+**Live:** [angelvalladares.dev](https://angelvalladares.dev)
 
 ---
 
-**Live demo:** https://angelvalladares.dev (configurable mediante `NEXT_PUBLIC_SITE_URL`)
+## Tech stack
 
-## ¿Qué verás aquí? (para un empleador)
-- Un portfolio moderno, rápido y optimizado para SEO, con soporte multi-idioma (es/en).
-- Página de resumen (About), Proyectos, Certificados, Sección dedicada para clientes de Upwork y enlaces de contacto.
-- Implementación pensada para contratación freelance: datos públicos (earnings/badges mencionados en UI) y enlaces directos a perfil de Upwork.
+| Area | Choice |
+| --- | --- |
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript + React 18 |
+| Styling | Tailwind CSS 3 |
+| UI primitives | Radix UI + `class-variance-authority` (Card, Button, Badge, Avatar, Dialog, Command) |
+| Command palette | `cmdk` (⌘K menu) |
+| Drawer / print | `vaul` |
+| Icons | `lucide-react` + custom social icons |
+| Analytics | Vercel Analytics (opt-in) |
+| Package manager | Bun (`bun.lock`) |
+| Hosting | Vercel |
 
-## Tecnologías principales
-- Framework: Next.js 15 (App Router)
-- Lenguaje: TypeScript + React
-- Estilos: Tailwind CSS
-- Componentes UI: componentes internos basados en primitives (Card, Button, Badge, Avatar)
-- Integraciones: Vercel Analytics (opcional), Open Graph image generation
-- Backend ligero: GraphQL route (archivo `src/app/graphql/route.ts`) para propósitos específicos
+## Features
 
-## Arquitectura y organización
-- `src/app`: App Router pages y layouts por locale (`[locale]`).
-- `src/data/resume-data.tsx`: fuente principal de datos (nombre, experiencia, proyectos, certificados). Cambia aquí para actualizar contenido sin tocar componentes.
-- `src/i18n`: configuración e `dictionary.ts` con textos para `en` y `es`.
-- `src/components`: componentes reutilizables (Header, CommandMenu, Certificates, Projects, etc.).
-- `src/components/icons` y `src/images/logos`: logos e iconos usados en la UI.
-- `public/`: assets públicos (favicon, imágenes públicas).
+- **Bilingual (en / es)** — locale-prefixed routes (`/en`, `/es`), middleware redirect to the default locale, and a `NEXT_LOCALE` cookie. UI labels live in `src/i18n/dictionary.ts`.
+- **Dark / light theme** — class-based theme switch via `theme-provider` with a toggle, no flash on load.
+- **Command menu** — `⌘K` palette for quick navigation and links.
+- **SEO** — centralized metadata, JSON-LD (`Person` + `WebSite`), dynamic Open Graph image, `robots.ts`, and `sitemap.ts`.
+- **Optimized images** — `next/image` with remote patterns allowed for Cloudinary and GitHub avatars.
+- **Print / PDF friendly** — a drawer-based print flow for exporting the CV.
 
-## SEO y mejoras realizadas
-- Metadatos (title, description, openGraph, twitter) centralizados en `src/app/layout.tsx` y en los metadatos de páginas específicas.
-- JSON-LD (Person, WebSite) añadido para mejorar rich results y presencia en buscadores.
-- i18n: rutas con prefijo `/en` y `/es`, middleware (`middleware.ts`) que redirige al locale por defecto y mantiene cookie `NEXT_LOCALE`.
+## Project structure
 
-## Imágenes y optimización
-- `next/image` usado en galerías y screenshots. `next.config.js` contiene `images.remotePatterns` para permitir optimización desde `res.cloudinary.com` y `avatars.githubusercontent.com`.
-- El favicon se sirve desde `public/favicon.ico` y está apuntado en metadata (`src/app/layout.tsx`).
-
-## Cambios recientes notables
-- Reemplazo de `img` por `next/image` para mejorar LCP y ancho de banda.
-- Ajustes visuales: mayor espaciado entre certificados para mejorar legibilidad.
-- Reemplazo del enlace del portafolio en el header/command menu por el enlace a Upwork (cuando aplica).
-- Metadatos SEO actualizados para posicionar la página como "Freelancer Full-Stack en Honduras".
-
-## Ejecutar localmente
-Requisitos: Node 18+ (o la versión que el proyecto use en tu entorno). Desde la raíz del repo:
-
-```bash
-npm install
-npm run dev       # arranca en modo desarrollo (http://localhost:3000)
-npm run build     # build de producción
-npm run start     # sirve build local
+```
+src/
+├── app/
+│   ├── layout.tsx              # Root metadata, fonts, theme, analytics
+│   ├── opengraph-image.tsx     # Dynamic OG image
+│   ├── robots.ts / sitemap.ts  # SEO endpoints
+│   ├── components/             # Page sections (Header, Summary, WorkExperience, Skills, Projects, Certificates, BlogSection, Education)
+│   └── [locale]/
+│       ├── page.tsx            # Home (about, work, skills, projects, certificates)
+│       ├── projects/[slug]/    # Project detail
+│       ├── certificates/       # Certificates page
+│       ├── blog/ + blog/[slug] # Blog index + post
+│       ├── setup/              # Hardware / software / platforms I use
+│       └── upwork-summary/     # Freelance summary page
+├── components/                 # Reusable UI (navbar, command-menu, theme/language toggles, print-drawer, ui/* primitives, icons/*)
+├── data/
+│   ├── resume-data.tsx         # Single source of truth: work, projects, certificates, skills, setup, education, contact (en + es)
+│   └── blog-data.tsx           # Blog posts (en + es)
+└── i18n/
+    ├── config.ts               # Locales + helpers
+    └── dictionary.ts           # UI labels / translations
 ```
 
-Variables útiles (opcional):
-- `NEXT_PUBLIC_SITE_URL` — URL pública del sitio (para Open Graph y canonical).
-- `NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS=true` — activa Vercel Analytics en producción.
+## Running locally
 
-## Tests y lint
-- El proyecto corre checks de lint y tipos durante `next build`. Ejecuta `npm run lint` si quieres revisar manualmente.
+Requires Node 18+ and [Bun](https://bun.sh).
 
-## Deploy
-- Diseñado para desplegar en Vercel (soporta Next.js App Router y funciones necesarias).
-- Asegúrate de definir `NEXT_PUBLIC_SITE_URL` en el entorno de producción.
+```bash
+bun install
+bun run dev      # http://localhost:3000
+bun run build    # production build (runs type + lint checks)
+bun run start    # serve the production build
+bun run lint     # lint only
+```
 
-## Cómo actualizar contenido
-- Contenido principal: editar `src/data/resume-data.tsx` (textos, proyectos, certificados).
-- Traducciones y labels: `src/i18n/dictionary.ts`.
-- Nuevas imágenes/logos: poner en `public/` o `src/images/logos/` y referenciarlas desde `resume-data.tsx`.
+> Using npm/yarn/pnpm instead of Bun also works — the scripts only call `next`.
 
-## Buenas prácticas / recomendaciones SEO
-- Mantén las descripciones en `src/i18n/dictionary.ts` cortas y con keywords relevantes (ej. "Freelancer Honduras, Full-Stack Developer, Next.js, Node.js").
-- Añade `hreflang`/alternates si publicas en dominios multi-región (ya se setea alternates en metadata).
-- Mantén `opengraph-image` actualizado para compartir en redes.
+## Environment variables
 
-## Contribuir
-- Este repo está pensado como CV personal; si quieres proponer cambios, abre un PR con: 1) cambios de contenido en `resume-data.tsx` o `dictionary.ts`, 2) pruebas visuales (screenshots) y 3) descripción breve del motivo.
+Set `NEXT_PUBLIC_SITE_URL` explicitly in production. The code falls back to the
+correct domain, but defining it avoids any risk of indexing under the wrong host.
 
-## Contacto
-- Email público: `arivalladares2.0@gmail.com`
-- Perfil profesional: https://www.upwork.com/freelancers/~0116803452ac7b4ff7
+| Variable | Purpose | Default |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | **Set in production.** Public site URL for canonical links, Open Graph, sitemap, robots, and JSON-LD | `https://angelvalladares.dev` |
+| `NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS` | Set to `true` to enable Vercel Analytics | _(disabled)_ |
 
----
-Licencia: `MIT` (revisar archivo `LICENSE` en este repo).
+## Updating content
 
-Si quieres, puedo: 1) generar un `README.es.md` con versión en español; 2) agregar un `CONTRIBUTING.md` con guía de cambios; o 3) crear scripts de CI para lint/build. Dime cuál prefieres que haga a continuación.
+All content is data-driven — no component edits needed for routine updates:
+
+- **Resume content** (work, projects, certificates, skills, setup, education, contact) → `src/data/resume-data.tsx`
+- **Blog posts** → `src/data/blog-data.tsx`
+- **UI labels / translations** → `src/i18n/dictionary.ts`
+
+Keep the `en` and `es` entries in sync when editing the data files.
+
+## Deployment
+
+Built for [Vercel](https://vercel.com). Set `NEXT_PUBLIC_SITE_URL` in the production environment. A `Dockerfile` and `docker-compose.yaml` are also included for container-based hosting.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). This repo is a personal portfolio, so changes are mostly content updates in the data files.
+
+## Contact
+
+- **Email:** arivalladares2.0@gmail.com
+- **GitHub:** [@angeldev96](https://github.com/angeldev96)
+- **LinkedIn:** [Angel Valladares](https://www.linkedin.com/in/angel-valladares-422490159/)
+
+## License
+
+[MIT](LICENSE)

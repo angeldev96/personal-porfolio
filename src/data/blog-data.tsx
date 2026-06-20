@@ -8,6 +8,8 @@ export type BlogPost = {
   excerpt: string;
   content: React.ReactNode;
   date: string;
+  /** ISO 8601 date (YYYY-MM-DD) for structured data / sitemaps. */
+  isoDate: string;
   tags: readonly string[];
   readingTime: string;
 };
@@ -25,6 +27,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "A practical guide to integrating OpenAI's API into your Next.js applications, from chatbots to content generation.",
         date: "May 15, 2026",
+        isoDate: "2026-05-15",
         tags: ["Next.js", "OpenAI", "AI", "TypeScript"],
         readingTime: "8 min read",
         content: (
@@ -93,6 +96,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "In the age of AI-assisted coding, understanding the fundamentals is what separates professionals from 'vibe coders'.",
         date: "April 28, 2026",
+        isoDate: "2026-04-28",
         tags: ["Software Engineering", "AI", "Career", "Best Practices"],
         readingTime: "6 min read",
         content: (
@@ -146,6 +150,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "A tour of the tools, hardware, and software I use daily to build modern web applications.",
         date: "April 10, 2026",
+        isoDate: "2026-04-10",
         tags: ["Setup", "Tools", "Productivity"],
         readingTime: "5 min read",
         content: (
@@ -166,7 +171,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
             <h2 className="text-2xl font-bold mt-8 mb-4">Software Stack</h2>
             <p className="mb-4">
               My primary code editor is VS Code with the Antigravity extension, and I use Warp as my
-              terminal. For AI-assisted development, I use OpenCode, Claude Code, and Cursor—each for
+              terminal. For AI-assisted development, I use Claude Code, Codex, and Cursor—each for
               different use cases.
             </p>
 
@@ -200,6 +205,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "Guía práctica para integrar la API de OpenAI en tus aplicaciones Next.js, desde chatbots hasta generación de contenido.",
         date: "15 de mayo, 2026",
+        isoDate: "2026-05-15",
         tags: ["Next.js", "OpenAI", "IA", "TypeScript"],
         readingTime: "8 min de lectura",
         content: (
@@ -255,6 +261,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "En la era de la codificación asistida por IA, entender los fundamentos es lo que separa a los profesionales de los 'vibe coders'.",
         date: "28 de abril, 2026",
+        isoDate: "2026-04-28",
         tags: ["Ingeniería de Software", "IA", "Carrera", "Mejores Prácticas"],
         readingTime: "6 min de lectura",
         content: (
@@ -289,6 +296,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
         excerpt:
           "Un recorrido por las herramientas, hardware y software que uso diariamente para construir aplicaciones web modernas.",
         date: "10 de abril, 2026",
+        isoDate: "2026-04-10",
         tags: ["Setup", "Herramientas", "Productividad"],
         readingTime: "5 min de lectura",
         content: (
@@ -309,7 +317,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
             <h2 className="text-2xl font-bold mt-8 mb-4">Software</h2>
             <p className="mb-4">
               Mi editor de código principal es VS Code con la extensión Antigravity, y uso Warp como
-              terminal. Para desarrollo asistido por IA, uso OpenCode, Claude Code y Cursor.
+              terminal. Para desarrollo asistido por IA, uso Claude Code, Codex y Cursor.
             </p>
           </>
         ),

@@ -1,16 +1,16 @@
-FROM node:22.2.0-slim as BUILD_STAGE
+FROM oven/bun:1 AS BUILD_STAGE
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json bun.lock ./
 
-RUN yarn install --frozen-lockfile
+RUN bun install --frozen-lockfile
 
 COPY . .
 
-RUN yarn build
+RUN bun run build
 
-FROM node:alpine
+FROM oven/bun:1-slim
 
 WORKDIR /app
 
@@ -21,4 +21,4 @@ COPY --from=BUILD_STAGE /app/public ./public
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["bun", "run", "start"]

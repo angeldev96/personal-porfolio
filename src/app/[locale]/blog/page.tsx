@@ -24,19 +24,38 @@ export async function generateMetadata({
   const dictionary = getDictionary(resolvedLocale);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
   const canonicalUrl = `${siteUrl}/${resolvedLocale}/blog`;
+  const title = `${dictionary.blog.title} — Angel Valladares`;
 
   return {
-    title: `${dictionary.blog.title} — Angel Valladares`,
+    metadataBase: new URL(siteUrl),
+    title,
     description: dictionary.blog.description,
     openGraph: {
-      title: `${dictionary.blog.title} — Angel Valladares`,
+      title,
       description: dictionary.blog.description,
       type: "website",
       url: canonicalUrl,
       locale: resolvedLocale === "en" ? "en_US" : "es_ES",
+      images: [`${siteUrl}/opengraph-image`],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: dictionary.blog.description,
+      site: "@angeldev96",
+      images: [`${siteUrl}/opengraph-image`],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
     alternates: {
       canonical: canonicalUrl,
+      languages: {
+        en: `${siteUrl}/en/blog`,
+        es: `${siteUrl}/es/blog`,
+        "x-default": `${siteUrl}/en/blog`,
+      },
     },
   };
 }

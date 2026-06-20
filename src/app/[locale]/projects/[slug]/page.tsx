@@ -45,9 +45,12 @@ export async function generateMetadata({
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
   const canonicalUrl = `${siteUrl}/${resolvedLocale}/projects/${slug}`;
+  const ogImage = project.images?.[0] || `${siteUrl}/opengraph-image`;
+  const title = `${project.title} — Project by Angel Valladares`;
 
   return {
-    title: `${project.title} - Project`,
+    metadataBase: new URL(siteUrl),
+    title,
     description: project.description,
     openGraph: {
       title: project.title,
@@ -55,9 +58,22 @@ export async function generateMetadata({
       type: "article",
       url: canonicalUrl,
       locale: resolvedLocale === "en" ? "en_US" : "es_ES",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: project.description,
+      site: "@angeldev96",
+      images: [ogImage],
     },
     alternates: {
       canonical: canonicalUrl,
+      languages: {
+        en: `${siteUrl}/en/projects/${slug}`,
+        es: `${siteUrl}/es/projects/${slug}`,
+        "x-default": `${siteUrl}/en/projects/${slug}`,
+      },
     },
   };
 }
@@ -78,6 +94,49 @@ export default async function ProjectPage({
     notFound();
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://angelvalladares.dev";
+  const projectUrl = `${siteUrl}/${resolvedLocale}/projects/${slug}`;
+  const creativeWorkLd = {
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.longDescription || project.description,
+    url: projectUrl,
+    inLanguage: resolvedLocale === "en" ? "en-US" : "es-ES",
+    keywords: [...project.techStack],
+    author: {
+      "@type": "Person",
+      name: "Angel Valladares",
+      url: `${siteUrl}/${resolvedLocale}`,
+    },
+    ...(project.images && project.images.length > 0
+      ? { image: project.images }
+      : {}),
+    ...(project.link ? { sameAs: project.link.href } : {}),
+  };
+
+  const breadcrumbLd = {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: resolvedLocale === "es" ? "Inicio" : "Home",
+        item: `${siteUrl}/${resolvedLocale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: project.title,
+        item: projectUrl,
+      },
+    ],
+  };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [creativeWorkLd, breadcrumbLd],
+  };
+
   const projectDetailLabels = dictionary.projectDetail || {
     backToProjects: "Back to Projects",
     technologies: "Technologies",
@@ -91,10 +150,14 @@ export default async function ProjectPage({
 
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto w-full max-w-4xl">
         {/* Back button */}
         <Link
-          href={`/${resolvedLocale}#projects`}
+          href={`/${resolvedLocale}#side-projects`}
           className="mb-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <ArrowLeft className="size-4" />
