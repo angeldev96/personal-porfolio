@@ -1,6 +1,8 @@
 import React from "react";
 import { DEFAULT_LOCALE, Locale } from "@/i18n/config";
 
+export type WorkplaceType = "remote" | "hybrid" | "onsite";
+
 export type ResumeData = {
   name: string;
   initials: string;
@@ -31,6 +33,7 @@ export type ResumeData = {
     badges: readonly string[];
     title: string;
     logo: string | null;
+    workplace: WorkplaceType;
     start: string;
     end: string | null;
     description: React.ReactNode;
@@ -165,6 +168,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         ],
         title: "Full-Stack & AI Software Engineer",
         logo: null,
+        workplace: "remote",
         start: "March 2026",
         end: null,
         description: (
@@ -219,6 +223,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         ],
         title: "Full-Stack Software Engineer · Top Rated · 100% Job Success",
         logo: null,
+        workplace: "remote",
         start: "April 2025",
         end: "March 2026",
         description: (
@@ -268,6 +273,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         ],
         title: "Full-Stack Developer & Electrical Plant Operator",
         logo: null,
+        workplace: "hybrid",
         start: "Jul 2024",
         end: "Dec 2025",
         description: (
@@ -308,6 +314,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         badges: ["C#", "Microsoft SQL Server", ".NET", "Web Development"],
         title: "IT Auxiliary",
         logo: null,
+        workplace: "onsite",
         start: "Jul 2023",
         end: "Jan 2024",
         description: (
@@ -335,6 +342,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         badges: ["C#", "Web Development", ".NET", "SQL Server"],
         title: "IT Intern",
         logo: null,
+        workplace: "onsite",
         start: "Feb 2023",
         end: "Jun 2023",
         description: (
@@ -655,6 +663,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         ],
         title: "Desarrollador de Software Full-Stack",
         logo: null,
+        workplace: "remote",
         start: "Marzo 2026",
         end: null,
         description: (
@@ -710,6 +719,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         title:
           "Ingeniero de Software Full-Stack · Top Rated · 100% Job Success",
         logo: null,
+        workplace: "remote",
         start: "Abril 2025",
         end: "Marzo 2026",
         description: (
@@ -757,6 +767,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         ],
         title: "Desarrollador Full-Stack y Operador de Planta Eléctrica",
         logo: null,
+        workplace: "hybrid",
         start: "Jul 2024",
         end: "Dic 2025",
         description: (
@@ -797,6 +808,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         badges: ["C#", "Microsoft SQL Server", ".NET", "Desarrollo Web"],
         title: "Auxiliar de IT",
         logo: null,
+        workplace: "onsite",
         start: "Jul 2023",
         end: "Ene 2024",
         description: (
@@ -825,6 +837,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         badges: ["C#", "Desarrollo Web", ".NET", "SQL Server"],
         title: "Pasante de IT",
         logo: null,
+        workplace: "onsite",
         start: "Feb 2023",
         end: "Jun 2023",
         description: (

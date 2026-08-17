@@ -81,19 +81,45 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
   );
 }
 
+interface WorkplaceBadgeProps {
+  workplace: WorkExperience["workplace"];
+  labels: Dictionary["workplace"];
+}
+
+/**
+ * Shows how the role was performed: remote, hybrid or on-site
+ */
+function WorkplaceBadge({ workplace, labels }: WorkplaceBadgeProps) {
+  return (
+    <Badge
+      variant="outline"
+      className="border-foreground/20 text-[10px] font-medium uppercase tracking-wide text-muted-foreground print:px-1.5 print:py-0 print:text-[8px]"
+      aria-label={`${labels.label}: ${labels[workplace]}`}
+    >
+      {labels[workplace]}
+    </Badge>
+  );
+}
+
 interface WorkExperienceItemProps {
   work: WorkExperience;
   labels: {
     technologiesUsed: string;
     present: string;
   };
+  workplaceLabels: Dictionary["workplace"];
 }
 
 /**
  * Individual work experience card component
  */
-function WorkExperienceItem({ work, labels }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description } = work;
+function WorkExperienceItem({
+  work,
+  labels,
+  workplaceLabels,
+}: WorkExperienceItemProps) {
+  const { company, link, badges, title, workplace, start, end, description } =
+    work;
 
   return (
     <Card className="py-3 print:py-2">
@@ -106,10 +132,13 @@ function WorkExperienceItem({ work, labels }: WorkExperienceItemProps) {
           <WorkPeriod start={start} end={end} presentLabel={labels.present} />
         </div>
 
-        {/* Job Title */}
-        <h4 className="font-mono text-sm font-medium leading-none print:text-[12px] text-foreground/90">
-          {title}
-        </h4>
+        {/* Job Title and work arrangement */}
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <h4 className="font-mono text-sm font-medium leading-none print:text-[12px] text-foreground/90">
+            {title}
+          </h4>
+          <WorkplaceBadge workplace={workplace} labels={workplaceLabels} />
+        </div>
 
         {/* Badges - Always in separate section */}
         <BadgeList
@@ -130,12 +159,17 @@ function WorkExperienceItem({ work, labels }: WorkExperienceItemProps) {
 interface WorkExperienceProps {
   work: ResumeData["work"];
   labels: Dictionary["work"];
+  workplaceLabels: Dictionary["workplace"];
 }
 
 /**
  * Main work experience section component
  */
-export function WorkExperience({ work, labels }: WorkExperienceProps) {
+export function WorkExperience({
+  work,
+  labels,
+  workplaceLabels,
+}: WorkExperienceProps) {
   return (
     <Section>
       <h2 className="text-xl font-bold" id="work-experience">
@@ -144,7 +178,11 @@ export function WorkExperience({ work, labels }: WorkExperienceProps) {
       <div className="space-y-4 print:space-y-2" role="feed" aria-labelledby="work-experience">
         {work.map((item) => (
           <article key={`${item.company}-${item.start}`} role="article">
-            <WorkExperienceItem work={item} labels={labels} />
+            <WorkExperienceItem
+              work={item}
+              labels={labels}
+              workplaceLabels={workplaceLabels}
+            />
           </article>
         ))}
       </div>

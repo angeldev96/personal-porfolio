@@ -193,7 +193,11 @@ export default async function ResumePage({
               locale={resolvedLocale}
             />
 
-            <WorkExperience work={resume.work} labels={dictionary.work} />
+            <WorkExperience
+              work={resume.work}
+              labels={dictionary.work}
+              workplaceLabels={dictionary.workplace}
+            />
 
             <Projects
               projects={resume.projects}

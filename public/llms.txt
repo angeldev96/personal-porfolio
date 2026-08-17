@@ -1,0 +1,37 @@
+# Angel Valladares
+
+> Full-Stack & AI Software Engineer at AirPlx, working remotely. I build production web applications, APIs and AI/LLM features with Next.js, React, Node.js, TypeScript, Python and PostgreSQL.
+
+This site is my personal portfolio and resume. It is available in English (`/en`) and Spanish (`/es`); both versions contain the same content. Every page is server-rendered static HTML, so no JavaScript execution is required to read it.
+
+- Name: Angel Valladares
+- Role: Full-Stack & AI Software Engineer at AirPlx (remote)
+- Previously: Top Rated freelancer on Upwork with a 100% Job Success Score (remote)
+- Core stack: TypeScript, React, Next.js, Node.js, NestJS, Python, FastAPI, PostgreSQL, MongoDB, Docker
+- Contact: arivalladares2.0@gmail.com
+
+## Main pages
+
+- [Resume (English)](https://angelvalladares.dev/en): Full profile — summary, work experience, projects, education and skills.
+- [Resume (Spanish)](https://angelvalladares.dev/es): The same profile in Spanish.
+- [Blog](https://angelvalladares.dev/en/blog): Articles on full-stack development, AI integration and engineering practice.
+- [Certificates](https://angelvalladares.dev/en/certificates): Verified certifications and credentials.
+- [Setup](https://angelvalladares.dev/en/setup): Hardware, software and platforms I use day to day.
+
+## Projects
+
+- [Yiddish Jobs](https://angelvalladares.dev/en/projects/yiddish-jobs): Job platform for the Yiddish-speaking community in Boro Park, New York. Next.js, React, TypeScript, Tailwind CSS.
+- [Pinky's Store](https://angelvalladares.dev/en/projects/pinkys-store): E-commerce and inventory management system for a local cosmetics business. Next.js, React, Node.js, PostgreSQL.
+
+## Blog posts
+
+- [Building AI-Powered Apps with Next.js and OpenAI](https://angelvalladares.dev/en/blog/building-ai-powered-apps-with-nextjs-and-openai): Practical guide to shipping LLM features in a Next.js application.
+- [Why Solid Fundamentals Matter More Than AI Tools](https://angelvalladares.dev/en/blog/why-solid-fundamentals-matter-more-than-ai-tools): Why engineering fundamentals still decide the outcome in an AI-assisted workflow.
+- [My Development Setup in 2026](https://angelvalladares.dev/en/blog/my-development-setup-2026): The hardware, editor and tooling I develop with.
+
+## Optional
+
+- [Spanish blog](https://angelvalladares.dev/es/blog): Spanish translations of the posts listed above.
+- [GitHub](https://github.com/angeldev96): Source code and open-source work.
+- [LinkedIn](https://www.linkedin.com/in/angel-valladares-422490159/): Professional profile and work history.
+- [Sitemap](https://angelvalladares.dev/sitemap.xml): Every indexable URL on this site.

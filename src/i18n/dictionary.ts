@@ -11,6 +11,13 @@ type SectionLabels = {
   sideProjects: string;
 };
 
+type WorkplaceLabels = {
+  label: string;
+  remote: string;
+  hybrid: string;
+  onsite: string;
+};
+
 type CertificateLabels = {
   title: string;
   backToResume: string;
@@ -53,6 +60,7 @@ export type Dictionary = {
     backToResume: string;
   };
   work: SectionLabels;
+  workplace: WorkplaceLabels;
   projects: SectionLabels;
   education: SectionLabels;
   skills: SectionLabels;
@@ -133,6 +141,12 @@ const dictionaries: Record<Locale, Dictionary> = {
       technologiesUsed: "Technologies used",
       present: "Present",
       sideProjects: "",
+    },
+    workplace: {
+      label: "Work arrangement",
+      remote: "Remote",
+      hybrid: "Hybrid",
+      onsite: "On-site",
     },
     projects: {
       about: "",
@@ -254,6 +268,12 @@ const dictionaries: Record<Locale, Dictionary> = {
       technologiesUsed: "Tecnologías usadas",
       present: "Actualidad",
       sideProjects: "",
+    },
+    workplace: {
+      label: "Modalidad de trabajo",
+      remote: "Remoto",
+      hybrid: "Híbrido",
+      onsite: "Presencial",
     },
     projects: {
       about: "",
