@@ -133,7 +133,7 @@ export default async function RootLayout({
               (function() {
                 function getTheme() {
                   const storedTheme = localStorage.getItem('portfolio-theme');
-                  if (storedTheme) {
+                  if (storedTheme === 'light' || storedTheme === 'dark') {
                     return storedTheme;
                   }
                   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';

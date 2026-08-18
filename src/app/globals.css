@@ -101,3 +101,55 @@
     animation: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Theme switch: "polygon-gradient" view transition
+   (https://theme-toggle.rdsx.dev). The new theme is revealed by a gradient
+   triangle mask sweeping out of the top-left corner. Browsers without the View
+   Transitions API just swap the theme instantly — see theme-provider.tsx.
+--------------------------------------------------------------------------- */
+:root {
+  --expo-out: linear(
+    0 0%, 0.1684 2.66%, 0.3165 5.49%,
+    0.446 8.52%, 0.5581 11.78%,
+    0.6535 15.29%, 0.7341 19.11%,
+    0.8011 23.3%, 0.8557 27.93%,
+    0.8962 32.68%, 0.9283 38.01%,
+    0.9529 44.08%, 0.9711 51.14%,
+    0.9833 59.06%, 0.9915 68.74%, 1 100%
+  );
+}
+
+@keyframes theme-mask-scale {
+  to {
+    mask-size: 200vmax;
+  }
+}
+
+::view-transition-group(root) {
+  animation-timing-function: var(--expo-out);
+}
+
+::view-transition-new(root) {
+  mask: url("/theme-mask.svg") top left / 0 no-repeat;
+  mask-origin: top left;
+  animation: theme-mask-scale 1.5s;
+  animation-fill-mode: both;
+}
+
+::view-transition-old(root),
+.dark::view-transition-old(root) {
+  animation: theme-mask-scale 1.5s;
+  animation-fill-mode: both;
+  transform-origin: top left;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+    mask: none !important;
+  }
+}

@@ -1,6 +1,19 @@
 "use client"
 
 import * as React from "react"
+import { flushSync } from "react-dom"
+
+// The View Transitions API is not in the TS DOM lib shipped with this project.
+declare global {
+  interface Document {
+    startViewTransition?: (callback: () => void) => {
+      finished: Promise<void>
+      ready: Promise<void>
+      updateCallbackDone: Promise<void>
+      skipTransition: () => void
+    }
+  }
+}
 
 type Theme = "dark" | "light" | "system"
 
@@ -22,6 +35,33 @@ const initialState: ThemeProviderState = {
 
 const ThemeProviderContext = React.createContext<ThemeProviderState>(initialState)
 
+function resolveTheme(theme: Theme) {
+  if (theme !== "system") return theme
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light"
+}
+
+function applyTheme(theme: Theme) {
+  const root = window.document.documentElement
+
+  root.classList.remove("light", "dark")
+  root.classList.add(resolveTheme(theme))
+}
+
+/**
+ * Whether the "polygon-gradient" reveal can run: the browser supports the View
+ * Transitions API and the visitor has not asked for reduced motion.
+ */
+function canAnimateThemeChange() {
+  return (
+    typeof document !== "undefined" &&
+    typeof document.startViewTransition === "function" &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+}
+
 export function ThemeProvider({
   children,
   defaultTheme = "system",
@@ -33,30 +73,32 @@ export function ThemeProvider({
   )
 
   React.useEffect(() => {
-    const root = window.document.documentElement
-
-    root.classList.remove("light", "dark")
-
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light"
-
-      root.classList.add(systemTheme)
-      return
-    }
-
-    root.classList.add(theme)
+    applyTheme(theme)
   }, [theme])
 
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme)
-      setTheme(theme)
-    },
-  }
+  const value = React.useMemo(
+    () => ({
+      theme,
+      setTheme: (nextTheme: Theme) => {
+        localStorage.setItem(storageKey, nextTheme)
+
+        // The class swap has to happen inside the transition callback so the
+        // browser can snapshot the old and the new theme around it.
+        const commit = () => {
+          flushSync(() => setTheme(nextTheme))
+          applyTheme(nextTheme)
+        }
+
+        if (!canAnimateThemeChange()) {
+          setTheme(nextTheme)
+          return
+        }
+
+        document.startViewTransition?.(commit)
+      },
+    }),
+    [theme, storageKey],
+  )
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
