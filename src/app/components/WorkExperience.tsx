@@ -122,11 +122,11 @@ function WorkExperienceItem({
     work;
 
   return (
-    <Card className="py-3 print:py-2">
-      <CardHeader className="print:space-y-1 space-y-2">
+    <Card className="py-1 print:py-0">
+      <CardHeader className="space-y-2.5 print:space-y-1">
         {/* Company and Period */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-          <h3 className="text-base font-semibold leading-none print:text-sm">
+          <h3 className="text-lg font-semibold leading-tight print:text-sm">
             <CompanyLink company={company} link={link} />
           </h3>
           <WorkPeriod start={start} end={end} presentLabel={labels.present} />
@@ -142,13 +142,14 @@ function WorkExperienceItem({
 
         {/* Badges - Always in separate section */}
         <BadgeList
+          className="pt-0.5"
           badges={badges}
           label={labels.technologiesUsed}
         />
       </CardHeader>
 
-      <CardContent>
-        <div className="text-xs text-foreground/80 print:text-[10px] text-pretty leading-relaxed">
+      <CardContent className="pt-3 print:pt-1">
+        <div className="text-pretty font-sans text-sm leading-relaxed text-foreground/85 print:text-[10px] print:leading-snug">
           {description}
         </div>
       </CardContent>
@@ -175,9 +176,17 @@ export function WorkExperience({
       <h2 className="text-xl font-bold" id="work-experience">
         {labels.work}
       </h2>
-      <div className="space-y-4 print:space-y-2" role="feed" aria-labelledby="work-experience">
+      <div
+        className="divide-y divide-border/60 print:divide-none"
+        role="feed"
+        aria-labelledby="work-experience"
+      >
         {work.map((item) => (
-          <article key={`${item.company}-${item.start}`} role="article">
+          <article
+            key={`${item.company}-${item.start}`}
+            role="article"
+            className="py-6 first:pt-0 last:pb-0 print:py-1.5"
+          >
             <WorkExperienceItem
               work={item}
               labels={labels}
