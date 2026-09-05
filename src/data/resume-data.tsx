@@ -384,6 +384,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "LLM Integration",
       "Document Retrieval",
       "React",
+      "Mobile Development",
       "React Native",
       "Expo",
       "TypeScript",
@@ -403,6 +404,57 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "HTML/CSS",
     ],
     projects: [
+      {
+        slug: "airplx-mobile",
+        title: "AirPlx Mobile",
+        techStack: ["React Native", "Expo", "TypeScript", "Node.js"],
+        description:
+          "Mobile app for airport ramp operations, where I am one of the principal engineers building features and fixing bugs. Line crews see the live base view, run per-airframe pre-tow safety checklists, complete walkaround inspections and file damage reports at the aircraft. Already in production at around a dozen customer bases.",
+        logo: null,
+        link: {
+          label: "Read the launch post",
+          href: "https://www.airplx.com/blog/introducing-airplx-mobile/",
+        },
+        longDescription:
+          "AirPlx Mobile brings the whole base onto the ramp. Built with React Native and Expo for iOS and Android, it gives the line crew and the front desk the same live picture of every aircraft, replaces radio calls and remembered procedures with checklists in hand, and logs every event automatically so it lands in reports without anyone chasing paperwork. Designed for the conditions of the job: buttons big enough to hit with gloves on, type readable in bright sun, and offline support for when there is no signal on the ramp. I work on it as one of the principal engineers, shipping features and fixing bugs alongside the rest of the AirPlx team.",
+        images: [],
+        features: [
+          "Live Base View on phone and tablet, so anyone can see where every aircraft is parked",
+          "Per-airframe pre-tow safety checklists with tow limits and required wing walkers, tracked to the final position",
+          "Walkaround inspections with photos and video attached as you go",
+          "Damage reports marked directly on the aircraft diagram, with severity and pre-existing flags",
+          "Hangar and ramp logs completed on the floor instead of reconstructed later",
+          "Push notifications that surface damage and safety events to the office instantly",
+          "Offline-capable, so work continues where there is no signal",
+        ],
+        challenges:
+          "Building for people wearing gloves in bright sun with unreliable connectivity meant rethinking the interface and the data layer at once: oversized touch targets and high-contrast type on the front end, and offline-first sync on the back end so records written at the aircraft reconcile cleanly once the device reconnects.",
+      },
+      {
+        slug: "airplx-web-platform",
+        title: "AirPlx Web Platform",
+        techStack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+        description:
+          "Aviation operations platform that gives FBOs and MROs one live picture of their base, from radar detection to departure. I am one of the principal engineers on the team, building new features and fixing bugs across the web platform.",
+        logo: null,
+        link: {
+          label: "airplx.com",
+          href: "https://www.airplx.com/",
+        },
+        longDescription:
+          "AirPlx replaces whiteboards and spreadsheets with a single live board shared by the front desk and the ramp. Inbound aircraft are detected from FAA flight plans and ADS-B, hangar and ramp layouts are planned with AI-assisted stacking against real aircraft dimensions, and every movement, visit and damage record feeds tenant reporting. Several engineers work on the platform; I am one of the principal ones, shipping features end to end and fixing bugs across the stack.",
+        images: [],
+        features: [
+          "Live Base View of every aircraft's location, status and departure time",
+          "Inbound flight tracking fed by FAA flight plans and ADS-B",
+          "AI-assisted hangar and ramp stacking (AutoStack) with 3D visualization and clearance checks",
+          "Movement history and visit records per tail number",
+          "Tenant and occupancy reporting built from logged events",
+          "Real-time conflict detection for safer ground operations",
+        ],
+        challenges:
+          "Ground operations data arrives from several sources at once — radar feeds, manual updates from the desk, and records written on the ramp — so the platform has to reconcile them into one board that everybody trusts. Much of the work is keeping that state consistent in real time while the schema and feature set keep growing.",
+      },
       {
         slug: "yiddish-jobs",
         title: "Yiddish Jobs",
@@ -898,6 +950,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "LLM Integration",
       "Document Retrieval",
       "React",
+      "Mobile Development",
       "React Native",
       "Expo",
       "TypeScript",
@@ -917,6 +970,57 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "HTML/CSS",
     ],
     projects: [
+      {
+        slug: "airplx-mobile",
+        title: "AirPlx Mobile",
+        techStack: ["React Native", "Expo", "TypeScript", "Node.js"],
+        description:
+          "App móvil para operaciones de rampa aeroportuaria, donde soy uno de los ingenieros principales desarrollando features y corrigiendo bugs. El personal de línea ve la vista en vivo de la base, ejecuta checklists de seguridad pre-remolque por aeronave, realiza inspecciones walkaround y reporta daños junto a la aeronave. Ya está en producción en cerca de una docena de bases de clientes.",
+        logo: null,
+        link: {
+          label: "Leer el anuncio",
+          href: "https://www.airplx.com/blog/introducing-airplx-mobile/",
+        },
+        longDescription:
+          "AirPlx Mobile lleva toda la base a la rampa. Construida con React Native y Expo para iOS y Android, le da al personal de línea y al front desk la misma imagen en vivo de cada aeronave, reemplaza llamadas por radio y procedimientos memorizados por checklists en mano, y registra cada evento automáticamente para que llegue a los reportes sin que nadie persiga papeleo. Diseñada para las condiciones del trabajo: botones lo bastante grandes para usarse con guantes, tipografía legible bajo sol directo y soporte offline para cuando no hay señal en la rampa. Trabajo en ella como uno de los ingenieros principales, desarrollando features y corrigiendo bugs junto al resto del equipo de AirPlx.",
+        images: [],
+        features: [
+          "Vista en vivo de la base en teléfono y tablet, para saber dónde está estacionada cada aeronave",
+          "Checklists de seguridad pre-remolque por aeronave con límites de tow y wing walkers requeridos, con seguimiento hasta la posición final",
+          "Inspecciones walkaround con fotos y video adjuntos sobre la marcha",
+          "Reportes de daño marcados directamente en el diagrama de la aeronave, con severidad y marca de daño preexistente",
+          "Bitácoras de hangar y rampa completadas en el piso en lugar de reconstruidas después",
+          "Notificaciones push que llevan daños y eventos de seguridad a la oficina al instante",
+          "Funciona offline, para seguir trabajando donde no hay señal",
+        ],
+        challenges:
+          "Construir para personas con guantes, bajo sol directo y con conectividad intermitente obligó a repensar la interfaz y la capa de datos a la vez: áreas táctiles grandes y tipografía de alto contraste en el front end, y sincronización offline-first en el back end para que los registros escritos junto a la aeronave se reconcilien limpiamente al reconectar.",
+      },
+      {
+        slug: "airplx-web-platform",
+        title: "AirPlx Web Platform",
+        techStack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+        description:
+          "Plataforma de operaciones aeronáuticas que da a FBOs y MROs una única imagen en vivo de su base, desde la detección en radar hasta la salida. Soy uno de los ingenieros principales del equipo, desarrollando nuevas features y corrigiendo bugs en la plataforma web.",
+        logo: null,
+        link: {
+          label: "airplx.com",
+          href: "https://www.airplx.com/",
+        },
+        longDescription:
+          "AirPlx reemplaza pizarras y hojas de cálculo con un único tablero en vivo compartido entre el front desk y la rampa. Las aeronaves entrantes se detectan desde planes de vuelo de la FAA y ADS-B, los layouts de hangar y rampa se planifican con stacking asistido por IA contra dimensiones reales de aeronaves, y cada movimiento, visita y reporte de daño alimenta los reportes para tenants. Varios ingenieros trabajan en la plataforma; soy uno de los principales, desarrollando features de punta a punta y corrigiendo bugs en todo el stack.",
+        images: [],
+        features: [
+          "Vista en vivo de la base con ubicación, estado y hora de salida de cada aeronave",
+          "Seguimiento de vuelos entrantes alimentado por planes de vuelo de la FAA y ADS-B",
+          "Stacking de hangar y rampa asistido por IA (AutoStack) con visualización 3D y verificación de holguras",
+          "Historial de movimientos y registros de visitas por matrícula",
+          "Reportes de ocupación y para tenants construidos a partir de los eventos registrados",
+          "Detección de conflictos en tiempo real para operaciones en tierra más seguras",
+        ],
+        challenges:
+          "Los datos de operaciones en tierra llegan de varias fuentes a la vez — feeds de radar, actualizaciones manuales desde el escritorio y registros escritos en la rampa — así que la plataforma debe reconciliarlos en un solo tablero en el que todos confíen. Buena parte del trabajo consiste en mantener ese estado consistente en tiempo real mientras el esquema y el conjunto de features siguen creciendo.",
+      },
       {
         slug: "yiddish-jobs",
         title: "Yiddish Jobs",
