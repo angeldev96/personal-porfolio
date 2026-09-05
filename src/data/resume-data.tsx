@@ -175,7 +175,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           <>
             Developing high-performance digital platform to optimize aviation
             hangar and ramp operations.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 <strong>Platform Development:</strong> Building robust
                 full-stack features using React, Node.js, and TypeScript for
@@ -233,7 +233,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
             architected and delivered production-grade applications for global
             clients, specializing in full-stack ecosystems and AI-driven
             automation.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 <strong>AI & LLM Architecture:</strong> Built production-grade
                 chatbots and AI-powered automation using OpenAI/Claude APIs,
@@ -283,7 +283,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
             maintain applications that optimize operations and monitoring in the
             electrical plant, while developing web applications for various
             departments.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 Developed web applications to optimize electrical plant
                 operations and monitoring systems.
@@ -321,7 +321,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           <>
             Provided IT support and development services in a hybrid work
             environment.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 Assisted in web development projects using C# and Microsoft SQL
                 Server.
@@ -348,7 +348,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         description: (
           <>
             Completed internship focusing on web development and IT support.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 Gained hands-on experience in web development with C# and SQL
                 Server.
@@ -670,7 +670,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           <>
             Desarrollo de plataformas de gemelos digitales de alto rendimiento
             para optimizar las operaciones de hangares y rampas de aviación.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 <strong>Desarrollo de Plataforma:</strong> Construcción de
                 funcionalidades full-stack robustas utilizando React, Node.js y
@@ -728,7 +728,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
             <strong>freelancer Top Rated con 100% Job Success Score</strong>,
             diseñé y construí aplicaciones de nivel de producción para clientes
             globales, especializándome en automatización impulsada por IA.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 <strong>Arquitectura de IA y LLM:</strong> Implementación de
                 soluciones de IA a medida y agentes autónomos utilizando APIs de
@@ -777,7 +777,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
             mantengo aplicaciones que optimizan operaciones y monitoreo en la
             planta eléctrica, además de crear aplicaciones web para varios
             departamentos.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 Desarrollé aplicaciones web para optimizar operaciones y
                 sistemas de monitoreo de la planta eléctrica.
@@ -815,7 +815,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
           <>
             Brindé soporte de TI y servicios de desarrollo en entorno de trabajo
             híbrido.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 Asistí en proyectos de desarrollo web usando C# y Microsoft SQL
                 Server.
@@ -843,7 +843,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         description: (
           <>
             Completé pasantía enfocada en desarrollo web y soporte de TI.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 Adquirí experiencia práctica en desarrollo web con C# y SQL
                 Server.
