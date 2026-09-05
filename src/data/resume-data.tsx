@@ -182,7 +182,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
             departure, replacing whiteboards and spreadsheets with one live
             picture shared by the front desk and the ramp. I work full-stack on
             the web platform and lead the mobile app.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 <strong>Full-Stack Platform Development:</strong> Shipping
                 features end to end with React, Node.js, TypeScript and
@@ -692,7 +692,7 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
             hasta su salida, reemplazando pizarras y hojas de cálculo por una
             única vista en vivo compartida entre oficina y rampa. Trabajo
             full-stack en la plataforma web y lidero la app móvil.
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
               <li>
                 <strong>Desarrollo Full-Stack de la Plataforma:</strong> Entrega
                 de funcionalidades de extremo a extremo con React, Node.js,
