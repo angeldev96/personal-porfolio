@@ -20,6 +20,8 @@ This site is my personal portfolio and resume. It is available in English (`/en`
 
 ## Projects
 
+- [AirPlx Mobile](https://angelvalladares.dev/en/projects/airplx-mobile): Mobile app for airport ramp operations — live base view, pre-tow safety checklists, walkaround inspections and damage reports. React Native, Expo, TypeScript, Node.js.
+- [AirPlx Web Platform](https://angelvalladares.dev/en/projects/airplx-web-platform): Aviation operations platform for FBOs and MROs — live base view, ADS-B inbound tracking, AI-assisted hangar stacking and tenant reporting. React, TypeScript, Node.js, PostgreSQL.
 - [Yiddish Jobs](https://angelvalladares.dev/en/projects/yiddish-jobs): Job platform for the Yiddish-speaking community in Boro Park, New York. Next.js, React, TypeScript, Tailwind CSS.
 - [Pinky's Store](https://angelvalladares.dev/en/projects/pinkys-store): E-commerce and inventory management system for a local cosmetics business. Next.js, React, Node.js, PostgreSQL.
 
