@@ -88,14 +88,17 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Remote · Open to relocation",
     locationLink: null,
     about:
-      "Full-Stack & AI Software Engineer at AirPlx",
+      "Full-Stack Software Engineer & Mobile Lead at AirPlx",
     summary: (
       <>
-        I am a <strong>Full-Stack Software Engineer at AirPlx</strong>, where
-        I build high-performance platforms that optimize hangar and ramp
-        operations through 3D visualization and AI-driven algorithms. My work
-        directly impacts efficiency and safety for the aviation industry,
-        helping FBOs and MROs maximize their facility capacity.
+        I am a <strong>Full-Stack Software Engineer at AirPlx</strong>, the
+        aviation operations platform that gives FBOs and MROs one live picture
+        of their whole base: inbound aircraft detected on radar through FAA
+        flight plans and ADS-B, AI-assisted hangar and ramp planning
+        (AutoStack), tow safety checklists, damage documentation and departure
+        reporting. I build the web platform end to end and{" "}
+        <strong>lead development of the AirPlx mobile app</strong>, used by line
+        crews on the ramp every day.
         <br />
         <br />
         Prior to joining <strong>AirPlx</strong>, I built a strong track record
@@ -160,42 +163,51 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         link: "https://www.airplx.com/",
         badges: [
           "React",
+          "React Native",
+          "Expo",
           "Node.js",
           "TypeScript",
           "PostgreSQL",
           "3D Visualization",
           "AI Optimization",
         ],
-        title: "Full-Stack & AI Software Engineer",
+        title: "Full-Stack Software Engineer · Mobile Lead",
         logo: null,
         workplace: "remote",
         start: "March 2026",
         end: null,
         description: (
           <>
-            Developing high-performance digital platform to optimize aviation
-            hangar and ramp operations.
-            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
+            AirPlx tracks every aircraft on a base from radar detection to
+            departure, replacing whiteboards and spreadsheets with one live
+            picture shared by the front desk and the ramp. I work full-stack on
+            the web platform and lead the mobile app.
+            <ul className="list-inside list-disc">
               <li>
-                <strong>Platform Development:</strong> Building robust
-                full-stack features using React, Node.js, and TypeScript for
-                real-time hangar management and facility optimization.
+                <strong>Full-Stack Platform Development:</strong> Shipping
+                features end to end with React, Node.js, TypeScript and
+                PostgreSQL: live base view, inbound flight tracking fed by FAA
+                flight plans and ADS-B, movement history, visit records and
+                tenant reporting.
               </li>
               <li>
-                <strong>Spatial Optimization:</strong> Supporting the
-                improvement of AI-driven algorithms (AutoStack) and 3D
-                visualization tools to maximize facility capacity for FBOs and
-                MROs globally.
+                <strong>Mobile Lead:</strong> Leading development of{" "}
+                <strong>AirPlx Mobile</strong> (React Native + Expo, iOS and
+                Android) — offline-capable ramp operations, per-airframe pre-tow
+                safety checklists, walkaround inspections with photo and video,
+                damage reports marked on aircraft diagrams, and push
+                notifications that surface field issues to the office instantly.
               </li>
               <li>
-                <strong>System Architecture:</strong> Contributing to scalable
-                database design and real-time conflict detection systems for
-                enhanced ground operation safety.
+                <strong>Spatial Optimization:</strong> Improving the AI-driven
+                AutoStack algorithms and 3D visualization that test hangar and
+                ramp layouts against real aircraft dimensions, maximizing
+                utilization while verifying clearances.
               </li>
               <li>
-                <strong>Aviation Tech:</strong> Working with
-                manufacturer-verified data and spatial models to digitize
-                complex aviation logistics.
+                <strong>System Architecture:</strong> Scalable database design
+                and real-time conflict detection for safer ground operations,
+                built on manufacturer-verified aircraft data and spatial models.
               </li>
             </ul>
           </>
@@ -372,6 +384,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "LLM Integration",
       "Document Retrieval",
       "React",
+      "React Native",
+      "Expo",
       "TypeScript",
       "Node.js",
       "MERN Stack",
@@ -584,14 +598,18 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
     location: "Remoto · Abierto a reubicación",
     locationLink: null,
     about:
-      "Desarrollador de Software Full-Stack en AirPlx · Especialista en Integraciones de IA y LLM",
+      "Desarrollador de Software Full-Stack y Líder Mobile en AirPlx",
     summary: (
       <>
         Soy <strong>Desarrollador de Software Full-Stack en AirPlx</strong>,
-        donde construyo plataformas de alto rendimiento que optimizan las
-        operaciones de hangares y rampas mediante visualización 3D y algoritmos
-        impulsados por IA. Mi trabajo impacta directamente en la eficiencia y
-        seguridad de la industria de la aviación.
+        la plataforma de operaciones de aviación que le da a FBOs y MROs una
+        única vista en vivo de toda su base: aeronaves entrantes detectadas por
+        radar mediante planes de vuelo de la FAA y ADS-B, planificación de
+        hangar y rampa asistida por IA (AutoStack), checklists de seguridad de
+        remolque, documentación de daños y reportes de salida. Construyo la
+        plataforma web de extremo a extremo y{" "}
+        <strong>lidero el desarrollo de la app móvil de AirPlx</strong>, que usan
+        a diario las cuadrillas en la rampa.
         <br />
         <br />
         Antes de unirme a <strong>AirPlx</strong>, construí una sólida
@@ -655,42 +673,54 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
         link: "https://www.airplx.com/",
         badges: [
           "React",
+          "React Native",
+          "Expo",
           "Node.js",
           "TypeScript",
           "PostgreSQL",
           "Visualización 3D",
           "Optimización IA",
         ],
-        title: "Desarrollador de Software Full-Stack",
+        title: "Desarrollador de Software Full-Stack · Líder Mobile",
         logo: null,
         workplace: "remote",
         start: "Marzo 2026",
         end: null,
         description: (
           <>
-            Desarrollo de plataformas de gemelos digitales de alto rendimiento
-            para optimizar las operaciones de hangares y rampas de aviación.
-            <ul className="mt-3 list-outside list-disc space-y-2.5 pl-5 marker:text-foreground/40 print:mt-1.5 print:space-y-0.5 print:pl-4">
+            AirPlx sigue cada aeronave de una base desde su detección en radar
+            hasta su salida, reemplazando pizarras y hojas de cálculo por una
+            única vista en vivo compartida entre oficina y rampa. Trabajo
+            full-stack en la plataforma web y lidero la app móvil.
+            <ul className="list-inside list-disc">
               <li>
-                <strong>Desarrollo de Plataforma:</strong> Construcción de
-                funcionalidades full-stack robustas utilizando React, Node.js y
-                TypeScript para la gestión de hangares en tiempo real.
+                <strong>Desarrollo Full-Stack de la Plataforma:</strong> Entrega
+                de funcionalidades de extremo a extremo con React, Node.js,
+                TypeScript y PostgreSQL: vista en vivo de la base, seguimiento
+                de vuelos entrantes con planes de vuelo de la FAA y ADS-B,
+                historial de movimientos, registros de visita y reportes para
+                tenants.
               </li>
               <li>
-                <strong>Optimización Espacial:</strong> Apoyo en la mejora de
-                algoritmos impulsados por IA (AutoStack) y herramientas de
-                visualización 3D para maximizar la capacidad de las
-                instalaciones a nivel global.
+                <strong>Liderazgo Mobile:</strong> Lidero el desarrollo de{" "}
+                <strong>AirPlx Mobile</strong> (React Native + Expo, iOS y
+                Android): operación en rampa con soporte offline, checklists de
+                seguridad previos al remolque por tipo de aeronave, inspecciones
+                walkaround con foto y video, reportes de daños marcados sobre
+                diagramas de la aeronave y notificaciones push que avisan a la
+                oficina al instante.
               </li>
               <li>
-                <strong>Arquitectura de Sistemas:</strong> Contribución al
-                diseño de bases de datos escalables y sistemas de detección de
-                conflictos en tiempo real para mejorar la seguridad operativa.
+                <strong>Optimización Espacial:</strong> Mejora de los algoritmos
+                de IA de AutoStack y de la visualización 3D que prueban layouts
+                de hangar y rampa contra las dimensiones reales de las
+                aeronaves, maximizando la utilización y verificando holguras.
               </li>
               <li>
-                <strong>Tecnología de Aviación:</strong> Trabajo con datos
-                verificados de fabricantes y modelos espaciales para digitalizar
-                logística compleja de aviación.
+                <strong>Arquitectura de Sistemas:</strong> Diseño de bases de
+                datos escalables y detección de conflictos en tiempo real para
+                una operación en tierra más segura, sobre datos de aeronaves
+                verificados por fabricante y modelos espaciales.
               </li>
             </ul>
           </>
@@ -868,6 +898,8 @@ const RESUME_DATA: Record<Locale, ResumeData> = {
       "LLM Integration",
       "Document Retrieval",
       "React",
+      "React Native",
+      "Expo",
       "TypeScript",
       "Node.js",
       "MERN Stack",
