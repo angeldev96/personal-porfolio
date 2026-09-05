@@ -1,6 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { DEFAULT_LOCALE, Locale } from "@/i18n/config";
+import {
+  aiEngineerRoadmapPostEn,
+  aiEngineerRoadmapPostEs,
+} from "@/data/posts/ai-engineer-roadmap-2026";
 
 export type BlogPost = {
   slug: string;
@@ -21,6 +25,7 @@ export type BlogData = {
 const BLOG_DATA: Record<Locale, BlogData> = {
   en: {
     posts: [
+      aiEngineerRoadmapPostEn,
       {
         slug: "building-ai-powered-apps-with-nextjs-and-openai",
         title: "Building AI-Powered Apps with Next.js and OpenAI",
@@ -199,6 +204,7 @@ const BLOG_DATA: Record<Locale, BlogData> = {
   },
   es: {
     posts: [
+      aiEngineerRoadmapPostEs,
       {
         slug: "building-ai-powered-apps-with-nextjs-and-openai",
         title: "Creando Apps con IA usando Next.js y OpenAI",
