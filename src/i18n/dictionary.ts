@@ -30,6 +30,7 @@ type CertificateLabels = {
 export type Dictionary = {
   nav: {
     home: string;
+    roadmap: string;
     blog: string;
     certificates: string;
     setup: string;
@@ -113,6 +114,7 @@ const dictionaries: Record<Locale, Dictionary> = {
   en: {
     nav: {
       home: "Home",
+      roadmap: "Road to AI",
       blog: "Blog",
       certificates: "Certificates",
       setup: "Setup",
@@ -240,6 +242,7 @@ const dictionaries: Record<Locale, Dictionary> = {
   es: {
     nav: {
       home: "Inicio",
+      roadmap: "Road to AI",
       blog: "Blog",
       certificates: "Certificados",
       setup: "Setup",
