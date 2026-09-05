@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 import { getResumeData } from "../data/resume-data";
 import { DEFAULT_LOCALE } from "../i18n/config";
 
-export const alt = "Angel Valladares — Full-Stack & AI Software Engineer";
+export const alt = "Angel Valladares — Full-Stack Software Engineer & Mobile Lead";
 export const size = {
   width: 1200,
   height: 630,

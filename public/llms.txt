@@ -1,13 +1,13 @@
 # Angel Valladares
 
-> Full-Stack & AI Software Engineer at AirPlx, working remotely. I build production web applications, APIs and AI/LLM features with Next.js, React, Node.js, TypeScript, Python and PostgreSQL.
+> Full-Stack Software Engineer and mobile lead at AirPlx, working remotely. I build the AirPlx web platform for aviation ground operations and lead development of the AirPlx mobile app (React Native + Expo), plus production APIs and AI/LLM features with Next.js, React, Node.js, TypeScript, Python and PostgreSQL.
 
 This site is my personal portfolio and resume. It is available in English (`/en`) and Spanish (`/es`); both versions contain the same content. Every page is server-rendered static HTML, so no JavaScript execution is required to read it.
 
 - Name: Angel Valladares
-- Role: Full-Stack & AI Software Engineer at AirPlx (remote)
+- Role: Full-Stack Software Engineer and mobile lead at AirPlx (remote) — aviation operations software for FBOs and MROs: live base view, ADS-B and FAA flight-plan tracking, AI-assisted hangar planning (AutoStack), tow safety and damage documentation
 - Previously: Top Rated freelancer on Upwork with a 100% Job Success Score (remote)
-- Core stack: TypeScript, React, Next.js, Node.js, NestJS, Python, FastAPI, PostgreSQL, MongoDB, Docker
+- Core stack: TypeScript, React, Next.js, React Native, Expo, Node.js, NestJS, Python, FastAPI, PostgreSQL, MongoDB, Docker
 - Contact: arivalladares2.0@gmail.com
 
 ## Main pages
