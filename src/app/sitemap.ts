@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const localizedPaths = LOCALES.flatMap((locale) => [
     `${origin}/${locale}`,
+    `${origin}/${locale}/roadmap`,
     `${origin}/${locale}/blog`,
     `${origin}/${locale}/certificates`,
     `${origin}/${locale}/setup`,
