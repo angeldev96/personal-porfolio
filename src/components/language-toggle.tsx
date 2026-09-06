@@ -27,9 +27,11 @@ export function LanguageToggle({ currentLocale, label }: { currentLocale: Locale
 
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       size="sm"
+      className="h-8 rounded-md px-2.5 text-xs font-medium text-muted-foreground hover:bg-secondary/50 hover:text-foreground"
       aria-label={label}
+      title={label}
       onClick={() => {
         const target = swapLocale(pathname, nextLocale);
         router.replace(target);

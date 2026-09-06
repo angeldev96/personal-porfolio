@@ -5,6 +5,9 @@ import { MoonIcon, SunIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
 
+const toggleClass =
+  "size-8 rounded-md px-0 text-muted-foreground hover:bg-secondary/50 hover:text-foreground";
+
 export function ThemeToggle({ label }: { label: string }) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
@@ -15,7 +18,7 @@ export function ThemeToggle({ label }: { label: string }) {
 
   if (!mounted) {
     return (
-      <Button variant="outline" size="sm" disabled>
+      <Button variant="ghost" size="sm" className={toggleClass} disabled>
         <SunIcon className="size-4" aria-hidden="true" />
       </Button>
     );
@@ -25,9 +28,11 @@ export function ThemeToggle({ label }: { label: string }) {
 
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       size="sm"
+      className={toggleClass}
       aria-label={label}
+      title={label}
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       {isDark ? (
