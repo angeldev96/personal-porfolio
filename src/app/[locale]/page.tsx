@@ -1,4 +1,5 @@
 import { CommandMenu } from "@/components/command-menu";
+import { SceneBackground } from "@/components/three/scene-background";
 import { Header } from "@/app/components/Header";
 import { Summary } from "@/app/components/Summary";
 import { WorkExperience } from "@/app/components/WorkExperience";
@@ -175,12 +176,14 @@ export default async function ResumePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
+      <SceneBackground />
+
       <main
         className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
         id="main-content"
       >
         <section
-          className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-4 dark:bg-background"
+          className="mx-auto w-full max-w-2xl space-y-8 print:space-y-4"
           aria-label="Resume Content"
         >
           <Header resume={resume} labels={dictionary.header} />
