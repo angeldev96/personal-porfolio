@@ -79,11 +79,13 @@ export function Navbar({
               ))}
             </nav>
             <span
-              className="mx-1 h-4 w-px shrink-0 bg-border sm:mx-2"
+              className="mx-2 h-4 w-px shrink-0 bg-border sm:mx-3"
               role="separator"
             />
-            <ThemeToggle label={themeLabel} />
-            <LanguageToggle currentLocale={locale} label={languageLabel} />
+            <div className="flex shrink-0 items-center gap-1">
+              <ThemeToggle label={themeLabel} />
+              <LanguageToggle currentLocale={locale} label={languageLabel} />
+            </div>
           </div>
         </div>
       </div>
